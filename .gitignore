@@ -12,3 +12,5 @@ __pycache__/
 *.pyo
 *.pyd
 *.SF2
+Code/tests
+*.mid
