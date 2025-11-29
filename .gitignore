@@ -1,5 +1,6 @@
 Notes/.obsidian/
+.obsidian/
 Notes.md
 references/
 Other/
-venv/
+code/venv/
