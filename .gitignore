@@ -3,4 +3,12 @@ Notes/.obsidian/
 Notes.md
 references/
 Other/
-code/venv/Code/FluidR3_GM.sf2
+Code/FluidR3_GM.sf2
+venv/
+Code/venv/
+*.sf2
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.SF2
