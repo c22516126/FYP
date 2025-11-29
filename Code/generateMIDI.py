@@ -1,32 +1,59 @@
+# generateMIDI.py
+
 import pretty_midi
 
-def buildMIDI(notes, outfile="output.mid"):
-    pm = pretty_midi.PrettyMIDI()
-    instrument = pretty_midi.Instrument(program=0)
+# ---------------------------------------------------------
+# Polyphony Limiter
+# ---------------------------------------------------------
 
-    for pitch, start, end in notes:
-        instrument.notes.append(
-            pretty_midi.Note(
-                velocity=80,
-                pitch=pitch,
-                start=start,
-                end=end
-            )
-        )
+def limit_polyphony(notes, max_poly=10):
+    """
+    Limit polyphony so that no more than max_poly notes overlap at once.
+    Notes must be pretty_midi.Note objects.
+    """
 
-    pm.instruments.append(instrument)
-    pm.write(outfile)
-    return pm
+    # Sort notes by start time (primary) then end time
+    notes_sorted = sorted(notes, key=lambda n: (n.start, n.end))
 
-if __name__ == "__main__":
-    # Fake notes: middle C from 0.0 → 1.0
-    notes = [(60, 0.0, 1.0)]
+    filtered = []
+    active = []
 
-    pm = buildMIDI(notes, "test_midi.mid")
-    print("Generated MIDI with", len(pm.instruments[0].notes), "notes")
+    for n in notes_sorted:
+        # Remove notes that ended before this note starts
+        active = [a for a in active if a.end > n.start]
 
-    assert len(pm.instruments) == 1
-    assert len(pm.instruments[0].notes) == 1
-    assert pm.instruments[0].notes[0].pitch == 60
+        # If we have room, accept this new note
+        if len(active) < max_poly:
+            filtered.append(n)
+            active.append(n)
+        # Otherwise skip (too much polyphony)
 
-    print("✔ midi_builder.py passed basic sanity test")
+    return filtered
+
+
+# ---------------------------------------------------------
+# MIDI Builder
+# ---------------------------------------------------------
+
+def buildMIDI(notes, output_path, instrument_name="Acoustic Grand Piano"):
+    """
+    Build a MIDI file from a list of pretty_midi.Note objects.
+    Polyphony is automatically limited to avoid Fluidsynth crashes.
+    """
+
+    # FIRST: limit polyphony to avoid fluidsynth rvoice errors
+    notes = limit_polyphony(notes, max_poly=10)
+
+    midi = pretty_midi.PrettyMIDI()
+
+    instrument = pretty_midi.Instrument(
+        program=pretty_midi.instrument_name_to_program(instrument_name)
+    )
+
+    for n in notes:
+        instrument.notes.append(n)
+
+    midi.instruments.append(instrument)
+    midi.write(output_path)
+
+    print(f"Saved MIDI with {len(notes)} notes → {output_path}")

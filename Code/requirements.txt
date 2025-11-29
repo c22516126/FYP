@@ -3,3 +3,4 @@ basic-pitch
 tensorflow
 pretty_midi
 soundfile
+pytest
