@@ -1,87 +1,64 @@
-import pretty_midi
 import numpy as np
+import pretty_midi
 import fluidsynth
-from scipy.io.wavfile import write
 
-def midi_to_audio(midi_path, wav_path, soundfont, sr=44100, block_size=1024):
+def midi_to_audio(midi_path, wav_path, soundfont="FluidR3_GM.sf2", sr=44100, block_size=512):
     pm = pretty_midi.PrettyMIDI(midi_path)
 
-    # Synth setup
+    # Initialize synth
     fs = fluidsynth.Synth(samplerate=sr)
     sfid = fs.sfload(soundfont)
-    if sfid == -1:
-        raise ValueError(f"Failed to load soundfont: {soundfont}")
     fs.program_select(0, sfid, 0, 0)
+    fs.start()
 
-    # Collect note events
+    # Collect all note on/off events
     events = []
     for inst in pm.instruments:
-        for n in inst.notes:
-            events.append(("on", n.start, n.pitch, n.velocity))
-            events.append(("off", n.end, n.pitch, n.velocity))
+        for note in inst.notes:
+            start_sample = int(note.start * sr)
+            end_sample = int(note.end * sr)
+            events.append((start_sample, "on", note.pitch, note.velocity))
+            events.append((end_sample, "off", note.pitch, note.velocity))
 
-    events.sort(key=lambda x: x[1])
-    next_event_idx = 0
+    # Sort events by sample position
+    events.sort(key=lambda x: x[0])
 
-    duration = pm.get_end_time()
-    total_samples = int((duration + 1.0) * sr)
+    total_samples = int(pm.get_end_time() * sr) + block_size
     audio = np.zeros(total_samples, dtype=np.float32)
 
-    current_time = 0.0
-    samples_written = 0
+    current_sample = 0
+    event_index = 0
 
-    # Convert stereo → mono
-    def to_mono(block):
-        block = np.asarray(block, dtype=np.float32)
-        if block.size % 2 != 0:
-            block = block[:-1]
-        block = block.reshape(-1, 2).mean(axis=1)
-        return block
+    while current_sample < total_samples:
+        next_event_sample = events[event_index][0] if event_index < len(events) else total_samples
+        samples_until_event = next_event_sample - current_sample
 
-    # Safe gain (lower = cleaner)
-    GAIN = 0.2
+        # Render until the next event (or block size)
+        render_samples = min(block_size, samples_until_event)
+        if render_samples > 0:
+            block = fs.get_samples(render_samples)
+            block = np.asarray(block, dtype=np.float32)
+            block = block.reshape(-1, 2).mean(axis=1)   # convert stereo → mono
 
-    while samples_written < total_samples:
-        block_end_time = current_time + block_size / sr
+            audio[current_sample : current_sample + render_samples] += block
+            current_sample += render_samples
 
-        # Process events in the block
-        while (next_event_idx < len(events) and 
-               events[next_event_idx][1] <= block_end_time):
-
-            evt, t, pitch, vel = events[next_event_idx]
-            sample_offset = int((t - current_time) * sr)
-
-            # Render up to event
-            if sample_offset > 0:
-                block = fs.get_samples(sample_offset)
-                block = to_mono(block) * GAIN
-                block_len = len(block)
-                audio[samples_written:samples_written + block_len] += block
-                samples_written += block_len
-
-            # Trigger MIDI event
-            if evt == "on":
+        # Process all events happening at this exact sample index
+        while event_index < len(events) and events[event_index][0] == current_sample:
+            _, etype, pitch, vel = events[event_index]
+            if etype == "on":
                 fs.noteon(0, pitch, vel)
             else:
                 fs.noteoff(0, pitch)
+            event_index += 1
 
-            current_time = t
-            next_event_idx += 1
+    # Normalize audio (safely)
+    max_amp = np.max(np.abs(audio))
+    if max_amp > 0:
+        audio = audio / max_amp
 
-        # Render remaining block
-        remaining = min(block_size, total_samples - samples_written)
-        block = fs.get_samples(remaining)
-        block = to_mono(block) * GAIN
-        block_len = len(block)
-        audio[samples_written:samples_written + block_len] += block
+    # Save WAV
+    import scipy.io.wavfile as wav
+    wav.write(wav_path, sr, audio)
 
-        samples_written += block_len
-        current_time += block_len / sr
-
-    # 🔥 Final normalization (prevents clipping)
-    peak = np.max(np.abs(audio))
-    if peak > 0:
-        audio = audio / peak * 0.9  # headroom
-
-    write(wav_path, sr, audio)
-    print(f"Saved audio → {wav_path}")
+    print(f"[OK] Wrote: {wav_path}")
