@@ -3,7 +3,7 @@ import numpy as np
 import fluidsynth
 from scipy.io.wavfile import write
 
-def midi_to_audio(midi_path, wav_path, soundfont="FluidR3_GM.sf2", sr=44100, block_size=1024):
+def midi_to_audio(midi_path, wav_path, soundfont, sr=44100, block_size=1024):
     pm = pretty_midi.PrettyMIDI(midi_path)
 
     # Synth setup
@@ -85,12 +85,3 @@ def midi_to_audio(midi_path, wav_path, soundfont="FluidR3_GM.sf2", sr=44100, blo
 
     write(wav_path, sr, audio)
     print(f"Saved audio → {wav_path}")
-
-
-# Run directly
-if __name__ == "__main__":
-    midi_to_audio(
-        midi_path="demo_output.mid",
-        wav_path="output.wav",
-        soundfont="FluidR3_GM.sf2"
-    )

@@ -12,5 +12,7 @@ __pycache__/
 *.pyo
 *.pyd
 *.SF2
-Code/tests
 *.mid
+
+Code/__pycache__/
+Code/.pytest_cache/
