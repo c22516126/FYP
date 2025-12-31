@@ -1,0 +1,35 @@
+## prerequisite knowledge
+- multipitch detection
+	- frame level
+	- note level
+- note level evaluation
+	- note attributes
+		- pitch
+		- onset
+		- offset
+	- how to measure correct note
+		- pitch matches
+		- onset is within 50ms of ground truth
+		- offset - optional for many systems
+- true positives, false positives, false negatives
+	- true positive
+		- right pitch
+		- onset is within 50ms of true onset
+	- false positive
+		- note that shouldn't exist
+	- false negative
+		- note in ground truth undetected by the system
+- note level metrics
+	- precision - how many notes were correct
+		- TP / (TP + FP)
+	- recall - how many notes are true notes
+		- TP (TP + FN)
+	- F1 score - harmonic mean of precision and recall
+		- 2PR / (P + R)
+- onset tolerance - 50ms rule
+	- humans perceive notes within 50ms as the same onset
+	- amt uses tolerance window
+	- exact alignment is unrealistic
+- note value (duration) basics
+	- note duration is correct if sufficiently close to ground truth duration
+- 

@@ -23,19 +23,40 @@ class TranscriptionCLI:
         model_path=MODEL_PATH,
         output_dir=OUTPUT_DIR,
         soundfont=SOUNDFONT_PATH,
+        
     ):
         print("Loading model...")
         self.interpreter = loadTfliteModel(model_path)
         self.runner = self.interpreter.get_signature_runner()
 
+        # -----------------
+        # Audio + model config
+        # -----------------
         self.FFT_HOP = 512
+        self.MODEL_HOP = 512  # samples per model frame (fixed by model)
+
         self.AUDIO_N_SAMPLES = 32768
         self.N_OVERLAP_FRAMES = 30
 
+        # overlap + stride in samples
         self.overlap_len = self.N_OVERLAP_FRAMES * self.FFT_HOP
         self.hop_size = self.AUDIO_N_SAMPLES - self.overlap_len
 
-        # Clean + consistent directory handling
+        # -----------------
+        # Frame-domain quantities (THIS was the missing ordering)
+        # -----------------
+        self.FRAMES_PER_WINDOW = self.AUDIO_N_SAMPLES // self.MODEL_HOP
+        self.FRAMES_PER_STRIDE = self.hop_size // self.MODEL_HOP
+
+        # safety checks (keep these)
+        assert self.AUDIO_N_SAMPLES % self.MODEL_HOP == 0, \
+            "Window size must be divisible by model hop"
+        assert self.hop_size % self.MODEL_HOP == 0, \
+            "Hop size must be divisible by model hop"
+
+        # -----------------
+        # Output paths
+        # -----------------
         self.output_dir = str(output_dir)
         os.makedirs(self.output_dir, exist_ok=True)
 
@@ -85,16 +106,16 @@ class TranscriptionCLI:
         onsetStack = np.stack(onsetWindows)
 
         pitchFull = unwrapOutput(
-            pitchStack,
-            audioOriginalLen,
-            self.N_OVERLAP_FRAMES,
-            self.hop_size,
-        )
+        pitchStack,
+        self.FRAMES_PER_WINDOW,
+        self.FRAMES_PER_STRIDE,
+    )
+
         onsetFull = unwrapOutput(
             onsetStack,
-            audioOriginalLen,
-            self.N_OVERLAP_FRAMES,
-            self.hop_size,
+            self.FRAMES_PER_WINDOW,
+            self.FRAMES_PER_STRIDE,
         )
+
 
         return pitchFull, onsetFull, audioOriginalLen
