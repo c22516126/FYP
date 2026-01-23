@@ -1,56 +1,23 @@
 import numpy as np
 
-# -------------------------
-# Signature-runner inference
-# -------------------------
+# infer pitch, onset and offset of an audio window
+def infer(interpreter, audioWindow):
+    runner = interpreter.get_signature_runner() # create callable inferrence function
 
-def runModelFast(interpreter, audioWindow):
-    runner = interpreter.get_signature_runner()
+    outputs = runner(input_2=audioWindow.astype(np.float32)) # run inferrence
 
-    outputs = runner(input_2=audioWindow.astype(np.float32))
+    # output tensors - pitch, onset, offset
+    pitch = outputs["note"]      
+    onset = outputs["onset"]     
+    offset = outputs["contour"] 
 
-    # Older TFLite models use these keys:
-    pitch = outputs["note"]      # pitch posteriorgram
-    onset = outputs["onset"]     # onset posteriorgram
-    offset = outputs["contour"]  # pitch contour (offset)
-
-    # squeeze batch dim
+    # remove batch windows
     pitch = np.squeeze(pitch, axis=0)
     onset = np.squeeze(onset, axis=0)
     offset = np.squeeze(offset, axis=0)
 
+    # output posteriorgrams for each
     return pitch, onset, offset
-
-# remove overlap and build posteriorgram
-def unwrapOutput(batchedOutput, framesPerWindow, framesPerStride):
-    """
-    Stitch overlapping model outputs while preserving
-    correct time alignment, including start/end boundaries.
-    """
-
-    if batchedOutput.ndim != 3:
-        return batchedOutput
-
-    stitched = []
-
-    center_start = (framesPerWindow - framesPerStride) // 2
-    center_end = center_start + framesPerStride
-
-    num_windows = batchedOutput.shape[0]
-
-    for i, window in enumerate(batchedOutput):
-        if i == 0:
-            # FIRST window: keep from start
-            stitched.append(window[:center_end])
-        elif i == num_windows - 1:
-            # LAST window: keep until end
-            stitched.append(window[center_start:])
-        else:
-            # MIDDLE windows: keep center slice only
-            stitched.append(window[center_start:center_end])
-
-    return np.vstack(stitched)
-
 
 # debugging
 

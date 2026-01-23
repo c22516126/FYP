@@ -1,12 +1,13 @@
 import os
 import numpy as np
 
-from pipeline.loadModel import loadTfliteModel
-from pipeline.inference import runModelFast, unwrapOutput
+from pipeline.loadModel import loadModel
+from pipeline.inference import infer
 from pipeline.noteCreation import createNotes
 from pipeline.generateMIDI import buildMIDI
 from pipeline.audioRender import midi_to_audio
-from config import MODEL_PATH, SOUNDFONT_PATH, OUTPUT_DIR
+from pipeline.stitch import unwrapOutput
+from config import MODEL_PATH, SOUNDFONT_PATH, OUTPUT_DIR, FFT_HOP, MODEL_HOP, WINDOW_SAMPLES, OVERLAP_FRAMES
 
 from basic_pitch.inference import get_audio_input
 
@@ -20,38 +21,32 @@ class TranscriptionCLI:
 
     def __init__(
         self,
-        model_path=MODEL_PATH,
-        output_dir=OUTPUT_DIR,
-        soundfont=SOUNDFONT_PATH,
+        model_path = MODEL_PATH,
+        output_dir = OUTPUT_DIR,
+        soundfont = SOUNDFONT_PATH
         
     ):
         print("Loading model...")
-        self.interpreter = loadTfliteModel(model_path)
-        self.runner = self.interpreter.get_signature_runner()
+        self.interpreter = loadModel(model_path)
 
         # -----------------
         # Audio + model config
         # -----------------
-        self.FFT_HOP = 512
-        self.MODEL_HOP = 512  # samples per model frame (fixed by model)
-
-        self.AUDIO_N_SAMPLES = 32768
-        self.N_OVERLAP_FRAMES = 30
 
         # overlap + stride in samples
-        self.overlap_len = self.N_OVERLAP_FRAMES * self.FFT_HOP
-        self.hop_size = self.AUDIO_N_SAMPLES - self.overlap_len
+        self.overlap_len = OVERLAP_FRAMES * FFT_HOP
+        self.hop_size = WINDOW_SAMPLES - self.overlap_len
 
         # -----------------
         # Frame-domain quantities (THIS was the missing ordering)
         # -----------------
-        self.FRAMES_PER_WINDOW = self.AUDIO_N_SAMPLES // self.MODEL_HOP
-        self.FRAMES_PER_STRIDE = self.hop_size // self.MODEL_HOP
+        self.FRAMES_PER_WINDOW = WINDOW_SAMPLES // MODEL_HOP
+        self.FRAMES_PER_STRIDE = self.hop_size // MODEL_HOP
 
         # safety checks (keep these)
-        assert self.AUDIO_N_SAMPLES % self.MODEL_HOP == 0, \
+        assert WINDOW_SAMPLES % MODEL_HOP == 0, \
             "Window size must be divisible by model hop"
-        assert self.hop_size % self.MODEL_HOP == 0, \
+        assert self.hop_size % MODEL_HOP == 0, \
             "Hop size must be divisible by model hop"
 
         # -----------------
@@ -74,7 +69,7 @@ class TranscriptionCLI:
             pitchFull,
             onsetPost=onsetFull,
             sr=22050,
-            fft_hop=self.FFT_HOP,
+            fft_hop= FFT_HOP,
         )
         print(f"Detected {len(notes)} notes")
 
@@ -98,7 +93,7 @@ class TranscriptionCLI:
             hop_size=self.hop_size,
         ):
             audioOriginalLen = origLen
-            p, o, _ = runModelFast(self.interpreter, window)
+            p, o, _ = infer(self.interpreter, window)
             pitchWindows.append(p)
             onsetWindows.append(o)
 

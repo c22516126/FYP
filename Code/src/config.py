@@ -1,10 +1,12 @@
+# paths
+# ----------------------------------------------------------------------------------------------------------------------------------------
 from pathlib import Path
 
-# Root of the project (src parent)
+# project root
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
 
-# Model path (relative to installed basic_pitch)
+# relative model path
 MODEL_PATH = (
     PROJECT_ROOT
     / "venv"
@@ -16,8 +18,17 @@ MODEL_PATH = (
     / "nmp.tflite"
 )
 
-# SoundFont
+# soundfont
 SOUNDFONT_PATH = PROJECT_ROOT / "resources" / "FluidR3_GM.sf2"
 
-# Output directory
+# output location
 OUTPUT_DIR = PROJECT_ROOT / "output"
+
+
+# variables
+# ----------------------------------------------------------------------------------------------------------------------------------------
+
+FFT_HOP = 512 # for every 512 samples, start a frame
+MODEL_HOP = 512 # for every 512 samples, make a prediction
+WINDOW_SAMPLES = 32768 # amount of samples fed to model during each inference instance
+OVERLAP_FRAMES = 30 # amount of frames overlapping within a window

@@ -1,12 +1,12 @@
-# model_loader.py
+# load model for use during inference
 
 import tensorflow as tf
 import os
 
-def loadTfliteModel(model_path):
-    if not os.path.exists(model_path):
-        raise FileNotFoundError(f"TFLite model not found at: {model_path}")
+def loadModel(modelPath):
+    if not os.path.exists(modelPath):
+        raise FileNotFoundError(f"Model not found at: {modelPath}")
 
-    interpreter = tf.lite.Interpreter(model_path=model_path)
-    interpreter.allocate_tensors()
+    interpreter = tf.lite.Interpreter(model_path=modelPath) # create an instance of tf.lite.Interpreter, load model into it
+    interpreter.allocate_tensors() # find tensors needed, determine shape, allocate memory, set execution order
     return interpreter
