@@ -68,8 +68,8 @@ class TranscriptionCLI:
         notes = createNotes(
             pitchFull,
             onsetPost=onsetFull,
-            sr=22050,
-            fft_hop= FFT_HOP,
+            sampleRate=22050,
+            fftHop= FFT_HOP,
         )
         print(f"Detected {len(notes)} notes")
 

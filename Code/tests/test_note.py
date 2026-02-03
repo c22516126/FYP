@@ -20,8 +20,8 @@ def test_single_note_simple():
 
     notes = createNotes(
         pitchPost,
-        pitch_threshold=0.2,
-        min_frames=1
+        pitchThreshold=0.2,
+        minFrames=1
     )
     frames = notes_to_frames(notes)
 
@@ -42,9 +42,9 @@ def test_gap_bridging():
 
     notes = createNotes(
         pitchPost,
-        pitch_threshold=0.2,
-        min_frames=1,
-        bridge_gap=2
+        pitchThreshold=0.2,
+        minFrames=1,
+        bridgeGap=2
     )
     frames = notes_to_frames(notes)
 
@@ -64,8 +64,8 @@ def test_minimum_length():
 
     notes = createNotes(
         pitchPost,
-        pitch_threshold=0.2,
-        min_frames=3
+        pitchThreshold=0.2,
+        minFrames=3
     )
 
     assert len(notes) == 0
@@ -82,9 +82,9 @@ def test_two_separate_notes():
 
     notes = createNotes(
         pitchPost,
-        pitch_threshold=0.2,
-        min_frames=1,
-        bridge_gap=2
+        pitchThreshold=0.2,
+        minFrames=1,
+        bridgeGap=2
     )
     frames = notes_to_frames(notes)
 
@@ -105,7 +105,7 @@ def test_noise_rejection():
 
     notes = createNotes(
         noise,
-        pitch_threshold=0.2
+        pitchThreshold=0.2
     )
 
     assert len(notes) == 0
