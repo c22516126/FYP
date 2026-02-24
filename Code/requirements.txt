@@ -4,3 +4,4 @@ tensorflow
 pretty_midi
 soundfile
 pytest
+mir_eval
