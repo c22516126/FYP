@@ -7,10 +7,9 @@ from pipeline.noteCreation import createNotes
 from pipeline.generateMIDI import buildMIDI
 from pipeline.audioRender import midi_to_audio
 from pipeline.stitch import unwrapOutput
-from config import MODEL_PATH, SOUNDFONT_PATH, OUTPUT_DIR, FFT_HOP, MODEL_HOP, WINDOW_SAMPLES, OVERLAP_FRAMES
+from config import MODEL_PATH, SOUNDFONT_PATH, OUTPUT_DIR, FFT_HOP, WINDOW_SAMPLES, OVERLAP_FRAMES
 
 from basic_pitch.inference import get_audio_input
-
 
 class TranscriptionCLI:
     """
@@ -40,13 +39,13 @@ class TranscriptionCLI:
         # -----------------
         # Frame-domain quantities (THIS was the missing ordering)
         # -----------------
-        self.FRAMES_PER_WINDOW = WINDOW_SAMPLES // MODEL_HOP
-        self.FRAMES_PER_STRIDE = self.hop_size // MODEL_HOP
+        self.FRAMES_PER_WINDOW = WINDOW_SAMPLES // FFT_HOP
+        self.FRAMES_PER_STRIDE = self.hop_size // FFT_HOP
 
         # safety checks (keep these)
-        assert WINDOW_SAMPLES % MODEL_HOP == 0, \
+        assert WINDOW_SAMPLES % FFT_HOP == 0, \
             "Window size must be divisible by model hop"
-        assert self.hop_size % MODEL_HOP == 0, \
+        assert self.hop_size % FFT_HOP == 0, \
             "Hop size must be divisible by model hop"
 
         # -----------------

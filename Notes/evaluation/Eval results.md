@@ -1,5 +1,28 @@
-- Feb 24
-	- precision: 0.012269938650306749 
-	- recall: 0.008064516129032258
-	- f measure: 0.009732360097323601
-	- average overlap ratio: 0.8274222931920192
+- Feb 24:
+	- default settings (offset on)
+		- precision: 0.012269938650306749 
+		- recall: 0.008064516129032258
+		- f measure: 0.009732360097323601
+		- average overlap ratio: 0.8274222931920192
+	- offset off
+		- precision: 0.018404907975460124
+		- recall: 0.012096774193548387
+		- f measure: 0.014598540145985401
+		- average overlap ratio: 0.7671996410871623
+- March 1:
+	- default
+		- precision: 0
+		- recall: 0
+		- f measure: 0
+		- avg overlap: 0
+	- offset off 
+		- P: 0.011673151750972763 
+		- R: 0.012096774193548387
+		- F-measure: 0.011881188118811881 
+		- overlap ratio: 0.4494139257598085
+---
+### Metric meanings
+- precision - proportion of correct notes in prediction
+- recall - how many notes were predicted correctly
+- f measure
+- average overlap ratio

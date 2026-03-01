@@ -28,7 +28,6 @@ OUTPUT_DIR = PROJECT_ROOT / "output"
 # variables
 # ----------------------------------------------------------------------------------------------------------------------------------------
 
-FFT_HOP = 512 # for every 512 samples, start a frame
-MODEL_HOP = 512 # for every 512 samples, make a prediction
+FFT_HOP = 256 # for every 256 samples, start a frame and make a prediction
 WINDOW_SAMPLES = 32768 # amount of samples fed to model during each inference instance
 OVERLAP_FRAMES = 30 # amount of frames overlapping within a window
