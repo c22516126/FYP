@@ -1,0 +1,1919 @@
+Note(start=0.625000, end=1.259766, pitch=65, velocity=39)
+Note(start=0.625000, end=1.259766, pitch=65, velocity=48)
+Note(start=0.625000, end=1.259766, pitch=68, velocity=39)
+Note(start=0.625000, end=1.259766, pitch=68, velocity=48)
+Note(start=1.250000, end=3.208330, pitch=77, velocity=61)
+Note(start=1.250000, end=3.251733, pitch=80, velocity=61)
+Note(start=3.208330, end=5.294405, pitch=73, velocity=46)
+Note(start=3.208330, end=5.294405, pitch=77, velocity=46)
+Note(start=5.401312, end=5.873696, pitch=72, velocity=45)
+Note(start=5.401312, end=5.873696, pitch=75, velocity=45)
+Note(start=5.866428, end=6.337554, pitch=73, velocity=49)
+Note(start=5.866428, end=6.337554, pitch=77, velocity=49)
+Note(start=4.874997, end=8.639235, pitch=66, velocity=55)
+Note(start=4.874997, end=8.639235, pitch=69, velocity=55)
+Note(start=6.331544, end=8.909416, pitch=72, velocity=51)
+Note(start=6.331544, end=8.909416, pitch=75, velocity=51)
+Note(start=9.055900, end=9.479077, pitch=70, velocity=46)
+Note(start=9.055900, end=9.479077, pitch=73, velocity=46)
+Note(start=9.472567, end=9.895743, pitch=72, velocity=45)
+Note(start=9.472567, end=9.895743, pitch=75, velocity=45)
+Note(start=9.889233, end=10.523997, pitch=73, velocity=46)
+Note(start=10.514232, end=11.787016, pitch=77, velocity=53)
+Note(start=8.639235, end=12.389229, pitch=65, velocity=51)
+Note(start=8.639235, end=12.389229, pitch=68, velocity=51)
+Note(start=11.764230, end=12.799767, pitch=73, velocity=46)
+Note(start=9.889233, end=12.833468, pitch=70, velocity=43)
+Note(start=12.781385, end=13.179669, pitch=68, velocity=46)
+Note(start=12.781385, end=13.179669, pitch=72, velocity=46)
+Note(start=13.173542, end=13.571825, pitch=70, velocity=48)
+Note(start=13.173542, end=13.571825, pitch=73, velocity=48)
+Note(start=13.565698, end=15.778825, pitch=68, velocity=47)
+Note(start=12.389229, end=15.896013, pitch=63, velocity=48)
+Note(start=12.389229, end=15.896013, pitch=66, velocity=48)
+Note(start=13.565698, end=16.145411, pitch=72, velocity=43)
+Note(start=16.280628, end=16.671252, pitch=70, velocity=50)
+Note(start=16.665243, end=17.055867, pitch=72, velocity=58)
+Note(start=17.049858, end=17.440260, pitch=70, velocity=50)
+Note(start=17.434473, end=17.810629, pitch=75, velocity=58)
+Note(start=15.896013, end=18.175212, pitch=66, velocity=48)
+Note(start=15.896013, end=18.175212, pitch=63, velocity=46)
+Note(start=15.896013, end=18.175212, pitch=61, velocity=40)
+Note(start=17.804842, end=18.180999, pitch=70, velocity=48)
+Note(start=18.175212, end=18.551368, pitch=68, velocity=41)
+Note(start=18.545581, end=18.921738, pitch=70, velocity=49)
+Note(start=18.175212, end=19.286320, pitch=63, velocity=50)
+Note(start=18.175212, end=19.286320, pitch=60, velocity=50)
+Note(start=18.175212, end=19.306575, pitch=66, velocity=53)
+Note(start=18.915951, end=19.671157, pitch=68, velocity=46)
+Note(start=19.656690, end=20.033069, pitch=66, velocity=50)
+Note(start=20.027059, end=20.417684, pitch=68, velocity=54)
+Note(start=19.286320, end=21.565519, pitch=63, velocity=48)
+Note(start=19.286320, end=21.565519, pitch=61, velocity=49)
+Note(start=19.286320, end=21.565519, pitch=58, velocity=50)
+Note(start=20.411674, end=21.595080, pitch=66, velocity=48)
+Note(start=21.565519, end=23.102681, pitch=63, velocity=52)
+Note(start=21.565519, end=23.187141, pitch=60, velocity=47)
+Note(start=21.565519, end=23.187141, pitch=57, velocity=47)
+Note(start=21.565519, end=23.505891, pitch=65, velocity=46)
+Note(start=23.587141, end=23.993268, pitch=65, velocity=50)
+Note(start=23.987141, end=24.385424, pitch=66, velocity=52)
+Note(start=24.379297, end=24.777581, pitch=65, velocity=51)
+Note(start=24.771454, end=25.169737, pitch=70, velocity=59)
+Note(start=23.187141, end=25.555767, pitch=56, velocity=54)
+Note(start=25.163610, end=25.561776, pitch=65, velocity=45)
+Note(start=25.555767, end=25.946391, pitch=63, velocity=38)
+Note(start=25.940382, end=26.331006, pitch=65, velocity=54)
+Note(start=23.187141, end=26.535333, pitch=61, velocity=48)
+Note(start=23.187141, end=26.709612, pitch=58, velocity=46)
+Note(start=25.555767, end=26.709612, pitch=54, velocity=48)
+Note(start=26.324997, end=27.048644, pitch=63, velocity=52)
+Note(start=27.086969, end=27.470223, pitch=61, velocity=45)
+Note(start=27.464327, end=27.847580, pitch=63, velocity=47)
+Note(start=26.709612, end=28.973757, pitch=56, velocity=52)
+Note(start=26.709612, end=28.973757, pitch=53, velocity=49)
+Note(start=27.841684, end=28.999798, pitch=61, velocity=48)
+Note(start=26.709612, end=29.029560, pitch=58, velocity=51)
+Note(start=28.973757, end=29.688041, pitch=51, velocity=55)
+Note(start=28.973757, end=30.498852, pitch=54, velocity=51)
+Note(start=28.973757, end=30.525528, pitch=60, velocity=49)
+Note(start=28.973757, end=30.525528, pitch=56, velocity=51)
+Note(start=29.688041, end=30.986656, pitch=44, velocity=45)
+Note(start=30.498852, end=30.994278, pitch=37, velocity=43)
+Note(start=30.986656, end=31.482082, pitch=53, velocity=47)
+Note(start=30.986656, end=31.482082, pitch=56, velocity=47)
+Note(start=31.962265, end=33.390833, pitch=77, velocity=65)
+Note(start=31.962265, end=33.416875, pitch=80, velocity=65)
+Note(start=31.474460, end=34.651992, pitch=65, velocity=66)
+Note(start=31.474460, end=34.651992, pitch=68, velocity=66)
+Note(start=33.390833, end=35.173568, pitch=73, velocity=60)
+Note(start=33.390833, end=35.173568, pitch=77, velocity=60)
+Note(start=35.263846, end=35.715233, pitch=75, velocity=44)
+Note(start=35.708289, end=36.158742, pitch=77, velocity=43)
+Note(start=34.819402, end=37.306578, pitch=42, velocity=48)
+Note(start=34.819402, end=37.306578, pitch=49, velocity=48)
+Note(start=35.263846, end=37.306578, pitch=49, velocity=44)
+Note(start=35.263846, end=38.304173, pitch=66, velocity=46)
+Note(start=35.263846, end=38.304173, pitch=70, velocity=46)
+Note(start=35.263846, end=38.460423, pitch=54, velocity=44)
+Note(start=35.263846, end=38.460423, pitch=58, velocity=44)
+Note(start=35.263846, end=38.460423, pitch=61, velocity=44)
+Note(start=36.152733, end=38.748616, pitch=75, velocity=48)
+Note(start=38.904866, end=39.355560, pitch=61, velocity=48)
+Note(start=38.904866, end=39.355560, pitch=73, velocity=48)
+Note(start=39.349310, end=39.756412, pitch=63, velocity=53)
+Note(start=39.349310, end=39.756412, pitch=75, velocity=53)
+Note(start=38.904866, end=39.767065, pitch=68, velocity=47)
+Note(start=39.749310, end=39.767065, pitch=68, velocity=54)
+Note(start=38.904866, end=39.767065, pitch=53, velocity=48)
+Note(start=38.904866, end=39.767065, pitch=56, velocity=48)
+Note(start=39.749310, end=41.112943, pitch=73, velocity=54)
+Note(start=38.460423, end=41.112943, pitch=41, velocity=49)
+Note(start=38.460423, end=41.112943, pitch=49, velocity=49)
+Note(start=39.749310, end=41.112943, pitch=61, velocity=57)
+Note(start=39.749310, end=41.137801, pitch=80, velocity=54)
+Note(start=39.749310, end=41.137801, pitch=65, velocity=57)
+Note(start=41.112943, end=41.137801, pitch=65, velocity=48)
+Note(start=41.112943, end=42.405554, pitch=73, velocity=48)
+Note(start=41.112943, end=42.405554, pitch=56, velocity=48)
+Note(start=41.112943, end=42.405554, pitch=61, velocity=48)
+Note(start=41.112943, end=42.838792, pitch=77, velocity=48)
+Note(start=42.931121, end=43.345662, pitch=75, velocity=47)
+Note(start=43.339284, end=43.754240, pitch=77, velocity=50)
+Note(start=42.476577, end=45.051794, pitch=42, velocity=47)
+Note(start=42.476577, end=45.051794, pitch=49, velocity=47)
+Note(start=42.931121, end=45.051794, pitch=49, velocity=42)
+Note(start=43.747447, end=45.075572, pitch=75, velocity=44)
+Note(start=42.931121, end=46.179512, pitch=66, velocity=47)
+Note(start=42.931121, end=46.179512, pitch=70, velocity=47)
+Note(start=42.931121, end=46.356142, pitch=54, velocity=42)
+Note(start=42.931121, end=46.356142, pitch=58, velocity=42)
+Note(start=42.931121, end=46.356142, pitch=61, velocity=42)
+Note(start=45.051794, end=46.702609, pitch=73, velocity=45)
+Note(start=46.790925, end=47.232217, pitch=61, velocity=50)
+Note(start=46.790925, end=47.232217, pitch=73, velocity=50)
+Note(start=46.790925, end=47.642373, pitch=53, velocity=48)
+Note(start=46.790925, end=47.642373, pitch=59, velocity=48)
+Note(start=47.225707, end=47.648883, pitch=63, velocity=57)
+Note(start=47.225707, end=47.648883, pitch=75, velocity=57)
+Note(start=46.790925, end=47.658649, pitch=68, velocity=46)
+Note(start=47.642373, end=48.277138, pitch=70, velocity=65)
+Note(start=47.642373, end=48.277138, pitch=82, velocity=65)
+Note(start=47.642373, end=49.292371, pitch=59, velocity=56)
+Note(start=47.642373, end=49.292371, pitch=61, velocity=56)
+Note(start=47.642373, end=49.292371, pitch=65, velocity=56)
+Note(start=48.267372, end=49.514246, pitch=68, velocity=54)
+Note(start=48.267372, end=49.514246, pitch=80, velocity=54)
+Note(start=46.356142, end=50.092371, pitch=44, velocity=48)
+Note(start=49.492371, end=50.101746, pitch=65, velocity=48)
+Note(start=47.642373, end=50.139246, pitch=77, velocity=51)
+Note(start=49.492371, end=50.139246, pitch=77, velocity=48)
+Note(start=50.492371, end=50.903213, pitch=75, velocity=63)
+Note(start=50.896835, end=51.311376, pitch=77, velocity=70)
+Note(start=50.492371, end=51.897742, pitch=63, velocity=44)
+Note(start=51.304998, end=51.906756, pitch=75, velocity=58)
+Note(start=50.092371, end=52.474664, pitch=46, velocity=51)
+Note(start=51.897742, end=53.122450, pitch=73, velocity=53)
+Note(start=50.492371, end=53.555392, pitch=65, velocity=41)
+Note(start=50.492371, end=53.555392, pitch=70, velocity=41)
+Note(start=53.099663, end=53.555392, pitch=70, velocity=54)
+Note(start=50.492371, end=53.724662, pitch=53, velocity=46)
+Note(start=50.492371, end=53.724662, pitch=58, velocity=46)
+Note(start=51.897742, end=53.724662, pitch=61, velocity=51)
+Note(start=54.456369, end=55.675880, pitch=82, velocity=51)
+Note(start=54.456369, end=55.675880, pitch=66, velocity=52)
+Note(start=54.456369, end=55.675880, pitch=70, velocity=52)
+Note(start=54.456369, end=55.692044, pitch=77, velocity=51)
+Note(start=54.456369, end=55.692044, pitch=89, velocity=51)
+Note(start=54.456369, end=55.692044, pitch=65, velocity=52)
+Note(start=55.675880, end=56.020707, pitch=75, velocity=53)
+Note(start=55.675880, end=56.020707, pitch=82, velocity=53)
+Note(start=55.675880, end=56.020707, pitch=87, velocity=53)
+Note(start=55.675880, end=56.020707, pitch=63, velocity=59)
+Note(start=55.675880, end=56.020707, pitch=66, velocity=59)
+Note(start=55.675880, end=56.020707, pitch=70, velocity=59)
+Note(start=56.020707, end=56.354040, pitch=75, velocity=56)
+Note(start=56.020707, end=56.354040, pitch=82, velocity=56)
+Note(start=56.020707, end=56.354040, pitch=87, velocity=56)
+Note(start=53.724662, end=56.354040, pitch=27, velocity=47)
+Note(start=53.724662, end=56.354040, pitch=39, velocity=47)
+Note(start=56.020707, end=56.354040, pitch=63, velocity=56)
+Note(start=56.020707, end=56.354040, pitch=66, velocity=56)
+Note(start=56.020707, end=56.354040, pitch=70, velocity=56)
+Note(start=56.354040, end=56.687372, pitch=82, velocity=55)
+Note(start=56.354040, end=56.687372, pitch=66, velocity=58)
+Note(start=56.354040, end=56.687372, pitch=70, velocity=58)
+Note(start=56.354040, end=56.692413, pitch=75, velocity=55)
+Note(start=56.354040, end=56.692413, pitch=87, velocity=55)
+Note(start=56.354040, end=56.692413, pitch=63, velocity=58)
+Note(start=56.687372, end=57.009953, pitch=73, velocity=55)
+Note(start=56.687372, end=57.009953, pitch=82, velocity=55)
+Note(start=56.687372, end=57.009953, pitch=85, velocity=55)
+Note(start=56.687372, end=57.009953, pitch=61, velocity=58)
+Note(start=56.687372, end=57.009953, pitch=66, velocity=58)
+Note(start=56.687372, end=57.009953, pitch=70, velocity=58)
+Note(start=57.009953, end=57.332617, pitch=73, velocity=60)
+Note(start=57.009953, end=57.332617, pitch=82, velocity=60)
+Note(start=57.009953, end=57.332617, pitch=85, velocity=60)
+Note(start=57.009953, end=57.332617, pitch=61, velocity=59)
+Note(start=57.009953, end=57.332617, pitch=66, velocity=59)
+Note(start=57.009953, end=57.332617, pitch=70, velocity=59)
+Note(start=57.332617, end=57.665950, pitch=82, velocity=59)
+Note(start=57.332617, end=57.665950, pitch=66, velocity=58)
+Note(start=57.332617, end=57.665950, pitch=70, velocity=58)
+Note(start=57.332617, end=57.671338, pitch=73, velocity=59)
+Note(start=57.332617, end=57.671338, pitch=85, velocity=59)
+Note(start=57.332617, end=57.671338, pitch=61, velocity=58)
+Note(start=57.665950, end=58.010777, pitch=72, velocity=54)
+Note(start=57.665950, end=58.010777, pitch=78, velocity=54)
+Note(start=57.665950, end=58.010777, pitch=82, velocity=54)
+Note(start=57.665950, end=58.010777, pitch=84, velocity=54)
+Note(start=57.665950, end=58.010777, pitch=60, velocity=58)
+Note(start=57.665950, end=58.010777, pitch=66, velocity=58)
+Note(start=57.665950, end=58.010777, pitch=70, velocity=58)
+Note(start=58.010777, end=58.367919, pitch=72, velocity=54)
+Note(start=58.010777, end=58.367919, pitch=78, velocity=54)
+Note(start=58.010777, end=58.367919, pitch=82, velocity=54)
+Note(start=58.010777, end=58.367919, pitch=84, velocity=54)
+Note(start=58.010777, end=58.367919, pitch=60, velocity=55)
+Note(start=58.010777, end=58.367919, pitch=66, velocity=55)
+Note(start=58.010777, end=58.367919, pitch=70, velocity=55)
+Note(start=58.367919, end=58.923474, pitch=82, velocity=59)
+Note(start=58.367919, end=58.923474, pitch=66, velocity=57)
+Note(start=58.367919, end=58.923474, pitch=70, velocity=57)
+Note(start=58.367919, end=58.932318, pitch=72, velocity=59)
+Note(start=58.367919, end=58.932318, pitch=78, velocity=59)
+Note(start=58.367919, end=58.932318, pitch=84, velocity=59)
+Note(start=58.367919, end=58.932318, pitch=60, velocity=57)
+Note(start=58.923474, end=59.489510, pitch=82, velocity=62)
+Note(start=58.923474, end=59.489510, pitch=61, velocity=58)
+Note(start=58.923474, end=59.489510, pitch=66, velocity=58)
+Note(start=58.923474, end=59.496721, pitch=73, velocity=62)
+Note(start=58.923474, end=59.496721, pitch=85, velocity=62)
+Note(start=58.923474, end=59.496721, pitch=70, velocity=58)
+Note(start=59.489510, end=59.496721, pitch=70, velocity=56)
+Note(start=59.489510, end=60.364508, pitch=78, velocity=56)
+Note(start=59.489510, end=60.364508, pitch=82, velocity=56)
+Note(start=59.489510, end=60.364508, pitch=58, velocity=55)
+Note(start=59.489510, end=60.364508, pitch=61, velocity=55)
+Note(start=59.489510, end=60.364508, pitch=66, velocity=55)
+Note(start=61.126869, end=62.213825, pitch=82, velocity=52)
+Note(start=61.126869, end=62.213825, pitch=66, velocity=52)
+Note(start=61.126869, end=62.213825, pitch=70, velocity=52)
+Note(start=61.126869, end=62.229715, pitch=77, velocity=52)
+Note(start=61.126869, end=62.229715, pitch=89, velocity=52)
+Note(start=61.126869, end=62.229715, pitch=65, velocity=52)
+Note(start=62.213825, end=62.552807, pitch=82, velocity=56)
+Note(start=62.213825, end=62.552807, pitch=66, velocity=64)
+Note(start=62.213825, end=62.552807, pitch=70, velocity=64)
+Note(start=62.213825, end=62.558104, pitch=78, velocity=56)
+Note(start=62.213825, end=62.558104, pitch=90, velocity=56)
+Note(start=62.213825, end=62.558104, pitch=75, velocity=64)
+Note(start=60.412584, end=62.891790, pitch=46, velocity=45)
+Note(start=62.552807, end=62.891790, pitch=82, velocity=58)
+Note(start=60.412584, end=62.891790, pitch=27, velocity=48)
+Note(start=60.412584, end=62.891790, pitch=39, velocity=48)
+Note(start=62.552807, end=62.891790, pitch=66, velocity=50)
+Note(start=62.552807, end=62.891790, pitch=70, velocity=50)
+Note(start=62.552807, end=62.896750, pitch=77, velocity=58)
+Note(start=62.552807, end=62.896750, pitch=89, velocity=58)
+Note(start=62.552807, end=62.896750, pitch=65, velocity=50)
+Note(start=62.891790, end=63.209250, pitch=82, velocity=55)
+Note(start=62.891790, end=63.209250, pitch=66, velocity=49)
+Note(start=62.891790, end=63.209250, pitch=70, velocity=49)
+Note(start=62.891790, end=63.214210, pitch=75, velocity=55)
+Note(start=62.891790, end=63.214210, pitch=87, velocity=55)
+Note(start=62.891790, end=63.214210, pitch=63, velocity=49)
+Note(start=63.209250, end=63.526710, pitch=82, velocity=60)
+Note(start=63.209250, end=63.526710, pitch=66, velocity=56)
+Note(start=63.209250, end=63.526710, pitch=70, velocity=56)
+Note(start=63.209250, end=63.531670, pitch=77, velocity=60)
+Note(start=63.209250, end=63.531670, pitch=89, velocity=60)
+Note(start=63.209250, end=63.531670, pitch=65, velocity=56)
+Note(start=63.526710, end=63.844170, pitch=82, velocity=54)
+Note(start=63.526710, end=63.844170, pitch=66, velocity=66)
+Note(start=63.526710, end=63.844170, pitch=70, velocity=66)
+Note(start=63.526710, end=63.849293, pitch=75, velocity=54)
+Note(start=63.526710, end=63.849293, pitch=87, velocity=54)
+Note(start=63.526710, end=63.849293, pitch=63, velocity=66)
+Note(start=63.844170, end=64.172038, pitch=82, velocity=51)
+Note(start=63.844170, end=64.172038, pitch=66, velocity=65)
+Note(start=63.844170, end=64.172038, pitch=70, velocity=65)
+Note(start=63.844170, end=64.177426, pitch=73, velocity=51)
+Note(start=63.844170, end=64.177426, pitch=85, velocity=51)
+Note(start=63.844170, end=64.177426, pitch=61, velocity=65)
+Note(start=64.172038, end=64.516865, pitch=82, velocity=64)
+Note(start=64.172038, end=64.516865, pitch=66, velocity=64)
+Note(start=64.172038, end=64.516865, pitch=70, velocity=64)
+Note(start=64.172038, end=64.522253, pitch=75, velocity=64)
+Note(start=64.172038, end=64.522253, pitch=87, velocity=64)
+Note(start=64.172038, end=64.522253, pitch=63, velocity=64)
+Note(start=64.516865, end=64.861692, pitch=82, velocity=66)
+Note(start=64.516865, end=64.861692, pitch=66, velocity=62)
+Note(start=64.516865, end=64.861692, pitch=70, velocity=62)
+Note(start=64.516865, end=64.867374, pitch=73, velocity=66)
+Note(start=64.516865, end=64.867374, pitch=85, velocity=66)
+Note(start=64.516865, end=64.867374, pitch=61, velocity=62)
+Note(start=64.861692, end=65.358850, pitch=72, velocity=61)
+Note(start=64.861692, end=65.358850, pitch=82, velocity=61)
+Note(start=64.861692, end=65.358850, pitch=84, velocity=61)
+Note(start=65.358850, end=65.407145, pitch=87, velocity=58)
+Note(start=64.861692, end=65.407145, pitch=66, velocity=61)
+Note(start=64.861692, end=65.407145, pitch=70, velocity=61)
+Note(start=64.861692, end=65.415668, pitch=60, velocity=61)
+Note(start=65.407145, end=65.924189, pitch=82, velocity=58)
+Note(start=65.407145, end=65.932712, pitch=73, velocity=58)
+Note(start=65.407145, end=65.932712, pitch=85, velocity=58)
+Note(start=65.407145, end=65.952598, pitch=66, velocity=61)
+Note(start=65.407145, end=65.959295, pitch=61, velocity=61)
+Note(start=65.407145, end=65.959295, pitch=70, velocity=61)
+Note(start=65.952598, end=65.959295, pitch=70, velocity=51)
+Note(start=65.952598, end=66.765096, pitch=58, velocity=56)
+Note(start=65.952598, end=66.765096, pitch=63, velocity=56)
+Note(start=65.952598, end=66.765096, pitch=66, velocity=56)
+Note(start=65.952598, end=67.229147, pitch=78, velocity=51)
+Note(start=65.952598, end=67.229147, pitch=82, velocity=51)
+Note(start=67.336054, end=67.870594, pitch=66, velocity=53)
+Note(start=67.336054, end=67.870594, pitch=78, velocity=53)
+Note(start=67.336054, end=67.870594, pitch=54, velocity=57)
+Note(start=67.862370, end=68.396909, pitch=68, velocity=53)
+Note(start=67.862370, end=68.396909, pitch=75, velocity=53)
+Note(start=67.862370, end=68.396909, pitch=80, velocity=53)
+Note(start=67.862370, end=68.396909, pitch=56, velocity=54)
+Note(start=67.862370, end=68.915001, pitch=63, velocity=52)
+Note(start=68.388685, end=68.923225, pitch=72, velocity=68)
+Note(start=68.388685, end=68.923225, pitch=84, velocity=68)
+Note(start=67.862370, end=68.923225, pitch=60, velocity=52)
+Note(start=68.388685, end=68.923225, pitch=60, velocity=70)
+Note(start=68.915001, end=69.441316, pitch=78, velocity=60)
+Note(start=68.915001, end=69.449540, pitch=70, velocity=60)
+Note(start=68.915001, end=69.449540, pitch=82, velocity=60)
+Note(start=68.915001, end=69.449540, pitch=58, velocity=68)
+Note(start=68.915001, end=69.914178, pitch=63, velocity=55)
+Note(start=68.915001, end=69.914178, pitch=66, velocity=55)
+Note(start=69.441316, end=69.914178, pitch=66, velocity=55)
+Note(start=69.441316, end=69.938849, pitch=78, velocity=55)
+Note(start=69.441316, end=69.938849, pitch=54, velocity=61)
+Note(start=66.809739, end=69.967632, pitch=32, velocity=66)
+Note(start=66.809739, end=69.967632, pitch=44, velocity=66)
+Note(start=70.290212, end=70.612793, pitch=66, velocity=59)
+Note(start=70.290212, end=70.612793, pitch=72, velocity=59)
+Note(start=70.290212, end=70.612793, pitch=75, velocity=59)
+Note(start=70.290212, end=70.612793, pitch=78, velocity=59)
+Note(start=70.290212, end=70.612793, pitch=54, velocity=55)
+Note(start=70.290212, end=70.612793, pitch=60, velocity=55)
+Note(start=70.290212, end=70.612793, pitch=63, velocity=55)
+Note(start=70.612793, end=70.935373, pitch=66, velocity=70)
+Note(start=70.612793, end=70.935373, pitch=72, velocity=70)
+Note(start=70.612793, end=70.935373, pitch=75, velocity=70)
+Note(start=70.612793, end=70.935373, pitch=78, velocity=70)
+Note(start=70.612793, end=70.935373, pitch=54, velocity=58)
+Note(start=70.612793, end=70.935373, pitch=60, velocity=58)
+Note(start=70.612793, end=70.935373, pitch=63, velocity=58)
+Note(start=70.935373, end=71.247873, pitch=66, velocity=68)
+Note(start=70.935373, end=71.247873, pitch=72, velocity=68)
+Note(start=70.935373, end=71.247873, pitch=75, velocity=68)
+Note(start=70.935373, end=71.247873, pitch=78, velocity=68)
+Note(start=70.935373, end=71.247873, pitch=54, velocity=66)
+Note(start=70.935373, end=71.247873, pitch=60, velocity=66)
+Note(start=70.935373, end=71.247873, pitch=63, velocity=66)
+Note(start=71.247873, end=71.560373, pitch=72, velocity=76)
+Note(start=71.247873, end=71.560373, pitch=75, velocity=76)
+Note(start=71.247873, end=71.560373, pitch=60, velocity=63)
+Note(start=71.247873, end=71.560373, pitch=63, velocity=63)
+Note(start=71.247873, end=71.565256, pitch=66, velocity=76)
+Note(start=71.247873, end=71.565256, pitch=78, velocity=76)
+Note(start=71.247873, end=71.565256, pitch=54, velocity=63)
+Note(start=71.560373, end=71.872873, pitch=72, velocity=74)
+Note(start=71.560373, end=71.872873, pitch=75, velocity=74)
+Note(start=69.967632, end=71.872873, pitch=33, velocity=57)
+Note(start=69.967632, end=71.872873, pitch=45, velocity=57)
+Note(start=71.560373, end=71.872873, pitch=60, velocity=60)
+Note(start=71.560373, end=71.872873, pitch=63, velocity=60)
+Note(start=71.560373, end=71.878261, pitch=68, velocity=74)
+Note(start=71.560373, end=71.878261, pitch=80, velocity=74)
+Note(start=71.560373, end=71.878261, pitch=56, velocity=60)
+Note(start=71.872873, end=72.853475, pitch=66, velocity=70)
+Note(start=71.872873, end=72.853475, pitch=72, velocity=70)
+Note(start=71.872873, end=72.853475, pitch=75, velocity=70)
+Note(start=71.872873, end=72.853475, pitch=78, velocity=70)
+Note(start=71.872873, end=72.853475, pitch=54, velocity=59)
+Note(start=71.872873, end=72.853475, pitch=60, velocity=59)
+Note(start=71.872873, end=72.853475, pitch=63, velocity=59)
+Note(start=73.395159, end=73.890585, pitch=66, velocity=62)
+Note(start=73.395159, end=73.890585, pitch=78, velocity=62)
+Note(start=73.395159, end=73.890585, pitch=54, velocity=59)
+Note(start=73.395159, end=74.370768, pitch=61, velocity=52)
+Note(start=73.882963, end=74.378390, pitch=68, velocity=63)
+Note(start=73.882963, end=74.378390, pitch=80, velocity=63)
+Note(start=73.882963, end=74.378390, pitch=56, velocity=63)
+Note(start=73.395159, end=74.389823, pitch=58, velocity=52)
+Note(start=73.395159, end=74.866194, pitch=73, velocity=94)
+Note(start=74.370768, end=74.866194, pitch=73, velocity=76)
+Note(start=74.370768, end=74.866194, pitch=85, velocity=76)
+Note(start=74.370768, end=74.866194, pitch=61, velocity=71)
+Note(start=74.858572, end=74.866194, pitch=61, velocity=65)
+Note(start=74.858572, end=75.353999, pitch=70, velocity=70)
+Note(start=74.858572, end=75.353999, pitch=82, velocity=70)
+Note(start=74.858572, end=75.353999, pitch=58, velocity=73)
+Note(start=74.858572, end=75.784639, pitch=78, velocity=110)
+Note(start=75.346377, end=75.784639, pitch=78, velocity=64)
+Note(start=74.858572, end=75.784639, pitch=66, velocity=65)
+Note(start=75.346377, end=75.784639, pitch=66, velocity=64)
+Note(start=75.346377, end=75.807505, pitch=54, velocity=57)
+Note(start=72.907354, end=75.834181, pitch=34, velocity=77)
+Note(start=72.907354, end=75.834181, pitch=46, velocity=77)
+Note(start=76.146681, end=76.459181, pitch=66, velocity=68)
+Note(start=76.146681, end=76.459181, pitch=70, velocity=68)
+Note(start=76.146681, end=76.459181, pitch=75, velocity=68)
+Note(start=76.146681, end=76.459181, pitch=78, velocity=68)
+Note(start=76.146681, end=76.459181, pitch=54, velocity=57)
+Note(start=76.146681, end=76.459181, pitch=58, velocity=57)
+Note(start=76.146681, end=76.459181, pitch=63, velocity=57)
+Note(start=76.459181, end=76.771681, pitch=66, velocity=76)
+Note(start=76.459181, end=76.771681, pitch=70, velocity=76)
+Note(start=76.459181, end=76.771681, pitch=75, velocity=76)
+Note(start=76.459181, end=76.771681, pitch=78, velocity=76)
+Note(start=76.459181, end=76.771681, pitch=54, velocity=65)
+Note(start=76.459181, end=76.771681, pitch=58, velocity=65)
+Note(start=76.459181, end=76.771681, pitch=63, velocity=65)
+Note(start=76.771681, end=77.074711, pitch=66, velocity=82)
+Note(start=76.771681, end=77.074711, pitch=70, velocity=82)
+Note(start=76.771681, end=77.074711, pitch=75, velocity=82)
+Note(start=76.771681, end=77.074711, pitch=78, velocity=82)
+Note(start=76.771681, end=77.074711, pitch=54, velocity=64)
+Note(start=76.771681, end=77.074711, pitch=58, velocity=64)
+Note(start=76.771681, end=77.074711, pitch=63, velocity=64)
+Note(start=77.074711, end=77.382475, pitch=66, velocity=81)
+Note(start=77.074711, end=77.382475, pitch=70, velocity=81)
+Note(start=77.074711, end=77.382475, pitch=75, velocity=81)
+Note(start=77.074711, end=77.382475, pitch=78, velocity=81)
+Note(start=77.074711, end=77.382475, pitch=54, velocity=69)
+Note(start=77.074711, end=77.382475, pitch=58, velocity=69)
+Note(start=77.074711, end=77.382475, pitch=63, velocity=69)
+Note(start=75.834181, end=77.680770, pitch=36, velocity=70)
+Note(start=75.834181, end=77.680770, pitch=48, velocity=70)
+Note(start=77.377740, end=77.685730, pitch=68, velocity=95)
+Note(start=77.377740, end=77.685730, pitch=72, velocity=95)
+Note(start=77.377740, end=77.685730, pitch=77, velocity=95)
+Note(start=77.377740, end=77.685730, pitch=80, velocity=95)
+Note(start=77.377740, end=77.685730, pitch=56, velocity=78)
+Note(start=77.377740, end=77.685730, pitch=60, velocity=78)
+Note(start=77.377740, end=77.685730, pitch=65, velocity=78)
+Note(start=77.680770, end=78.583547, pitch=66, velocity=73)
+Note(start=77.680770, end=78.583547, pitch=70, velocity=73)
+Note(start=77.680770, end=78.583547, pitch=75, velocity=73)
+Note(start=77.680770, end=78.583547, pitch=78, velocity=73)
+Note(start=77.680770, end=78.583547, pitch=54, velocity=60)
+Note(start=77.680770, end=78.583547, pitch=58, velocity=60)
+Note(start=77.680770, end=78.583547, pitch=63, velocity=60)
+Note(start=79.109339, end=79.592969, pitch=66, velocity=66)
+Note(start=79.109339, end=79.592969, pitch=78, velocity=66)
+Note(start=79.109339, end=79.592969, pitch=54, velocity=69)
+Note(start=79.585529, end=80.069159, pitch=68, velocity=77)
+Note(start=79.585529, end=80.069159, pitch=80, velocity=77)
+Note(start=79.585529, end=80.069159, pitch=56, velocity=73)
+Note(start=79.109339, end=80.080320, pitch=58, velocity=66)
+Note(start=79.109339, end=80.080320, pitch=61, velocity=66)
+Note(start=80.061718, end=80.545348, pitch=75, velocity=87)
+Note(start=80.061718, end=80.545348, pitch=87, velocity=87)
+Note(start=80.061718, end=80.545348, pitch=63, velocity=83)
+Note(start=79.109339, end=80.563950, pitch=70, velocity=65)
+Note(start=80.537908, end=80.563950, pitch=70, velocity=63)
+Note(start=79.109339, end=80.563950, pitch=73, velocity=65)
+Note(start=80.537908, end=80.563950, pitch=73, velocity=72)
+Note(start=80.537908, end=81.021538, pitch=85, velocity=72)
+Note(start=80.537908, end=81.021538, pitch=61, velocity=80)
+Note(start=80.537908, end=81.441924, pitch=78, velocity=81)
+Note(start=80.537908, end=81.441924, pitch=82, velocity=81)
+Note(start=81.014097, end=81.441924, pitch=82, velocity=67)
+Note(start=80.537908, end=81.441924, pitch=66, velocity=63)
+Note(start=81.014097, end=81.441924, pitch=70, velocity=67)
+Note(start=81.014097, end=81.464245, pitch=58, velocity=68)
+Note(start=78.633150, end=81.490287, pitch=37, velocity=75)
+Note(start=78.633150, end=81.490287, pitch=49, velocity=75)
+Note(start=81.797978, end=82.105670, pitch=70, velocity=63)
+Note(start=81.797978, end=82.105670, pitch=78, velocity=63)
+Note(start=81.797978, end=82.105670, pitch=82, velocity=63)
+Note(start=81.797978, end=82.105670, pitch=58, velocity=64)
+Note(start=81.797978, end=82.105670, pitch=61, velocity=64)
+Note(start=81.797978, end=82.105670, pitch=66, velocity=64)
+Note(start=82.105670, end=82.408699, pitch=70, velocity=77)
+Note(start=82.105670, end=82.408699, pitch=78, velocity=77)
+Note(start=82.105670, end=82.408699, pitch=82, velocity=77)
+Note(start=82.105670, end=82.408699, pitch=58, velocity=76)
+Note(start=82.105670, end=82.408699, pitch=61, velocity=76)
+Note(start=82.105670, end=82.408699, pitch=66, velocity=76)
+Note(start=82.408699, end=82.707206, pitch=70, velocity=74)
+Note(start=82.408699, end=82.707206, pitch=78, velocity=74)
+Note(start=82.408699, end=82.707206, pitch=82, velocity=74)
+Note(start=82.408699, end=82.707206, pitch=58, velocity=68)
+Note(start=82.408699, end=82.707206, pitch=61, velocity=68)
+Note(start=82.408699, end=82.707206, pitch=66, velocity=68)
+Note(start=82.707206, end=83.010378, pitch=70, velocity=78)
+Note(start=82.707206, end=83.010378, pitch=78, velocity=78)
+Note(start=82.707206, end=83.010378, pitch=82, velocity=78)
+Note(start=82.707206, end=83.010378, pitch=58, velocity=68)
+Note(start=82.707206, end=83.010378, pitch=61, velocity=68)
+Note(start=82.707206, end=83.010378, pitch=66, velocity=68)
+Note(start=81.490287, end=83.304220, pitch=39, velocity=74)
+Note(start=81.490287, end=83.304220, pitch=51, velocity=74)
+Note(start=83.005713, end=83.309181, pitch=72, velocity=86)
+Note(start=83.005713, end=83.309181, pitch=80, velocity=86)
+Note(start=83.005713, end=83.309181, pitch=84, velocity=86)
+Note(start=83.005713, end=83.309181, pitch=60, velocity=73)
+Note(start=83.005713, end=83.309181, pitch=63, velocity=73)
+Note(start=83.005713, end=83.309181, pitch=68, velocity=73)
+Note(start=83.304220, end=83.621680, pitch=82, velocity=76)
+Note(start=83.304220, end=83.621680, pitch=61, velocity=70)
+Note(start=83.304220, end=83.621680, pitch=66, velocity=70)
+Note(start=83.304220, end=83.626803, pitch=70, velocity=76)
+Note(start=83.621680, end=83.626803, pitch=70, velocity=73)
+Note(start=83.304220, end=83.626803, pitch=78, velocity=76)
+Note(start=83.304220, end=83.626803, pitch=58, velocity=70)
+Note(start=83.621680, end=83.949548, pitch=82, velocity=89)
+Note(start=83.621680, end=83.949548, pitch=66, velocity=73)
+Note(start=83.621680, end=83.954671, pitch=73, velocity=89)
+Note(start=83.621680, end=83.954671, pitch=85, velocity=89)
+Note(start=83.621680, end=83.954671, pitch=61, velocity=73)
+Note(start=83.949548, end=84.259486, pitch=75, velocity=89)
+Note(start=83.949548, end=84.259486, pitch=82, velocity=89)
+Note(start=83.949548, end=84.259486, pitch=87, velocity=89)
+Note(start=83.949548, end=84.259486, pitch=63, velocity=73)
+Note(start=83.949548, end=84.259486, pitch=66, velocity=73)
+Note(start=83.949548, end=84.259486, pitch=70, velocity=73)
+Note(start=84.277416, end=86.244624, pitch=80, velocity=78)
+Note(start=84.356822, end=86.244624, pitch=85, velocity=78)
+Note(start=84.436228, end=86.244624, pitch=92, velocity=78)
+Note(start=84.356822, end=86.244624, pitch=68, velocity=107)
+Note(start=84.436228, end=86.244624, pitch=73, velocity=107)
+Note(start=84.515633, end=86.279646, pitch=77, velocity=107)
+Note(start=84.277416, end=86.285034, pitch=65, velocity=107)
+Note(start=86.244624, end=87.279105, pitch=80, velocity=77)
+Note(start=86.322749, end=87.279105, pitch=85, velocity=77)
+Note(start=86.400874, end=87.279105, pitch=92, velocity=77)
+Note(start=86.322749, end=87.279105, pitch=68, velocity=79)
+Note(start=86.478999, end=87.279105, pitch=73, velocity=79)
+Note(start=86.557124, end=87.293310, pitch=76, velocity=79)
+Note(start=86.400874, end=87.296151, pitch=70, velocity=79)
+Note(start=86.244624, end=87.298992, pitch=64, velocity=79)
+Note(start=87.279105, end=89.350123, pitch=63, velocity=62)
+Note(start=87.358651, end=89.355805, pitch=66, velocity=62)
+Note(start=87.438196, end=89.358646, pitch=68, velocity=62)
+Note(start=87.517741, end=89.361487, pitch=73, velocity=62)
+Note(start=87.597287, end=89.367169, pitch=75, velocity=62)
+Note(start=87.279105, end=89.460918, pitch=80, velocity=69)
+Note(start=87.358651, end=89.460918, pitch=85, velocity=69)
+Note(start=87.438196, end=89.460918, pitch=92, velocity=69)
+Note(start=89.460918, end=91.082540, pitch=68, velocity=59)
+Note(start=89.536932, end=91.082540, pitch=75, velocity=59)
+Note(start=89.612945, end=91.082540, pitch=80, velocity=59)
+Note(start=89.460918, end=91.082540, pitch=56, velocity=57)
+Note(start=89.536932, end=91.082540, pitch=63, velocity=52)
+Note(start=89.612945, end=91.082540, pitch=66, velocity=51)
+Note(start=89.688959, end=91.082540, pitch=72, velocity=51)
+Note(start=91.238790, end=91.397481, pitch=44, velocity=40)
+Note(start=91.395040, end=91.553731, pitch=49, velocity=40)
+Note(start=91.551290, end=91.709981, pitch=53, velocity=42)
+Note(start=91.707540, end=91.866231, pitch=56, velocity=43)
+Note(start=91.082540, end=91.971212, pitch=37, velocity=35)
+Note(start=91.863790, end=92.010274, pitch=61, velocity=52)
+Note(start=92.176290, end=92.334981, pitch=48, velocity=41)
+Note(start=92.332540, end=92.491231, pitch=53, velocity=46)
+Note(start=92.488790, end=92.647481, pitch=56, velocity=42)
+Note(start=92.645040, end=92.803731, pitch=60, velocity=49)
+Note(start=92.020040, end=92.908712, pitch=41, velocity=36)
+Note(start=91.082540, end=92.947774, pitch=65, velocity=34)
+Note(start=92.801290, end=92.947774, pitch=65, velocity=48)
+Note(start=91.082540, end=92.957540, pitch=68, velocity=34)
+Note(start=93.124206, end=93.293477, pitch=52, velocity=42)
+Note(start=93.290872, end=93.460233, pitch=56, velocity=44)
+Note(start=93.457539, end=93.632646, pitch=59, velocity=45)
+Note(start=92.957540, end=93.643422, pitch=68, velocity=60)
+Note(start=92.957540, end=93.643422, pitch=71, velocity=60)
+Note(start=93.629952, end=93.805060, pitch=64, velocity=51)
+Note(start=92.957540, end=93.920900, pitch=44, velocity=38)
+Note(start=93.629952, end=93.955921, pitch=73, velocity=65)
+Note(start=93.802366, end=93.964003, pitch=68, velocity=48)
+Note(start=94.136069, end=94.297280, pitch=44, velocity=46)
+Note(start=94.294799, end=94.455971, pitch=49, velocity=52)
+Note(start=94.453529, end=94.612221, pitch=53, velocity=46)
+Note(start=94.609779, end=94.768471, pitch=56, velocity=52)
+Note(start=93.974779, end=94.873451, pitch=37, velocity=38)
+Note(start=94.766029, end=94.912514, pitch=61, velocity=49)
+Note(start=95.078529, end=95.237221, pitch=48, velocity=46)
+Note(start=95.234779, end=95.393471, pitch=53, velocity=50)
+Note(start=95.391029, end=95.549721, pitch=56, velocity=49)
+Note(start=95.547279, end=95.705971, pitch=60, velocity=54)
+Note(start=94.922279, end=95.810951, pitch=41, velocity=41)
+Note(start=93.974779, end=95.850014, pitch=65, velocity=50)
+Note(start=95.703529, end=95.850014, pitch=65, velocity=46)
+Note(start=93.974779, end=95.859779, pitch=68, velocity=50)
+Note(start=96.018509, end=96.179720, pitch=52, velocity=44)
+Note(start=96.177239, end=96.338450, pitch=56, velocity=47)
+Note(start=95.859779, end=96.494699, pitch=68, velocity=70)
+Note(start=96.335969, end=96.497180, pitch=59, velocity=40)
+Note(start=95.859779, end=96.507100, pitch=71, velocity=70)
+Note(start=96.494699, end=96.655910, pitch=68, velocity=64)
+Note(start=96.494699, end=96.655910, pitch=68, velocity=50)
+Note(start=95.859779, end=96.762556, pitch=44, velocity=35)
+Note(start=96.653429, end=96.802239, pitch=64, velocity=37)
+Note(start=96.812159, end=96.975970, pitch=37, velocity=40)
+Note(start=96.973450, end=97.137220, pitch=44, velocity=46)
+Note(start=97.134740, end=97.295950, pitch=49, velocity=49)
+Note(start=97.293470, end=97.454680, pitch=53, velocity=52)
+Note(start=96.812159, end=97.464601, pitch=65, velocity=75)
+Note(start=96.812159, end=97.464601, pitch=73, velocity=75)
+Note(start=97.452200, end=97.613410, pitch=56, velocity=45)
+Note(start=97.610930, end=97.772101, pitch=61, velocity=49)
+Note(start=97.452200, end=97.774543, pitch=68, velocity=69)
+Note(start=97.452200, end=97.774543, pitch=75, velocity=69)
+Note(start=97.769660, end=97.928351, pitch=65, velocity=50)
+Note(start=97.925910, end=98.084601, pitch=68, velocity=60)
+Note(start=98.082160, end=98.240851, pitch=65, velocity=44)
+Note(start=98.238410, end=98.397101, pitch=61, velocity=40)
+Note(start=98.394660, end=98.553314, pitch=56, velocity=40)
+Note(start=97.769660, end=98.704756, pitch=73, velocity=69)
+Note(start=98.550910, end=98.707160, pitch=53, velocity=41)
+Note(start=97.769660, end=98.721583, pitch=77, velocity=69)
+Note(start=98.704756, end=98.861005, pitch=56, velocity=40)
+Note(start=98.858601, end=99.014851, pitch=53, velocity=41)
+Note(start=99.012447, end=99.168697, pitch=49, velocity=41)
+Note(start=98.704756, end=99.320139, pitch=73, velocity=59)
+Note(start=99.166293, end=99.322543, pitch=44, velocity=34)
+Note(start=98.704756, end=99.332158, pitch=65, velocity=59)
+Note(start=99.320139, end=99.476388, pitch=49, velocity=42)
+Note(start=99.320139, end=99.611003, pitch=73, velocity=76)
+Note(start=99.320139, end=99.611003, pitch=77, velocity=76)
+Note(start=99.473984, end=99.618215, pitch=44, velocity=41)
+Note(start=99.627830, end=99.784080, pitch=39, velocity=38)
+Note(start=99.781676, end=99.937926, pitch=46, velocity=47)
+Note(start=99.627830, end=99.940329, pitch=75, velocity=79)
+Note(start=99.627830, end=99.940329, pitch=79, velocity=79)
+Note(start=99.935522, end=100.091771, pitch=51, velocity=44)
+Note(start=99.935522, end=100.243213, pitch=73, velocity=71)
+Note(start=100.089367, end=100.245617, pitch=55, velocity=45)
+Note(start=99.935522, end=100.248021, pitch=77, velocity=71)
+Note(start=100.243213, end=100.399463, pitch=58, velocity=41)
+Note(start=100.243213, end=100.550905, pitch=70, velocity=63)
+Note(start=100.243213, end=100.550905, pitch=73, velocity=63)
+Note(start=100.397059, end=100.553346, pitch=63, velocity=50)
+Note(start=100.550905, end=100.709596, pitch=67, velocity=45)
+Note(start=100.550905, end=100.709596, pitch=67, velocity=47)
+Note(start=100.707155, end=100.865846, pitch=63, velocity=45)
+Note(start=100.863405, end=101.022096, pitch=58, velocity=38)
+Note(start=101.019655, end=101.178425, pitch=55, velocity=37)
+Note(start=100.863405, end=101.180945, pitch=65, velocity=55)
+Note(start=101.175905, end=101.339715, pitch=51, velocity=40)
+Note(start=100.550905, end=101.400199, pitch=70, velocity=69)
+Note(start=100.550905, end=101.400199, pitch=73, velocity=69)
+Note(start=101.175905, end=101.498485, pitch=61, velocity=47)
+Note(start=101.337195, end=101.501005, pitch=46, velocity=38)
+Note(start=101.498485, end=101.662296, pitch=39, velocity=38)
+Note(start=101.659775, end=101.823670, pitch=46, velocity=44)
+Note(start=101.821066, end=101.990336, pitch=51, velocity=44)
+Note(start=101.498485, end=101.995544, pitch=61, velocity=58)
+Note(start=101.987732, end=102.157002, pitch=55, velocity=42)
+Note(start=102.154398, end=102.323669, pitch=51, velocity=41)
+Note(start=101.987732, end=102.461689, pitch=58, velocity=55)
+Note(start=102.321064, end=102.477314, pitch=46, velocity=36)
+Note(start=102.649021, end=102.812753, pitch=51, velocity=54)
+Note(start=102.810311, end=102.969003, pitch=54, velocity=55)
+Note(start=102.966561, end=103.125253, pitch=58, velocity=53)
+Note(start=103.122811, end=103.281503, pitch=60, velocity=55)
+Note(start=102.487731, end=103.386483, pitch=44, velocity=50)
+Note(start=103.279061, end=103.425546, pitch=66, velocity=63)
+Note(start=103.591561, end=103.750253, pitch=49, velocity=48)
+Note(start=103.747811, end=103.906503, pitch=54, velocity=51)
+Note(start=103.904061, end=104.062753, pitch=58, velocity=48)
+Note(start=104.060311, end=104.219003, pitch=61, velocity=56)
+Note(start=103.435311, end=104.323983, pitch=42, velocity=44)
+Note(start=104.216561, end=104.363046, pitch=66, velocity=55)
+Note(start=102.487731, end=104.409432, pitch=70, velocity=53)
+Note(start=104.532133, end=104.695943, pitch=48, velocity=53)
+Note(start=104.693423, end=104.857233, pitch=53, velocity=58)
+Note(start=104.854713, end=105.018524, pitch=56, velocity=62)
+Note(start=104.372811, end=105.028604, pitch=72, velocity=76)
+Note(start=105.016003, end=105.167213, pitch=68, velocity=63)
+Note(start=105.016003, end=105.167213, pitch=60, velocity=67)
+Note(start=104.372811, end=105.288181, pitch=41, velocity=51)
+Note(start=105.016003, end=105.320943, pitch=77, velocity=86)
+Note(start=105.177294, end=105.338584, pitch=65, velocity=46)
+Note(start=105.499874, end=105.661084, pitch=51, velocity=55)
+Note(start=105.658604, end=105.819814, pitch=54, velocity=57)
+Note(start=105.817334, end=105.978544, pitch=58, velocity=52)
+Note(start=105.976064, end=106.137274, pitch=60, velocity=56)
+Note(start=105.338584, end=106.243921, pitch=44, velocity=41)
+Note(start=106.134794, end=106.283603, pitch=66, velocity=62)
+Note(start=106.452254, end=106.608504, pitch=49, velocity=46)
+Note(start=106.606100, end=106.762349, pitch=54, velocity=48)
+Note(start=106.759946, end=106.916195, pitch=58, velocity=44)
+Note(start=106.913791, end=107.070041, pitch=61, velocity=47)
+Note(start=106.293524, end=107.173406, pitch=42, velocity=43)
+Note(start=107.067637, end=107.211867, pitch=66, velocity=50)
+Note(start=105.338584, end=107.257540, pitch=70, velocity=60)
+Note(start=107.375329, end=107.534020, pitch=48, velocity=54)
+Note(start=107.531579, end=107.690270, pitch=53, velocity=59)
+Note(start=107.687829, end=107.846520, pitch=56, velocity=51)
+Note(start=107.221483, end=107.856286, pitch=72, velocity=72)
+Note(start=107.844079, end=107.990563, pitch=68, velocity=52)
+Note(start=107.844079, end=107.990563, pitch=60, velocity=59)
+Note(start=107.221483, end=108.107750, pitch=41, velocity=49)
+Note(start=107.844079, end=108.139489, pitch=77, velocity=82)
+Note(start=108.000329, end=108.156579, pitch=65, velocity=48)
+Note(start=108.312829, end=108.474039, pitch=46, velocity=64)
+Note(start=108.471559, end=108.632769, pitch=51, velocity=69)
+Note(start=108.630289, end=108.791499, pitch=54, velocity=67)
+Note(start=108.789019, end=108.950229, pitch=58, velocity=74)
+Note(start=108.156579, end=109.056875, pitch=39, velocity=59)
+Note(start=108.947749, end=109.096558, pitch=63, velocity=62)
+Note(start=108.156579, end=109.141201, pitch=78, velocity=76)
+Note(start=109.106479, end=109.421458, pitch=66, velocity=66)
+Note(start=109.265209, end=109.421458, pitch=66, velocity=76)
+Note(start=109.429143, end=109.595638, pitch=70, velocity=78)
+Note(start=109.757011, end=109.923506, pitch=66, velocity=56)
+Note(start=109.920945, end=110.087440, pitch=70, velocity=63)
+Note(start=109.593077, end=110.092563, pitch=77, velocity=83)
+Note(start=109.593077, end=110.092563, pitch=65, velocity=67)
+Note(start=110.248813, end=110.418083, pitch=66, velocity=59)
+Note(start=110.415479, end=110.584749, pitch=70, velocity=67)
+Note(start=110.084879, end=110.589958, pitch=74, velocity=80)
+Note(start=110.084879, end=110.589958, pitch=62, velocity=53)
+Note(start=110.748811, end=110.905061, pitch=66, velocity=58)
+Note(start=110.582145, end=111.056102, pitch=75, velocity=87)
+Note(start=110.582145, end=111.056102, pitch=63, velocity=54)
+Note(start=110.915478, end=111.082144, pitch=70, velocity=75)
+Note(start=111.246078, end=111.412573, pitch=66, velocity=65)
+Note(start=111.410012, end=111.573946, pitch=70, velocity=72)
+Note(start=111.573946, end=111.740441, pitch=70, velocity=57)
+Note(start=111.737880, end=111.904462, pitch=78, velocity=66)
+Note(start=111.082144, end=112.018339, pitch=62, velocity=58)
+Note(start=111.082144, end=112.060712, pitch=82, velocity=104)
+Note(start=111.901814, end=112.060712, pitch=82, velocity=67)
+Note(start=112.240796, end=112.412936, pitch=66, velocity=51)
+Note(start=112.410288, end=112.579779, pitch=70, velocity=54)
+Note(start=112.579779, end=112.751964, pitch=70, velocity=53)
+Note(start=112.749270, end=112.924378, pitch=78, velocity=64)
+Note(start=112.071305, end=113.040218, pitch=63, velocity=48)
+Note(start=112.921684, end=113.083321, pitch=82, velocity=49)
+Note(start=113.094097, end=113.269205, pitch=60, velocity=44)
+Note(start=113.266511, end=113.441618, pitch=64, velocity=48)
+Note(start=113.438924, end=113.614128, pitch=68, velocity=70)
+Note(start=113.611338, end=113.792699, pitch=72, velocity=77)
+Note(start=113.789909, end=113.971270, pitch=76, velocity=70)
+Note(start=113.094097, end=114.091248, pitch=80, velocity=100)
+Note(start=113.968480, end=114.091248, pitch=80, velocity=76)
+Note(start=113.094097, end=114.091248, pitch=56, velocity=47)
+Note(start=114.308072, end=114.471882, pitch=56, velocity=65)
+Note(start=114.469362, end=114.633132, pitch=61, velocity=68)
+Note(start=114.630652, end=114.791862, pitch=65, velocity=69)
+Note(start=114.789382, end=114.950592, pitch=68, velocity=77)
+Note(start=114.146781, end=115.057239, pitch=49, velocity=57)
+Note(start=114.948112, end=115.096921, pitch=73, velocity=76)
+Note(start=115.106842, end=115.268052, pitch=56, velocity=54)
+Note(start=115.265572, end=115.426782, pitch=60, velocity=65)
+Note(start=115.424302, end=115.585512, pitch=65, velocity=75)
+Note(start=115.583032, end=115.744242, pitch=68, velocity=65)
+Note(start=115.741762, end=115.902972, pitch=72, velocity=72)
+Note(start=115.106842, end=116.010259, pitch=53, velocity=52)
+Note(start=114.146781, end=116.050582, pitch=77, velocity=78)
+Note(start=115.900492, end=116.050582, pitch=77, velocity=74)
+Note(start=114.146781, end=116.060662, pitch=80, velocity=78)
+Note(start=116.060662, end=116.224473, pitch=59, velocity=52)
+Note(start=116.221952, end=116.385763, pitch=64, velocity=68)
+Note(start=116.383243, end=116.547053, pitch=68, velocity=77)
+Note(start=116.544533, end=116.708343, pitch=71, velocity=72)
+Note(start=116.060662, end=116.718424, pitch=80, velocity=94)
+Note(start=116.060662, end=116.718424, pitch=83, velocity=94)
+Note(start=116.705823, end=116.869634, pitch=76, velocity=80)
+Note(start=116.060662, end=116.978001, pitch=56, velocity=50)
+Note(start=116.705823, end=117.010763, pitch=85, velocity=92)
+Note(start=116.867113, end=117.018323, pitch=80, velocity=72)
+Note(start=117.189694, end=117.353504, pitch=56, velocity=53)
+Note(start=117.350984, end=117.514795, pitch=61, velocity=62)
+Note(start=117.512274, end=117.676085, pitch=65, velocity=64)
+Note(start=117.673565, end=117.837335, pitch=68, velocity=68)
+Note(start=117.028404, end=117.943982, pitch=49, velocity=52)
+Note(start=117.834855, end=117.983664, pitch=73, velocity=77)
+Note(start=117.993585, end=118.154795, pitch=56, velocity=54)
+Note(start=118.152315, end=118.313486, pitch=60, velocity=64)
+Note(start=118.311045, end=118.469736, pitch=65, velocity=70)
+Note(start=118.467295, end=118.625986, pitch=68, velocity=80)
+Note(start=118.623545, end=118.782275, pitch=72, velocity=68)
+Note(start=117.993585, end=118.888922, pitch=53, velocity=52)
+Note(start=117.028404, end=118.928604, pitch=77, velocity=74)
+Note(start=118.779795, end=118.928604, pitch=77, velocity=77)
+Note(start=117.028404, end=118.938525, pitch=80, velocity=74)
+Note(start=118.938525, end=119.099775, pitch=59, velocity=54)
+Note(start=119.097255, end=119.261065, pitch=64, velocity=63)
+Note(start=119.258545, end=119.422356, pitch=68, velocity=71)
+Note(start=118.938525, end=119.581126, pitch=80, velocity=87)
+Note(start=119.419835, end=119.583646, pitch=71, velocity=68)
+Note(start=118.938525, end=119.593727, pitch=83, velocity=87)
+Note(start=119.581126, end=119.744936, pitch=80, velocity=81)
+Note(start=119.581126, end=119.744936, pitch=80, velocity=86)
+Note(start=118.938525, end=119.853303, pitch=56, velocity=49)
+Note(start=119.742416, end=119.893626, pitch=76, velocity=60)
+Note(start=119.903627, end=120.062319, pitch=61, velocity=31)
+Note(start=120.059877, end=120.218569, pitch=64, velocity=59)
+Note(start=120.216127, end=120.374819, pitch=68, velocity=64)
+Note(start=120.372377, end=120.531069, pitch=73, velocity=46)
+Note(start=119.903627, end=120.540835, pitch=85, velocity=80)
+Note(start=119.903627, end=120.790646, pitch=59, velocity=53)
+Note(start=120.372377, end=120.814685, pitch=71, velocity=58)
+Note(start=120.528627, end=120.821896, pitch=80, velocity=60)
+Note(start=120.684877, end=120.838723, pitch=76, velocity=58)
+Note(start=120.838723, end=120.994973, pitch=64, velocity=44)
+Note(start=120.992569, end=121.148819, pitch=68, velocity=59)
+Note(start=121.146415, end=121.302664, pitch=71, velocity=65)
+Note(start=121.300260, end=121.456510, pitch=76, velocity=52)
+Note(start=120.838723, end=121.466125, pitch=88, velocity=96)
+Note(start=120.838723, end=121.713721, pitch=61, velocity=59)
+Note(start=121.300260, end=121.737759, pitch=73, velocity=65)
+Note(start=121.454106, end=121.744971, pitch=85, velocity=75)
+Note(start=121.607952, end=121.761798, pitch=80, velocity=63)
+Note(start=121.761798, end=121.915680, pitch=68, velocity=52)
+Note(start=121.913312, end=122.067195, pitch=71, velocity=59)
+Note(start=122.064827, end=122.218709, pitch=73, velocity=63)
+Note(start=122.216342, end=122.370224, pitch=80, velocity=56)
+Note(start=121.761798, end=122.379694, pitch=92, velocity=100)
+Note(start=121.761798, end=122.623538, pitch=64, velocity=64)
+Note(start=122.216342, end=122.647212, pitch=76, velocity=64)
+Note(start=122.367857, end=122.654314, pitch=88, velocity=94)
+Note(start=122.519371, end=122.670886, pitch=83, velocity=64)
+Note(start=122.824732, end=122.980982, pitch=69, velocity=47)
+Note(start=122.978578, end=123.134827, pitch=73, velocity=56)
+Note(start=123.132423, end=123.288673, pitch=80, velocity=55)
+Note(start=123.286269, end=123.442519, pitch=85, velocity=63)
+Note(start=122.670886, end=123.545884, pitch=68, velocity=46)
+Note(start=123.440115, end=123.584345, pitch=81, velocity=43)
+Note(start=122.670886, end=123.610788, pitch=92, velocity=92)
+Note(start=123.747806, end=123.906498, pitch=69, velocity=46)
+Note(start=123.904056, end=124.062748, pitch=73, velocity=53)
+Note(start=124.060306, end=124.218998, pitch=78, velocity=59)
+Note(start=124.216556, end=124.375248, pitch=85, velocity=70)
+Note(start=123.593961, end=124.480228, pitch=66, velocity=46)
+Note(start=124.372806, end=124.519291, pitch=81, velocity=36)
+Note(start=124.529056, end=124.687748, pitch=66, velocity=50)
+Note(start=124.685306, end=124.843998, pitch=69, velocity=53)
+Note(start=124.841556, end=125.000248, pitch=73, velocity=72)
+Note(start=124.997806, end=125.156498, pitch=78, velocity=84)
+Note(start=125.154056, end=125.312748, pitch=85, velocity=76)
+Note(start=123.593961, end=125.371342, pitch=90, velocity=94)
+Note(start=124.529056, end=125.417728, pitch=65, velocity=63)
+Note(start=125.310306, end=125.456791, pitch=81, velocity=70)
+Note(start=125.466556, end=125.625248, pitch=66, velocity=43)
+Note(start=125.622806, end=125.781498, pitch=69, velocity=61)
+Note(start=125.779056, end=125.937748, pitch=73, velocity=68)
+Note(start=125.935306, end=126.093998, pitch=78, velocity=72)
+Note(start=126.091556, end=126.250248, pitch=85, velocity=69)
+Note(start=125.466556, end=126.355228, pitch=64, velocity=56)
+Note(start=126.247806, end=126.394291, pitch=81, velocity=68)
+Note(start=126.404056, end=126.562748, pitch=66, velocity=41)
+Note(start=126.560306, end=126.718998, pitch=69, velocity=63)
+Note(start=126.716556, end=126.875287, pitch=73, velocity=69)
+Note(start=126.872806, end=127.034017, pitch=78, velocity=66)
+Note(start=127.031536, end=127.192747, pitch=85, velocity=74)
+Note(start=126.404056, end=127.299393, pitch=63, velocity=57)
+Note(start=127.190266, end=127.339076, pitch=81, velocity=74)
+Note(start=125.466556, end=127.386199, pitch=90, velocity=83)
+Note(start=127.348996, end=127.510207, pitch=64, velocity=47)
+Note(start=127.507726, end=127.668937, pitch=69, velocity=66)
+Note(start=127.666456, end=127.827667, pitch=73, velocity=75)
+Note(start=127.825186, end=127.986397, pitch=76, velocity=69)
+Note(start=127.348996, end=127.996317, pitch=93, velocity=99)
+Note(start=127.983916, end=128.145127, pitch=97, velocity=91)
+Note(start=127.983916, end=128.145127, pitch=97, velocity=91)
+Note(start=127.348996, end=128.251773, pitch=61, velocity=53)
+Note(start=128.142646, end=128.291456, pitch=85, velocity=46)
+Note(start=128.460106, end=128.618836, pitch=63, velocity=71)
+Note(start=128.618836, end=128.777566, pitch=66, velocity=65)
+Note(start=128.777566, end=128.936296, pitch=66, velocity=63)
+Note(start=128.936296, end=129.095026, pitch=73, velocity=72)
+Note(start=128.301376, end=129.253756, pitch=59, velocity=50)
+Note(start=129.095026, end=129.253756, pitch=69, velocity=55)
+Note(start=129.412486, end=129.571216, pitch=61, velocity=74)
+Note(start=129.571216, end=129.729946, pitch=64, velocity=64)
+Note(start=129.729946, end=129.888676, pitch=66, velocity=67)
+Note(start=129.888676, end=130.047406, pitch=73, velocity=74)
+Note(start=129.253756, end=130.206136, pitch=57, velocity=53)
+Note(start=130.047406, end=130.206136, pitch=69, velocity=58)
+Note(start=128.301376, end=130.247989, pitch=78, velocity=74)
+Note(start=130.384708, end=130.563279, pitch=61, velocity=67)
+Note(start=130.563279, end=130.741850, pitch=64, velocity=65)
+Note(start=130.741850, end=130.920421, pitch=69, velocity=72)
+Note(start=130.206136, end=130.934372, pitch=81, velocity=97)
+Note(start=130.920421, end=131.098993, pitch=76, velocity=73)
+Note(start=130.920421, end=131.258033, pitch=85, velocity=107)
+Note(start=130.206136, end=131.277141, pitch=56, velocity=54)
+Note(start=131.098993, end=131.277141, pitch=81, velocity=73)
+Note(start=131.277141, end=131.580171, pitch=85, velocity=111)
+Note(start=131.277141, end=131.580171, pitch=88, velocity=111)
+Note(start=131.428656, end=131.582538, pitch=61, velocity=69)
+Note(start=131.580171, end=131.734053, pitch=64, velocity=74)
+Note(start=131.580171, end=131.883200, pitch=83, velocity=95)
+Note(start=131.580171, end=131.883200, pitch=87, velocity=95)
+Note(start=131.731685, end=131.885604, pitch=66, velocity=69)
+Note(start=131.883200, end=132.039450, pitch=69, velocity=78)
+Note(start=131.883200, end=132.190892, pitch=81, velocity=89)
+Note(start=131.883200, end=132.190892, pitch=85, velocity=89)
+Note(start=132.037046, end=132.193296, pitch=73, velocity=67)
+Note(start=132.190892, end=132.347141, pitch=76, velocity=76)
+Note(start=132.344737, end=132.501025, pitch=78, velocity=66)
+Note(start=132.190892, end=132.654833, pitch=80, velocity=84)
+Note(start=132.190892, end=132.654833, pitch=83, velocity=84)
+Note(start=132.498583, end=132.657275, pitch=76, velocity=63)
+Note(start=132.654833, end=132.813525, pitch=73, velocity=56)
+Note(start=132.811083, end=132.969775, pitch=69, velocity=47)
+Note(start=132.967333, end=133.113818, pitch=66, velocity=56)
+Note(start=133.123583, end=133.279833, pitch=64, velocity=54)
+Note(start=132.654833, end=133.436083, pitch=78, velocity=77)
+Note(start=132.654833, end=133.436083, pitch=81, velocity=77)
+Note(start=133.279833, end=133.436083, pitch=66, velocity=61)
+Note(start=133.436083, end=133.592333, pitch=64, velocity=57)
+Note(start=133.436083, end=133.748583, pitch=76, velocity=69)
+Note(start=133.436083, end=133.748583, pitch=80, velocity=69)
+Note(start=133.592333, end=133.748583, pitch=61, velocity=53)
+Note(start=133.748583, end=133.904833, pitch=57, velocity=57)
+Note(start=133.748583, end=134.061083, pitch=75, velocity=70)
+Note(start=133.748583, end=134.061083, pitch=78, velocity=70)
+Note(start=131.277141, end=134.061083, pitch=54, velocity=58)
+Note(start=133.904833, end=134.061083, pitch=54, velocity=58)
+Note(start=134.061083, end=134.222293, pitch=42, velocity=41)
+Note(start=134.061083, end=134.378543, pitch=73, velocity=66)
+Note(start=134.061083, end=134.378543, pitch=76, velocity=66)
+Note(start=134.219813, end=134.381023, pitch=49, velocity=47)
+Note(start=134.378543, end=134.539753, pitch=52, velocity=56)
+Note(start=134.378543, end=134.696003, pitch=71, velocity=62)
+Note(start=134.378543, end=134.696003, pitch=75, velocity=62)
+Note(start=134.537273, end=134.698483, pitch=54, velocity=59)
+Note(start=134.696003, end=134.857213, pitch=57, velocity=56)
+Note(start=134.696003, end=135.013463, pitch=69, velocity=64)
+Note(start=134.696003, end=135.013463, pitch=73, velocity=64)
+Note(start=134.854733, end=135.015943, pitch=61, velocity=61)
+Note(start=135.013463, end=135.174755, pitch=64, velocity=55)
+Note(start=135.013463, end=135.336127, pitch=68, velocity=60)
+Note(start=135.013463, end=135.336127, pitch=71, velocity=60)
+Note(start=135.172193, end=135.338689, pitch=61, velocity=51)
+Note(start=135.336127, end=135.502623, pitch=57, velocity=50)
+Note(start=135.336127, end=135.663995, pitch=66, velocity=65)
+Note(start=135.336127, end=135.663995, pitch=69, velocity=65)
+Note(start=135.500061, end=135.666557, pitch=54, velocity=46)
+Note(start=135.663995, end=135.830491, pitch=52, velocity=48)
+Note(start=135.827929, end=135.981617, pitch=49, velocity=51)
+Note(start=135.991863, end=136.158359, pitch=42, velocity=42)
+Note(start=135.663995, end=136.319731, pitch=64, velocity=61)
+Note(start=135.663995, end=136.319731, pitch=68, velocity=61)
+Note(start=136.155797, end=136.322293, pitch=49, velocity=46)
+Note(start=136.319731, end=136.486359, pitch=42, velocity=47)
+Note(start=136.319731, end=136.656079, pitch=63, velocity=59)
+Note(start=136.319731, end=136.656079, pitch=66, velocity=59)
+Note(start=136.483665, end=136.658773, pitch=49, velocity=52)
+Note(start=136.656079, end=136.831186, pitch=42, velocity=47)
+Note(start=136.828492, end=136.990130, pitch=49, velocity=50)
+Note(start=135.991863, end=137.000906, pitch=57, velocity=50)
+Note(start=136.656079, end=137.000906, pitch=61, velocity=58)
+Note(start=136.656079, end=137.000906, pitch=64, velocity=58)
+Note(start=137.000906, end=137.176013, pitch=44, velocity=48)
+Note(start=137.173319, end=137.348427, pitch=51, velocity=57)
+Note(start=137.345733, end=137.520840, pitch=44, velocity=50)
+Note(start=137.518146, end=137.693254, pitch=51, velocity=55)
+Note(start=137.000906, end=137.717499, pitch=54, velocity=61)
+Note(start=137.690560, end=137.865667, pitch=44, velocity=46)
+Note(start=137.862973, end=138.038081, pitch=51, velocity=51)
+Note(start=137.690560, end=138.046163, pitch=56, velocity=58)
+Note(start=138.035387, end=138.210494, pitch=44, velocity=50)
+Note(start=138.207800, end=138.382908, pitch=51, velocity=46)
+Note(start=138.380214, end=138.555321, pitch=44, velocity=50)
+Note(start=138.552627, end=138.727735, pitch=51, velocity=59)
+Note(start=138.035387, end=138.751980, pitch=58, velocity=60)
+Note(start=138.725041, end=138.900148, pitch=44, velocity=46)
+Note(start=137.000906, end=139.069868, pitch=63, velocity=59)
+Note(start=138.897454, end=139.072562, pitch=51, velocity=49)
+Note(start=137.000906, end=139.080644, pitch=61, velocity=59)
+Note(start=138.725041, end=139.080644, pitch=61, velocity=64)
+Note(start=139.069868, end=139.244975, pitch=44, velocity=44)
+Note(start=139.242281, end=139.417389, pitch=51, velocity=46)
+Note(start=139.414695, end=139.589802, pitch=44, velocity=49)
+Note(start=139.069868, end=139.724500, pitch=63, velocity=64)
+Note(start=139.069868, end=139.724500, pitch=66, velocity=64)
+Note(start=139.587108, end=139.762216, pitch=51, velocity=50)
+Note(start=139.759522, end=139.934629, pitch=44, velocity=48)
+Note(start=139.069868, end=139.999284, pitch=60, velocity=59)
+Note(start=139.759522, end=140.085491, pitch=63, velocity=64)
+Note(start=139.759522, end=140.085491, pitch=66, velocity=64)
+Note(start=139.759522, end=140.085491, pitch=70, velocity=64)
+Note(start=139.931935, end=140.107043, pitch=51, velocity=49)
+Note(start=140.104349, end=140.279456, pitch=44, velocity=42)
+Note(start=140.276762, end=140.451870, pitch=51, velocity=49)
+Note(start=140.449176, end=140.624283, pitch=44, velocity=45)
+Note(start=140.621589, end=140.796697, pitch=51, velocity=47)
+Note(start=140.104349, end=140.820942, pitch=54, velocity=52)
+Note(start=140.794003, end=140.969110, pitch=44, velocity=48)
+Note(start=140.966416, end=141.141524, pitch=51, velocity=50)
+Note(start=140.794003, end=141.149606, pitch=56, velocity=54)
+Note(start=141.138830, end=141.313937, pitch=44, velocity=48)
+Note(start=141.311243, end=141.486351, pitch=51, velocity=54)
+Note(start=141.483657, end=141.658764, pitch=44, velocity=44)
+Note(start=141.656070, end=141.831178, pitch=51, velocity=51)
+Note(start=141.138830, end=141.855423, pitch=58, velocity=62)
+Note(start=141.828484, end=142.003591, pitch=44, velocity=49)
+Note(start=140.104349, end=142.173311, pitch=63, velocity=47)
+Note(start=142.000897, end=142.176005, pitch=51, velocity=50)
+Note(start=140.104349, end=142.184087, pitch=61, velocity=47)
+Note(start=141.828484, end=142.184087, pitch=61, velocity=65)
+Note(start=142.173311, end=142.348418, pitch=44, velocity=52)
+Note(start=142.345724, end=142.520699, pitch=51, velocity=56)
+Note(start=142.518138, end=142.684633, pitch=44, velocity=47)
+Note(start=142.173311, end=142.812707, pitch=63, velocity=50)
+Note(start=142.173311, end=142.812707, pitch=66, velocity=50)
+Note(start=142.682072, end=142.848567, pitch=51, velocity=48)
+Note(start=142.846006, end=143.012501, pitch=44, velocity=49)
+Note(start=142.173311, end=143.073976, pitch=60, velocity=63)
+Note(start=142.846006, end=143.155943, pitch=63, velocity=70)
+Note(start=143.009940, end=143.163628, pitch=51, velocity=48)
+Note(start=143.173874, end=143.340369, pitch=44, velocity=59)
+Note(start=142.846006, end=143.468443, pitch=66, velocity=70)
+Note(start=142.846006, end=143.468443, pitch=70, velocity=70)
+Note(start=143.337808, end=143.504303, pitch=39, velocity=56)
+Note(start=143.173874, end=143.506865, pitch=61, velocity=51)
+Note(start=143.501742, end=143.668237, pitch=44, velocity=64)
+Note(start=143.665676, end=143.832171, pitch=51, velocity=68)
+Note(start=143.501742, end=143.834733, pitch=68, velocity=72)
+Note(start=143.501742, end=143.834733, pitch=72, velocity=72)
+Note(start=143.501742, end=143.834733, pitch=77, velocity=72)
+Note(start=143.829610, end=143.996105, pitch=44, velocity=57)
+Note(start=143.829610, end=144.157478, pitch=66, velocity=68)
+Note(start=143.829610, end=144.157478, pitch=70, velocity=68)
+Note(start=143.993544, end=144.160039, pitch=51, velocity=60)
+Note(start=143.829610, end=144.162601, pitch=75, velocity=68)
+Note(start=144.157478, end=144.323973, pitch=56, velocity=65)
+Note(start=144.321412, end=144.487907, pitch=51, velocity=58)
+Note(start=144.157478, end=144.490469, pitch=61, velocity=52)
+Note(start=144.485346, end=144.651841, pitch=56, velocity=67)
+Note(start=144.649280, end=144.815775, pitch=63, velocity=77)
+Note(start=144.485346, end=144.818337, pitch=58, velocity=49)
+Note(start=144.813214, end=144.979709, pitch=56, velocity=56)
+Note(start=144.157478, end=145.141082, pitch=66, velocity=54)
+Note(start=144.977148, end=145.143643, pitch=51, velocity=52)
+Note(start=144.813214, end=145.146205, pitch=61, velocity=51)
+Note(start=144.157478, end=145.159012, pitch=70, velocity=54)
+Note(start=145.141082, end=145.307577, pitch=56, velocity=66)
+Note(start=145.141082, end=145.451019, pitch=58, velocity=50)
+Note(start=145.305016, end=145.471511, pitch=51, velocity=61)
+Note(start=145.468950, end=145.635445, pitch=44, velocity=55)
+Note(start=145.468950, end=145.796818, pitch=60, velocity=54)
+Note(start=145.632884, end=145.799379, pitch=51, velocity=60)
+Note(start=145.796818, end=145.963313, pitch=44, velocity=60)
+Note(start=145.141082, end=146.073456, pitch=66, velocity=45)
+Note(start=145.141082, end=146.073456, pitch=68, velocity=45)
+Note(start=145.960752, end=146.114440, pitch=39, velocity=54)
+Note(start=145.796818, end=146.124686, pitch=63, velocity=56)
+Note(start=146.124686, end=146.291181, pitch=44, velocity=57)
+Note(start=146.288620, end=146.455115, pitch=39, velocity=55)
+Note(start=146.124686, end=146.457677, pitch=61, velocity=63)
+Note(start=146.124686, end=146.457677, pitch=66, velocity=63)
+Note(start=146.124686, end=146.457677, pitch=70, velocity=63)
+Note(start=146.452554, end=146.619049, pitch=44, velocity=63)
+Note(start=146.616488, end=146.782983, pitch=51, velocity=71)
+Note(start=146.452554, end=146.785545, pitch=68, velocity=75)
+Note(start=146.452554, end=146.785545, pitch=72, velocity=75)
+Note(start=146.452554, end=146.785545, pitch=77, velocity=75)
+Note(start=146.780422, end=146.946917, pitch=44, velocity=58)
+Note(start=146.780422, end=147.108290, pitch=66, velocity=62)
+Note(start=146.780422, end=147.108290, pitch=70, velocity=62)
+Note(start=146.944356, end=147.110851, pitch=51, velocity=58)
+Note(start=146.780422, end=147.113413, pitch=75, velocity=62)
+Note(start=147.108290, end=147.274785, pitch=56, velocity=66)
+Note(start=147.272224, end=147.438719, pitch=51, velocity=65)
+Note(start=147.108290, end=147.441281, pitch=61, velocity=48)
+Note(start=147.436158, end=147.602653, pitch=56, velocity=65)
+Note(start=147.600092, end=147.766587, pitch=63, velocity=76)
+Note(start=147.436158, end=147.769149, pitch=58, velocity=46)
+Note(start=147.764026, end=147.930521, pitch=56, velocity=58)
+Note(start=147.108290, end=148.091894, pitch=66, velocity=56)
+Note(start=147.927960, end=148.094455, pitch=51, velocity=53)
+Note(start=147.764026, end=148.097017, pitch=61, velocity=54)
+Note(start=147.108290, end=148.109824, pitch=70, velocity=56)
+Note(start=148.091894, end=148.258389, pitch=56, velocity=60)
+Note(start=148.091894, end=148.401831, pitch=58, velocity=52)
+Note(start=148.255828, end=148.422282, pitch=51, velocity=60)
+Note(start=148.419762, end=148.583572, pitch=56, velocity=65)
+Note(start=148.419762, end=148.742342, pitch=60, velocity=51)
+Note(start=148.581052, end=148.744862, pitch=51, velocity=60)
+Note(start=148.742342, end=148.906153, pitch=56, velocity=64)
+Note(start=148.091894, end=149.014520, pitch=66, velocity=53)
+Note(start=148.091894, end=149.014520, pitch=68, velocity=53)
+Note(start=148.903632, end=149.054842, pitch=51, velocity=61)
+Note(start=148.742342, end=149.064923, pitch=63, velocity=55)
+Note(start=149.226213, end=149.392544, pitch=63, velocity=52)
+Note(start=149.387503, end=149.553834, pitch=66, velocity=52)
+Note(start=149.548793, end=149.715124, pitch=70, velocity=70)
+Note(start=149.064923, end=149.722685, pitch=54, velocity=58)
+Note(start=149.710084, end=149.876414, pitch=66, velocity=62)
+Note(start=149.871374, end=150.022584, pitch=63, velocity=57)
+Note(start=149.710084, end=150.037705, pitch=56, velocity=59)
+Note(start=150.193954, end=150.360285, pitch=63, velocity=57)
+Note(start=150.355245, end=150.521575, pitch=66, velocity=61)
+Note(start=150.516535, end=150.682866, pitch=70, velocity=69)
+Note(start=150.032664, end=150.690426, pitch=58, velocity=64)
+Note(start=150.677825, end=150.844156, pitch=66, velocity=62)
+Note(start=150.839115, end=150.992845, pitch=63, velocity=55)
+Note(start=149.064923, end=151.005366, pitch=61, velocity=77)
+Note(start=150.677825, end=151.005366, pitch=61, velocity=67)
+Note(start=149.064923, end=151.037608, pitch=75, velocity=84)
+Note(start=151.159136, end=151.320346, pitch=63, velocity=70)
+Note(start=151.317866, end=151.479076, pitch=66, velocity=80)
+Note(start=151.476596, end=151.637806, pitch=70, velocity=69)
+Note(start=151.000406, end=151.647726, pitch=78, velocity=94)
+Note(start=151.635326, end=151.796536, pitch=72, velocity=73)
+Note(start=151.000406, end=151.856060, pitch=60, velocity=76)
+Note(start=151.635326, end=151.935425, pitch=82, velocity=84)
+Note(start=151.794056, end=151.942865, pitch=75, velocity=70)
+Note(start=152.111516, end=152.275206, pitch=63, velocity=47)
+Note(start=152.270246, end=152.433936, pitch=66, velocity=50)
+Note(start=152.428976, end=152.592666, pitch=70, velocity=69)
+Note(start=151.952786, end=152.600106, pitch=54, velocity=57)
+Note(start=152.587706, end=152.751396, pitch=66, velocity=60)
+Note(start=152.746436, end=152.895245, pitch=63, velocity=55)
+Note(start=152.587706, end=152.910126, pitch=56, velocity=59)
+Note(start=153.063896, end=153.227586, pitch=63, velocity=57)
+Note(start=153.222626, end=153.386316, pitch=66, velocity=60)
+Note(start=153.381356, end=153.545046, pitch=70, velocity=68)
+Note(start=152.905166, end=153.552486, pitch=58, velocity=62)
+Note(start=153.540086, end=153.703776, pitch=66, velocity=59)
+Note(start=153.698816, end=153.850105, pitch=63, velocity=55)
+Note(start=151.952786, end=153.862506, pitch=61, velocity=46)
+Note(start=153.540086, end=153.862506, pitch=61, velocity=67)
+Note(start=151.952786, end=153.894748, pitch=75, velocity=59)
+Note(start=154.016276, end=154.174967, pitch=63, velocity=67)
+Note(start=154.172526, end=154.331217, pitch=66, velocity=70)
+Note(start=154.328776, end=154.487467, pitch=70, velocity=66)
+Note(start=153.857546, end=154.497233, pitch=78, velocity=63)
+Note(start=154.485026, end=154.643717, pitch=72, velocity=73)
+Note(start=153.857546, end=154.702311, pitch=60, velocity=45)
+Note(start=154.485026, end=154.780436, pitch=82, velocity=76)
+Note(start=154.641276, end=154.787760, pitch=75, velocity=68)
+Note(start=154.953776, end=155.112467, pitch=70, velocity=46)
+Note(start=155.110026, end=155.268717, pitch=73, velocity=46)
+Note(start=155.266276, end=155.424967, pitch=75, velocity=43)
+Note(start=155.422526, end=155.581217, pitch=78, velocity=44)
+Note(start=155.578776, end=155.725260, pitch=82, velocity=52)
+Note(start=154.797526, end=155.893756, pitch=66, velocity=43)
+Note(start=155.735026, end=155.893756, pitch=66, velocity=26)
+Note(start=155.891276, end=156.052486, pitch=70, velocity=32)
+Note(start=156.050006, end=156.211216, pitch=73, velocity=48)
+Note(start=156.208736, end=156.369946, pitch=75, velocity=48)
+Note(start=156.367466, end=156.516275, pitch=78, velocity=43)
+Note(start=156.526196, end=156.684926, pitch=84, velocity=54)
+Note(start=156.684926, end=156.739489, pitch=66, velocity=61)
+Note(start=156.843656, end=157.004866, pitch=70, velocity=55)
+Note(start=157.002386, end=157.163636, pitch=73, velocity=63)
+Note(start=157.161116, end=157.324926, pitch=75, velocity=51)
+Note(start=157.322406, end=157.486216, pitch=78, velocity=56)
+Note(start=157.483696, end=157.634906, pitch=82, velocity=55)
+Note(start=157.806277, end=157.972772, pitch=69, velocity=39)
+Note(start=157.970211, end=158.136706, pitch=73, velocity=46)
+Note(start=158.134145, end=158.300640, pitch=75, velocity=36)
+Note(start=158.298079, end=158.464574, pitch=78, velocity=49)
+Note(start=158.462013, end=158.615701, pitch=81, velocity=37)
+Note(start=154.797526, end=158.702791, pitch=87, velocity=84)
+Note(start=157.644986, end=158.792485, pitch=66, velocity=35)
+Note(start=158.625947, end=158.792485, pitch=66, velocity=23)
+Note(start=158.789881, end=158.959151, pitch=69, velocity=30)
+Note(start=158.956547, end=159.125817, pitch=73, velocity=37)
+Note(start=159.123213, end=159.292484, pitch=75, velocity=42)
+Note(start=159.289879, end=159.459150, pitch=78, velocity=38)
+Note(start=159.456546, end=159.612795, pitch=83, velocity=42)
+Note(start=158.625947, end=159.641441, pitch=85, velocity=81)
+Note(start=159.789878, end=159.962018, pitch=69, velocity=35)
+Note(start=159.959369, end=160.131509, pitch=73, velocity=38)
+Note(start=160.128861, end=160.301000, pitch=75, velocity=38)
+Note(start=160.298352, end=160.470492, pitch=78, velocity=46)
+Note(start=159.623212, end=160.584368, pitch=87, velocity=63)
+Note(start=159.623212, end=160.584368, pitch=66, velocity=34)
+Note(start=160.467843, end=160.626741, pitch=81, velocity=38)
+Note(start=160.822519, end=161.010597, pitch=68, velocity=37)
+Note(start=161.007704, end=161.195782, pitch=72, velocity=45)
+Note(start=161.192889, end=161.380967, pitch=77, velocity=39)
+Note(start=161.378073, end=161.566152, pitch=80, velocity=40)
+Note(start=161.563258, end=161.736869, pitch=84, velocity=38)
+Note(start=160.637334, end=162.746705, pitch=65, velocity=33)
+Note(start=161.748443, end=162.859551, pitch=89, velocity=45)
+Note(start=161.748443, end=162.879806, pitch=92, velocity=45)
+Note(start=162.859551, end=163.970660, pitch=65, velocity=50)
+Note(start=164.155845, end=164.343923, pitch=69, velocity=50)
+Note(start=162.859551, end=164.369965, pitch=89, velocity=41)
+Note(start=164.341029, end=164.529108, pitch=72, velocity=54)
+Note(start=164.526214, end=164.714292, pitch=75, velocity=52)
+Note(start=164.341029, end=164.717186, pitch=84, velocity=45)
+Note(start=164.341029, end=164.717186, pitch=87, velocity=45)
+Note(start=164.711399, end=164.899477, pitch=77, velocity=59)
+Note(start=164.896584, end=165.070194, pitch=81, velocity=47)
+Note(start=164.711399, end=165.087555, pitch=85, velocity=46)
+Note(start=164.711399, end=165.087555, pitch=89, velocity=46)
+Note(start=163.970660, end=166.080030, pitch=65, velocity=45)
+Note(start=166.192877, end=167.303985, pitch=65, velocity=54)
+Note(start=165.081768, end=167.541464, pitch=84, velocity=45)
+Note(start=165.081768, end=167.541464, pitch=87, velocity=45)
+Note(start=167.487487, end=167.672145, pitch=68, velocity=50)
+Note(start=167.669304, end=167.853963, pitch=70, velocity=54)
+Note(start=167.851122, end=168.035781, pitch=73, velocity=49)
+Note(start=167.669304, end=168.038622, pitch=82, velocity=49)
+Note(start=167.669304, end=168.038622, pitch=85, velocity=49)
+Note(start=168.032940, end=168.217599, pitch=77, velocity=56)
+Note(start=168.214758, end=168.385212, pitch=80, velocity=48)
+Note(start=168.032940, end=168.402257, pitch=84, velocity=49)
+Note(start=168.032940, end=168.402257, pitch=87, velocity=49)
+Note(start=168.396575, end=168.942029, pitch=85, velocity=47)
+Note(start=168.396575, end=168.950551, pitch=82, velocity=47)
+Note(start=167.303985, end=169.376687, pitch=65, velocity=48)
+Note(start=168.942029, end=170.032935, pitch=85, velocity=51)
+Note(start=168.942029, end=170.052822, pitch=89, velocity=51)
+Note(start=169.487482, end=170.578388, pitch=65, velocity=60)
+Note(start=170.756960, end=170.938321, pitch=66, velocity=43)
+Note(start=170.032935, end=170.952272, pitch=82, velocity=42)
+Note(start=170.032935, end=170.952272, pitch=85, velocity=42)
+Note(start=170.935531, end=171.116892, pitch=68, velocity=47)
+Note(start=171.114102, end=171.295464, pitch=72, velocity=48)
+Note(start=170.935531, end=171.298254, pitch=80, velocity=36)
+Note(start=170.935531, end=171.298254, pitch=84, velocity=36)
+Note(start=171.292673, end=171.474035, pitch=75, velocity=55)
+Note(start=171.471245, end=171.638655, pitch=78, velocity=46)
+Note(start=171.292673, end=171.655498, pitch=82, velocity=54)
+Note(start=171.292673, end=171.655498, pitch=85, velocity=54)
+Note(start=170.578388, end=172.629927, pitch=63, velocity=45)
+Note(start=171.649816, end=173.720834, pitch=80, velocity=55)
+Note(start=171.649816, end=173.720834, pitch=84, velocity=55)
+Note(start=172.740722, end=173.831629, pitch=63, velocity=50)
+Note(start=174.013447, end=174.200845, pitch=63, velocity=52)
+Note(start=174.195264, end=174.379416, pitch=66, velocity=58)
+Note(start=174.195264, end=174.557987, pitch=82, velocity=47)
+Note(start=174.195264, end=174.557987, pitch=78, velocity=55)
+Note(start=174.373836, end=174.557987, pitch=70, velocity=59)
+Note(start=174.552407, end=174.736559, pitch=73, velocity=61)
+Note(start=174.730978, end=174.901179, pitch=75, velocity=55)
+Note(start=174.552407, end=174.915559, pitch=84, velocity=47)
+Note(start=174.552407, end=174.915559, pitch=80, velocity=57)
+Note(start=174.909549, end=175.300174, pitch=82, velocity=47)
+Note(start=175.294164, end=175.684789, pitch=87, velocity=57)
+Note(start=173.831629, end=175.988274, pitch=61, velocity=52)
+Note(start=175.678779, end=176.069404, pitch=82, velocity=43)
+Note(start=174.909549, end=176.084428, pitch=78, velocity=53)
+Note(start=176.063394, end=176.453691, pitch=80, velocity=36)
+Note(start=176.448009, end=176.817327, pitch=82, velocity=55)
+Note(start=176.063394, end=177.118462, pitch=63, velocity=42)
+Note(start=176.063394, end=177.118462, pitch=60, velocity=53)
+Note(start=176.141519, end=177.124144, pitch=65, velocity=42)
+Note(start=176.219644, end=177.126985, pitch=68, velocity=42)
+Note(start=176.297769, end=177.129826, pitch=72, velocity=42)
+Note(start=176.063394, end=177.465053, pitch=77, velocity=51)
+Note(start=176.811645, end=177.501984, pitch=80, velocity=55)
+Note(start=177.357098, end=177.544598, pitch=54, velocity=43)
+Note(start=177.538916, end=177.726416, pitch=58, velocity=48)
+Note(start=177.538916, end=177.908233, pitch=78, velocity=43)
+Note(start=177.538916, end=177.908233, pitch=75, velocity=55)
+Note(start=177.720734, end=177.908233, pitch=60, velocity=41)
+Note(start=177.902551, end=178.090051, pitch=63, velocity=46)
+Note(start=178.084369, end=178.257664, pitch=66, velocity=43)
+Note(start=177.902551, end=178.271869, pitch=80, velocity=43)
+Note(start=177.902551, end=178.271869, pitch=77, velocity=57)
+Note(start=177.175280, end=179.286071, pitch=48, velocity=38)
+Note(start=178.266187, end=179.376980, pitch=78, velocity=52)
+Note(start=178.266187, end=179.376980, pitch=75, velocity=61)
+Note(start=178.266187, end=179.376980, pitch=70, velocity=44)
+Note(start=179.357093, end=180.391182, pitch=69, velocity=55)
+Note(start=179.357093, end=180.391182, pitch=60, velocity=47)
+Note(start=179.357093, end=180.391182, pitch=63, velocity=47)
+Note(start=179.357093, end=180.391182, pitch=53, velocity=51)
+Note(start=179.357093, end=180.737772, pitch=77, velocity=53)
+Note(start=180.629818, end=180.817317, pitch=58, velocity=49)
+Note(start=180.811635, end=180.999135, pitch=61, velocity=53)
+Note(start=180.811635, end=181.180953, pitch=77, velocity=56)
+Note(start=180.811635, end=181.180953, pitch=73, velocity=54)
+Note(start=180.993453, end=181.180953, pitch=65, velocity=49)
+Note(start=181.175271, end=181.362985, pitch=68, velocity=53)
+Note(start=181.357089, end=181.536923, pitch=70, velocity=53)
+Note(start=181.175271, end=181.551664, pitch=78, velocity=58)
+Note(start=181.175271, end=181.551664, pitch=75, velocity=57)
+Note(start=181.545767, end=181.929021, pitch=77, velocity=48)
+Note(start=181.923125, end=182.306492, pitch=82, velocity=53)
+Note(start=180.448000, end=182.609977, pitch=56, velocity=49)
+Note(start=181.545767, end=182.685097, pitch=73, velocity=56)
+Note(start=182.300482, end=182.691107, pitch=77, velocity=44)
+Note(start=182.685097, end=183.075499, pitch=75, velocity=38)
+Note(start=183.069712, end=183.445869, pitch=77, velocity=54)
+Note(start=182.685097, end=183.752581, pitch=73, velocity=61)
+Note(start=182.685097, end=183.752581, pitch=54, velocity=46)
+Note(start=182.763222, end=183.758368, pitch=58, velocity=46)
+Note(start=182.841347, end=183.761262, pitch=61, velocity=46)
+Note(start=182.919472, end=183.764155, pitch=63, velocity=46)
+Note(start=183.440082, end=184.162780, pitch=75, velocity=52)
+Note(start=184.006530, end=184.205672, pitch=56, velocity=46)
+Note(start=184.202608, end=184.401750, pitch=58, velocity=50)
+Note(start=184.398686, end=184.597828, pitch=61, velocity=51)
+Note(start=184.202608, end=184.600892, pitch=70, velocity=55)
+Note(start=184.202608, end=184.600892, pitch=73, velocity=55)
+Note(start=184.594764, end=184.793906, pitch=65, velocity=61)
+Note(start=184.790843, end=184.974666, pitch=68, velocity=50)
+Note(start=184.594764, end=184.993048, pitch=72, velocity=58)
+Note(start=184.594764, end=184.993048, pitch=75, velocity=58)
+Note(start=183.810451, end=186.043905, pitch=53, velocity=48)
+Note(start=184.986921, end=186.187168, pitch=70, velocity=54)
+Note(start=184.986921, end=186.187168, pitch=73, velocity=54)
+Note(start=186.163390, end=186.815564, pitch=51, velocity=39)
+Note(start=186.163390, end=187.399803, pitch=68, velocity=51)
+Note(start=186.163390, end=187.399803, pitch=72, velocity=51)
+Note(start=186.163390, end=187.467738, pitch=54, velocity=48)
+Note(start=186.163390, end=187.467738, pitch=60, velocity=48)
+Note(start=186.815564, end=187.467738, pitch=44, velocity=41)
+Note(start=187.467738, end=187.909314, pitch=37, velocity=38)
+Note(start=187.467738, end=187.909314, pitch=44, velocity=38)
+Note(start=187.902520, end=188.344096, pitch=53, velocity=43)
+Note(start=187.902520, end=188.344096, pitch=56, velocity=43)
+Note(start=188.772085, end=190.076433, pitch=77, velocity=38)
+Note(start=188.772085, end=190.099704, pitch=80, velocity=38)
+Note(start=188.337303, end=191.203427, pitch=65, velocity=61)
+Note(start=188.337303, end=191.203427, pitch=68, velocity=61)
+Note(start=188.772085, end=191.223373, pitch=59, velocity=53)
+Note(start=190.076433, end=191.811804, pitch=73, velocity=33)
+Note(start=190.076433, end=191.811804, pitch=77, velocity=33)
+Note(start=191.778559, end=192.210739, pitch=75, velocity=47)
+Note(start=192.204090, end=192.636132, pitch=77, velocity=52)
+Note(start=191.353027, end=193.879620, pitch=42, velocity=33)
+Note(start=191.353027, end=193.879620, pitch=49, velocity=33)
+Note(start=191.778559, end=193.879620, pitch=49, velocity=38)
+Note(start=191.778559, end=194.960347, pitch=66, velocity=59)
+Note(start=191.778559, end=194.960347, pitch=70, velocity=59)
+Note(start=191.778559, end=195.129618, pitch=54, velocity=38)
+Note(start=191.778559, end=195.129618, pitch=58, velocity=38)
+Note(start=191.778559, end=195.129618, pitch=61, velocity=38)
+Note(start=192.629622, end=195.405549, pitch=75, velocity=44)
+Note(start=195.555149, end=195.987330, pitch=61, velocity=43)
+Note(start=195.555149, end=195.987330, pitch=73, velocity=43)
+Note(start=195.555149, end=196.406212, pitch=53, velocity=36)
+Note(start=195.555149, end=196.406212, pitch=56, velocity=36)
+Note(start=195.980681, end=196.412861, pitch=63, velocity=43)
+Note(start=195.980681, end=196.412861, pitch=75, velocity=43)
+Note(start=195.555149, end=196.422835, pitch=68, velocity=58)
+Note(start=196.406212, end=196.422835, pitch=68, velocity=46)
+Note(start=196.406212, end=197.682807, pitch=77, velocity=46)
+Note(start=195.129618, end=197.682807, pitch=44, velocity=48)
+Note(start=196.406212, end=197.682807, pitch=61, velocity=54)
+Note(start=196.406212, end=197.682807, pitch=65, velocity=54)
+Note(start=196.406212, end=197.705593, pitch=80, velocity=46)
+Note(start=196.406212, end=198.932805, pitch=59, velocity=56)
+Note(start=197.682807, end=198.932805, pitch=61, velocity=38)
+Note(start=197.682807, end=198.955591, pitch=65, velocity=37)
+Note(start=197.682807, end=198.955591, pitch=73, velocity=37)
+Note(start=197.682807, end=199.382023, pitch=77, velocity=37)
+Note(start=199.349471, end=199.772647, pitch=75, velocity=40)
+Note(start=199.766137, end=200.189313, pitch=77, velocity=39)
+Note(start=198.932805, end=201.432801, pitch=46, velocity=51)
+Note(start=199.349471, end=201.432801, pitch=63, velocity=40)
+Note(start=200.182803, end=201.456072, pitch=75, velocity=41)
+Note(start=199.349471, end=202.536523, pitch=65, velocity=57)
+Note(start=199.349471, end=202.536523, pitch=70, velocity=57)
+Note(start=201.432801, end=202.642906, pitch=73, velocity=39)
+Note(start=199.349471, end=202.709395, pitch=53, velocity=50)
+Note(start=199.349471, end=202.709395, pitch=58, velocity=50)
+Note(start=201.432801, end=202.709395, pitch=61, velocity=40)
+Note(start=203.144178, end=203.592547, pitch=61, velocity=36)
+Note(start=203.578960, end=204.027330, pitch=63, velocity=39)
+Note(start=203.144178, end=204.047710, pitch=56, velocity=54)
+Note(start=204.013743, end=205.318090, pitch=61, velocity=50)
+Note(start=204.013743, end=205.318090, pitch=65, velocity=50)
+Note(start=204.013743, end=205.365645, pitch=70, velocity=50)
+Note(start=205.318090, end=206.489965, pitch=56, velocity=46)
+Note(start=205.318090, end=206.489965, pitch=61, velocity=46)
+Note(start=205.318090, end=206.489965, pitch=65, velocity=46)
+Note(start=202.709395, end=206.622438, pitch=41, velocity=53)
+Note(start=207.066881, end=207.525214, pitch=66, velocity=41)
+Note(start=207.511325, end=207.969657, pitch=68, velocity=42)
+Note(start=207.066881, end=207.990491, pitch=58, velocity=65)
+Note(start=207.066881, end=207.990491, pitch=61, velocity=65)
+Note(start=207.955768, end=209.219655, pitch=66, velocity=54)
+Note(start=207.955768, end=209.243960, pitch=73, velocity=58)
+Note(start=207.955768, end=209.243960, pitch=70, velocity=54)
+Note(start=206.622438, end=209.289099, pitch=39, velocity=58)
+Note(start=207.955768, end=209.313404, pitch=51, velocity=56)
+Note(start=209.289099, end=210.552985, pitch=70, velocity=53)
+Note(start=209.289099, end=210.552985, pitch=61, velocity=40)
+Note(start=209.289099, end=210.552985, pitch=66, velocity=40)
+Note(start=209.289099, end=210.552985, pitch=63, velocity=52)
+Note(start=211.076974, end=211.538621, pitch=70, velocity=46)
+Note(start=211.304246, end=211.986063, pitch=51, velocity=45)
+Note(start=211.531518, end=211.993503, pitch=72, velocity=49)
+Note(start=211.986063, end=211.993503, pitch=72, velocity=55)
+Note(start=211.076974, end=212.004664, pitch=60, velocity=43)
+Note(start=211.076974, end=212.004664, pitch=66, velocity=43)
+Note(start=210.622429, end=213.414631, pitch=44, velocity=48)
+Note(start=211.986063, end=213.414631, pitch=80, velocity=80)
+Note(start=211.986063, end=213.440673, pitch=77, velocity=68)
+Note(start=211.986063, end=213.440673, pitch=68, velocity=55)
+Note(start=213.414631, end=213.440673, pitch=68, velocity=54)
+Note(start=213.414631, end=214.768795, pitch=60, velocity=52)
+Note(start=213.414631, end=214.768795, pitch=66, velocity=52)
+Note(start=213.414631, end=214.842221, pitch=56, velocity=45)
+Note(start=215.017659, end=215.195839, pitch=44, velocity=46)
+Note(start=215.193098, end=215.371278, pitch=49, velocity=48)
+Note(start=215.368536, end=215.546716, pitch=53, velocity=51)
+Note(start=215.543975, end=215.708449, pitch=56, velocity=54)
+Note(start=214.842221, end=215.835939, pitch=37, velocity=43)
+Note(start=215.719413, end=215.888905, pitch=61, velocity=51)
+Note(start=216.058396, end=216.230536, pitch=48, velocity=41)
+Note(start=216.227887, end=216.400027, pitch=53, velocity=48)
+Note(start=216.397378, end=216.569518, pitch=56, velocity=46)
+Note(start=216.566870, end=216.739009, pitch=60, velocity=51)
+Note(start=215.888905, end=216.852886, pitch=41, velocity=43)
+Note(start=216.736361, end=216.895259, pitch=65, velocity=49)
+Note(start=217.075343, end=217.250451, pitch=44, velocity=42)
+Note(start=217.247757, end=217.422864, pitch=49, velocity=45)
+Note(start=217.420170, end=217.595278, pitch=53, velocity=43)
+Note(start=217.592584, end=217.767691, pitch=56, velocity=45)
+Note(start=216.905852, end=217.883532, pitch=37, velocity=42)
+Note(start=217.764997, end=217.926635, pitch=61, velocity=49)
+Note(start=218.106902, end=218.279042, pitch=48, velocity=45)
+Note(start=218.276393, end=218.448533, pitch=53, velocity=51)
+Note(start=218.445885, end=218.618024, pitch=56, velocity=44)
+Note(start=218.615376, end=218.787516, pitch=60, velocity=50)
+Note(start=217.937411, end=218.901392, pitch=41, velocity=42)
+Note(start=218.784867, end=218.943765, pitch=65, velocity=48)
+Note(start=219.123850, end=219.295989, pitch=52, velocity=54)
+Note(start=219.293341, end=219.465481, pitch=56, velocity=60)
+Note(start=219.462832, end=219.635017, pitch=59, velocity=46)
+Note(start=219.632323, end=219.807431, pitch=64, velocity=50)
+Note(start=219.804737, end=219.979844, pitch=66, velocity=45)
+Note(start=218.954358, end=219.996008, pitch=71, velocity=67)
+Note(start=218.954358, end=219.996008, pitch=68, velocity=50)
+Note(start=219.977150, end=219.996008, pitch=68, velocity=48)
+Note(start=218.954358, end=220.906567, pitch=44, velocity=44)
+Note(start=219.977150, end=220.957752, pitch=73, velocity=72)
+Note(start=219.977150, end=220.957752, pitch=64, velocity=50)
+Note(start=221.181123, end=221.353262, pitch=56, velocity=45)
+Note(start=221.350614, end=221.522754, pitch=61, velocity=47)
+Note(start=221.520105, end=221.692245, pitch=65, velocity=45)
+Note(start=221.689596, end=221.861736, pitch=68, velocity=55)
+Note(start=221.011631, end=221.975613, pitch=49, velocity=43)
+Note(start=221.859088, end=222.017986, pitch=73, velocity=54)
+Note(start=222.195245, end=222.364516, pitch=60, velocity=50)
+Note(start=222.361911, end=222.531182, pitch=65, velocity=57)
+Note(start=222.528578, end=222.697848, pitch=68, velocity=55)
+Note(start=222.695244, end=222.864514, pitch=72, velocity=60)
+Note(start=222.028579, end=222.976493, pitch=53, velocity=45)
+Note(start=222.861910, end=223.018160, pitch=77, velocity=52)
+Note(start=223.195243, end=223.364513, pitch=56, velocity=49)
+Note(start=223.361909, end=223.531179, pitch=61, velocity=54)
+Note(start=223.528575, end=223.697846, pitch=65, velocity=49)
+Note(start=223.695241, end=223.864512, pitch=68, velocity=51)
+Note(start=223.028576, end=223.976491, pitch=49, velocity=46)
+Note(start=223.861908, end=224.018157, pitch=73, velocity=56)
+Note(start=224.195240, end=224.364511, pitch=60, velocity=48)
+Note(start=224.361906, end=224.531177, pitch=65, velocity=50)
+Note(start=224.528573, end=224.697843, pitch=68, velocity=46)
+Note(start=224.695239, end=224.864509, pitch=72, velocity=52)
+Note(start=224.028574, end=224.976488, pitch=53, velocity=42)
+Note(start=224.861905, end=225.018155, pitch=77, velocity=50)
+Note(start=225.195238, end=225.364508, pitch=59, velocity=53)
+Note(start=225.361904, end=225.531174, pitch=64, velocity=62)
+Note(start=225.528570, end=225.697841, pitch=68, velocity=54)
+Note(start=225.695236, end=225.864507, pitch=71, velocity=59)
+Note(start=225.028571, end=226.046798, pitch=83, velocity=73)
+Note(start=225.028571, end=226.927004, pitch=80, velocity=62)
+Note(start=225.028571, end=226.927004, pitch=56, velocity=49)
+Note(start=225.861903, end=226.968671, pitch=76, velocity=56)
+Note(start=226.028569, end=226.976483, pitch=85, velocity=82)
+Note(start=227.198058, end=227.370197, pitch=59, velocity=40)
+Note(start=227.367549, end=227.539689, pitch=64, velocity=49)
+Note(start=227.537040, end=227.709180, pitch=68, velocity=50)
+Note(start=227.706531, end=227.878671, pitch=71, velocity=57)
+Note(start=227.028566, end=228.064372, pitch=83, velocity=59)
+Note(start=227.028566, end=228.974930, pitch=56, velocity=45)
+Note(start=227.876023, end=229.018034, pitch=76, velocity=52)
+Note(start=228.045514, end=229.099881, pitch=85, velocity=59)
+Note(start=227.028566, end=229.122608, pitch=80, velocity=56)
+Note(start=229.079995, end=230.114083, pitch=88, velocity=67)
+Note(start=229.079995, end=230.170901, pitch=44, velocity=43)
+Note(start=230.352719, end=230.538798, pitch=44, velocity=52)
+Note(start=230.535905, end=230.723983, pitch=49, velocity=56)
+Note(start=230.721090, end=230.909222, pitch=53, velocity=48)
+Note(start=230.906274, end=231.097901, pitch=56, velocity=46)
+Note(start=231.094953, end=231.286637, pitch=61, velocity=53)
+Note(start=231.283632, end=231.674497, pitch=65, velocity=54)
+Note(start=231.668247, end=232.080356, pitch=68, velocity=52)
+Note(start=232.073846, end=232.497305, pitch=73, velocity=64)
+Note(start=230.170901, end=232.541463, pitch=37, velocity=45)
+Note(start=232.490512, end=232.932561, pitch=77, velocity=52)
+Note(start=232.925294, end=233.399091, pitch=80, velocity=54)
+Note(start=233.390410, end=233.915584, pitch=85, velocity=64)
+Note(start=230.170901, end=233.945966, pitch=89, velocity=72)
+Note(start=230.170901, end=233.945966, pitch=92, velocity=72)
+Note(start=233.945966, end=237.279299, pitch=80, velocity=42)
+Note(start=234.024091, end=237.279299, pitch=85, velocity=42)
+Note(start=234.102216, end=237.279299, pitch=89, velocity=42)
+Note(start=234.180341, end=237.279299, pitch=92, velocity=42)
+Note(start=233.945966, end=237.279299, pitch=61, velocity=38)
+Note(start=234.024091, end=237.279299, pitch=68, velocity=38)
+Note(start=234.102216, end=237.279299, pitch=73, velocity=38)
+Note(start=234.180341, end=237.279299, pitch=77, velocity=38)
+End time:237.27929854296866
+tempo changes:(array([  0.        ,   1.875     ,   3.2083305 ,   4.874997  ,
+         5.4013125 ,   6.3315445 ,   8.6392345 ,  12.3892285 ,
+        14.7421675 ,  17.4344725 ,  20.027059  ,  21.565519  ,
+        23.1871405 ,  23.9871405 ,  25.5557665 ,  26.7096115 ,
+        28.9737565 ,  29.68804075,  30.4988515 ,  31.962265  ,
+        34.819402  ,  36.1527325 ,  38.4604225 ,  39.3493095 ,
+        39.7493095 ,  42.931121  ,  43.747447  ,  47.225707  ,
+        48.892371  ,  50.673621  ,  51.57923266,  52.47466445,
+        53.72466245,  55.67588045,  56.02070745,  56.68737245,
+        57.33001329,  57.66594995,  58.01077695,  58.36791945,
+        58.9234737 ,  59.48950995,  60.41258445,  61.1268687 ,
+        62.21382495,  62.89178995,  63.84416995,  64.17203795,
+        64.86169195,  65.95259845,  66.80973895,  66.80973895,
+        69.96763195,  70.93537345,  71.87287345,  72.90735445,
+        75.83418145,  76.77168145,  77.68076995,  78.63314995,
+        81.49028695,  81.49028695,  82.10566995,  82.40869945,
+        83.30422045,  83.62168045,  86.24462445,  87.27910545,
+        89.46091845,  91.08253995,  92.95753995,  93.4575387 ,
+        93.9747792 ,  94.13606945,  94.45352945,  95.85977945,
+        96.81215945,  97.13473995,  97.76965995,  98.55090995,
+       100.5509047 , 101.1759047 , 101.8210657 , 102.4877307 ,
+       102.8103112 , 104.43384636, 105.49987411, 106.45225411,
+       107.37532861, 108.31282861, 109.26520861, 110.24881261,
+       111.08214386, 111.90181386, 112.74927011, 113.61133761,
+       114.14426118, 114.63065209, 115.96993646, 117.83485498,
+       118.31104498, 118.77979498, 119.09725498, 119.90118607,
+       120.68487748, 121.76179773, 122.67088623, 123.74780648,
+       126.87280648, 130.20613648, 131.2747738 , 131.88320022,
+       132.49858322, 134.06108322, 135.17219322, 136.48366522,
+       142.51813772, 148.41976172, 151.00040572, 154.01627572,
+       155.89127572, 157.16111572, 157.80627672, 158.78988072,
+       159.78987822, 160.63733447, 167.39657784, 170.57838847,
+       171.64981597, 174.19526447, 174.90954947, 176.44800947,
+       181.35708872, 182.30048247, 183.06971247, 183.81045147,
+       186.16339047, 190.07643297, 192.62962197, 195.12961797,
+       197.68280697, 201.43280097, 202.70939547, 206.62243797,
+       210.62242947, 211.98606297, 214.83947974, 215.71941346,
+       217.07534346, 217.93741096, 219.63232346, 221.01163146,
+       222.02857896, 227.02856646, 228.04551396, 229.07999496,
+       230.4606735 , 230.90627431, 231.28363181, 231.66824681,
+       231.93387181, 232.49051154, 232.92529404, 233.39041004]), array([ 48.        ,  67.50014344,  54.0000054 ,  57.00003135,
+        64.5000387 ,  78.000078  ,  72.0001152 ,  76.50007076,
+        78.000078  ,  81.00019035,  78.000078  ,  55.50000416,
+        75.        ,  76.50007076,  78.000078  ,  79.50020869,
+        63.00012915,  55.50000416,  61.50004766,  63.00012915,
+        67.50014344,  78.000078  ,  67.50014344,  75.        ,
+        66.0001386 ,  73.50004778,  69.00001725,  72.0001152 ,
+        75.        ,  73.50004778,  78.000078  ,  72.0001152 ,
+        61.50004766,  87.0001479 ,  90.000225  ,  93.00004185,
+        90.000225  ,  87.0001479 ,  84.000084  ,  81.00019035,
+        79.50020869,  97.50025594,  63.00012915,  69.00001725,
+        88.50014381,  94.5000945 ,  91.5002379 ,  87.0001479 ,
+        82.50019594, 105.00028875, 105.0004725 ,  57.00003135,
+        93.00004185,  96.        ,  87.0001479 ,  61.50004766,
+        96.        ,  99.00026235,  94.5000945 ,  63.00012915,
+        63.0001953 ,  97.50025594,  99.00026235, 100.50015578,
+        94.5000945 ,  91.5002379 ,  87.0001479 ,  82.50019594,
+        55.50000416,  96.        ,  90.000225  ,  87.0001479 ,
+        93.00004185,  94.5000945 ,  96.        ,  94.5000945 ,
+        93.00004185,  94.5000945 ,  96.        ,  97.50025594,
+        96.        ,  93.00004185,  90.000225  ,  93.00004185,
+        96.        ,  93.00004185,  94.5000945 ,  97.50025594,
+        96.        ,  94.5000945 ,  91.5002379 ,  90.000225  ,
+        91.5002379 ,  88.50014381,  87.0001479 ,  84.000084  ,
+        93.00004185,  94.5000945 ,  93.00004185,  94.5000945 ,
+        96.        ,  94.5000945 ,  93.00004185,  96.        ,
+        97.50025594,  99.00026235,  97.50025594,  96.        ,
+        94.5000945 ,  84.000084  ,  99.00026235,  97.50025594,
+        96.        ,  94.5000945 ,  91.5002379 ,  87.0001479 ,
+        91.5002379 ,  93.00004185,  94.5000945 ,  96.        ,
+        94.5000945 ,  93.00004185,  91.5002379 ,  90.000225  ,
+        88.50014381,  81.00019035,  82.50019594,  84.000084  ,
+        82.50019594,  84.000084  ,  78.000078  ,  82.50019594,
+        79.50020869,  78.000078  ,  81.00019035,  76.50007076,
+        69.00001725,  70.50006874,  72.0001152 ,  70.50006874,
+        72.0001152 ,  70.50006874,  69.00001725,  67.50014344,
+        66.0001386 ,  63.00012915,  85.50004703,  88.50014381,
+        87.0001479 ,  88.50014381,  87.0001479 ,  88.50014381,
+        90.000225  ,  88.50014381,  87.0001479 ,  82.50019594,
+        81.00019035,  79.50020869,  78.000078  ,  75.        ,
+        72.0001152 ,  69.00001725,  64.5000387 ,  54.0000054 ]))
+Sustain pedal events:
+time=0.000, value=0
+time=0.000, value=0
+time=0.625, value=127
+time=3.920, value=0
+time=4.875, value=127
+time=7.594, value=0
+time=9.889, value=127
+time=11.764, value=0
+time=13.566, value=127
+time=15.319, value=0
+time=15.896, value=127
+time=17.620, value=0
+time=18.175, value=127
+time=19.286, value=127
+time=19.304, value=0
+time=20.989, value=0
+time=21.064, value=127
+time=22.507, value=0
+time=23.187, value=127
+time=23.987, value=0
+time=24.379, value=127
+time=25.164, value=0
+time=25.556, value=127
+time=26.727, value=0
+time=27.087, value=127
+time=28.481, value=0
+time=30.499, value=127
+time=33.391, value=0
+time=35.264, value=127
+time=37.307, value=0
+time=39.749, value=127
+time=42.473, value=0
+time=42.931, value=127
+time=45.483, value=0
+time=46.356, value=127
+time=47.226, value=0
+time=48.267, value=127
+time=50.089, value=0
+time=50.092, value=127
+time=50.897, value=0
+time=51.898, value=127
+time=53.100, value=0
+time=53.725, value=127
+time=54.948, value=0
+time=55.188, value=127
+time=56.146, value=0
+time=56.354, value=127
+time=57.010, value=0
+time=57.330, value=127
+time=58.189, value=0
+time=58.368, value=127
+time=58.923, value=0
+time=59.490, value=127
+time=60.410, value=0
+time=60.413, value=127
+time=61.779, value=0
+time=62.892, value=127
+time=63.527, value=0
+time=63.844, value=127
+time=64.517, value=0
+time=64.862, value=127
+time=65.953, value=0
+time=66.810, value=127
+time=67.862, value=0
+time=67.862, value=127
+time=68.389, value=0
+time=68.915, value=127
+time=69.441, value=0
+time=69.968, value=127
+time=70.613, value=0
+time=70.935, value=127
+time=71.560, value=0
+time=71.873, value=127
+time=72.905, value=0
+time=72.907, value=127
+time=73.395, value=0
+time=74.371, value=127
+time=75.346, value=0
+time=75.834, value=127
+time=76.459, value=0
+time=76.772, value=127
+time=77.378, value=0
+time=77.681, value=127
+time=78.316, value=0
+time=78.633, value=127
+time=79.280, value=0
+time=79.586, value=127
+time=80.233, value=0
+time=80.538, value=127
+time=81.185, value=0
+time=81.490, value=127
+time=82.106, value=0
+time=82.409, value=127
+time=83.006, value=0
+time=83.304, value=127
+time=83.950, value=0
+time=84.277, value=127
+time=85.604, value=0
+time=86.245, value=127
+time=87.276, value=0
+time=87.279, value=127
+time=88.489, value=0
+time=88.969, value=127
+time=90.352, value=0
+time=91.083, value=127
+time=91.864, value=0
+time=92.020, value=127
+time=92.801, value=0
+time=92.958, value=127
+time=93.802, value=0
+time=93.975, value=127
+time=94.766, value=0
+time=94.922, value=127
+time=95.704, value=0
+time=95.860, value=127
+time=96.653, value=0
+time=96.812, value=127
+time=97.611, value=0
+time=97.770, value=127
+time=98.551, value=0
+time=98.705, value=127
+time=99.474, value=0
+time=100.551, value=127
+time=101.176, value=0
+time=101.498, value=127
+time=102.321, value=0
+time=102.488, value=127
+time=103.279, value=0
+time=103.435, value=127
+time=104.217, value=0
+time=104.373, value=127
+time=105.177, value=0
+time=105.339, value=127
+time=105.339, value=127
+time=105.976, value=0
+time=106.135, value=0
+time=106.294, value=127
+time=107.068, value=0
+time=107.221, value=127
+time=108.000, value=0
+time=108.157, value=127
+time=108.948, value=0
+time=109.106, value=127
+time=109.429, value=0
+time=109.593, value=127
+time=109.921, value=0
+time=110.085, value=127
+time=110.415, value=0
+time=110.582, value=127
+time=110.915, value=0
+time=111.082, value=127
+time=111.902, value=0
+time=112.071, value=127
+time=112.922, value=0
+time=113.094, value=127
+time=113.968, value=0
+time=114.147, value=127
+time=114.948, value=0
+time=115.107, value=127
+time=115.900, value=0
+time=116.061, value=127
+time=116.867, value=0
+time=117.028, value=127
+time=117.835, value=0
+time=117.994, value=127
+time=118.780, value=0
+time=118.939, value=127
+time=119.742, value=0
+time=119.904, value=127
+time=120.685, value=0
+time=120.839, value=127
+time=121.608, value=0
+time=121.762, value=127
+time=122.519, value=0
+time=122.671, value=127
+time=123.440, value=0
+time=123.594, value=127
+time=124.373, value=0
+time=124.529, value=127
+time=125.310, value=0
+time=125.467, value=127
+time=126.248, value=0
+time=126.404, value=127
+time=127.190, value=0
+time=127.349, value=127
+time=128.143, value=0
+time=128.301, value=127
+time=129.095, value=0
+time=129.254, value=127
+time=130.047, value=0
+time=130.206, value=127
+time=131.099, value=0
+time=131.277, value=127
+time=132.037, value=0
+time=132.191, value=127
+time=132.967, value=0
+time=133.124, value=127
+time=133.905, value=0
+time=134.061, value=127
+time=134.696, value=0
+time=135.013, value=127
+time=135.664, value=0
+time=135.992, value=127
+time=136.656, value=0
+time=137.001, value=127
+time=137.863, value=0
+time=138.035, value=127
+time=138.897, value=0
+time=139.070, value=127
+time=140.102, value=0
+time=149.065, value=127
+time=149.871, value=0
+time=150.033, value=127
+time=150.839, value=0
+time=151.000, value=127
+time=151.794, value=0
+time=151.953, value=127
+time=152.746, value=0
+time=152.905, value=127
+time=153.699, value=0
+time=153.858, value=127
+time=154.688, value=0
+time=154.798, value=127
+time=155.625, value=0
+time=155.735, value=127
+time=156.573, value=0
+time=156.685, value=127
+time=157.532, value=0
+time=157.645, value=127
+time=158.511, value=0
+time=158.626, value=127
+time=159.506, value=0
+time=159.623, value=127
+time=160.518, value=0
+time=160.637, value=127
+time=161.748, value=0
+time=162.860, value=127
+time=163.968, value=0
+time=163.971, value=127
+time=164.711, value=0
+time=165.082, value=127
+time=167.301, value=0
+time=167.304, value=127
+time=168.215, value=0
+time=168.397, value=127
+time=170.576, value=0
+time=170.578, value=127
+time=171.471, value=0
+time=171.650, value=127
+time=173.829, value=0
+time=173.832, value=127
+time=174.552, value=0
+time=174.910, value=127
+time=175.679, value=0
+time=176.063, value=127
+time=176.812, value=0
+time=177.175, value=127
+time=177.903, value=0
+time=178.266, value=127
+time=178.993, value=0
+time=179.357, value=127
+time=180.084, value=0
+time=180.448, value=127
+time=181.175, value=0
+time=181.546, value=127
+time=182.300, value=0
+time=182.685, value=127
+time=183.440, value=0
+time=183.810, value=127
+time=184.595, value=0
+time=184.791, value=127
+time=185.575, value=0
+time=186.163, value=127
+time=187.033, value=0
+time=187.468, value=127
+time=188.772, value=0
+time=188.772, value=127
+time=190.738, value=0
+time=191.353, value=127
+time=192.204, value=0
+time=192.630, value=127
+time=195.126, value=0
+time=195.130, value=127
+time=195.981, value=0
+time=196.406, value=127
+time=198.383, value=0
+time=198.933, value=127
+time=199.766, value=0
+time=200.183, value=127
+time=202.706, value=0
+time=202.709, value=127
+time=203.579, value=0
+time=204.014, value=127
+time=205.749, value=0
+time=206.619, value=127
+time=207.511, value=0
+time=207.956, value=127
+time=209.806, value=0
+time=210.622, value=127
+time=211.532, value=0
+time=211.986, value=127
+time=212.938, value=0
+time=213.415, value=127
+time=214.367, value=0
+time=214.842, value=127
+time=215.889, value=0
+time=215.889, value=127
+time=216.736, value=0
+time=216.906, value=127
+time=217.765, value=0
+time=217.937, value=127
+time=218.785, value=0
+time=218.954, value=127
+time=219.805, value=0
+time=219.977, value=127
+time=220.839, value=0
+time=221.012, value=127
+time=221.859, value=0
+time=222.029, value=127
+time=222.862, value=0
+time=223.029, value=127
+time=223.862, value=0
+time=224.029, value=127
+time=224.862, value=0
+time=225.029, value=127
+time=225.862, value=0
+time=225.862, value=127
+time=227.026, value=0
+time=227.029, value=127
+time=227.786, value=0
+time=227.876, value=127
+time=228.644, value=0
+time=229.080, value=127
+time=229.892, value=0
+time=230.171, value=127
+time=233.712, value=0
+time=233.942, value=127
+time=237.279, value=0

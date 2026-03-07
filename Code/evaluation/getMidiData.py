@@ -15,6 +15,12 @@ def getIntervals(path):
     intervals = np.array([[note.start, note.end] for note in notes])
 
     return intervals
+
+def getShiftedIntervals(path, shift):
+    notes = getNoteData(path)
+    intervals = np.array([[note.start - shift, note.end - shift] for note in notes])
+
+    return intervals
         
 # get 1d array of pitches in HZ
 def getPitchesInHZ(path):
@@ -36,6 +42,4 @@ def getPitchesInMIDI(path):
     pitches = np.array(pitches) # convert to numpy
     return pitches
 
-def makeAnnotationFile(inputPath, outputPath):
-    notes = getNoteData(inputPath)
 

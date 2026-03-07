@@ -1,4 +1,12 @@
-- Feb 24:
+### Aligned results
+- March 4:
+	- offset off
+		- shift
+			- -0.16517006802721093 secs
+		- metrics
+			- [0.7318007662835249, 0.7609561752988048, 0.74609375, 0.656941236631364]
+### Garbage
+- Feb 24: (incorrectly timed reference file)
 	- default settings (offset on)
 		- precision: 0.012269938650306749 
 		- recall: 0.008064516129032258
@@ -9,7 +17,7 @@
 		- recall: 0.012096774193548387
 		- f measure: 0.014598540145985401
 		- average overlap ratio: 0.7671996410871623
-- March 1:
+- March 1: (incorrectly timed reference file)
 	- default
 		- precision: 0
 		- recall: 0

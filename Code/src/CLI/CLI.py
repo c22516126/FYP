@@ -37,7 +37,7 @@ class TranscriptionCLI:
         self.hop_size = WINDOW_SAMPLES - self.overlap_len
 
         # -----------------
-        # Frame-domain quantities (THIS was the missing ordering)
+        # Frame-domain quantities 
         # -----------------
         self.FRAMES_PER_WINDOW = WINDOW_SAMPLES // FFT_HOP
         self.FRAMES_PER_STRIDE = self.hop_size // FFT_HOP

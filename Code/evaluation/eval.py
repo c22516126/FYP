@@ -1,17 +1,15 @@
 import mir_eval
-from getMidiData import getNoteData, getIntervals, getPitchesInHZ, getPitchesInMIDI
+from src.config import FITP_REFERENCE_PATH, FITP_ESTIMATE_PATH
+from getMidiData import getNoteData, getIntervals, getPitchesInHZ, getPitchesInMIDI, getShiftedIntervals
 from saveNotes import saveNotes
 from basic_pitch.inference import predict
 from basic_pitch import ICASSP_2022_MODEL_PATH
 
+estimateIntervals = getIntervals(FITP_ESTIMATE_PATH)
+estimatePitches = getPitchesInHZ(FITP_ESTIMATE_PATH)
 
-estimatePath = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\FITP\output.mid')
-estimateIntervals = getIntervals(estimatePath)
-estimatePitches = getPitchesInHZ(estimatePath)
-
-referencePath = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\FITP\FITPeval.mid')
-referenceIntervals = getIntervals(referencePath)
-referencePitches = getPitchesInHZ(referencePath)
+referenceIntervals = getIntervals(FITP_REFERENCE_PATH)
+referencePitches = getPitchesInHZ(FITP_REFERENCE_PATH)
 
 
 """
@@ -28,15 +26,15 @@ overlapScore2 = mir_eval.transcription.precision_recall_f1_overlap(
     estimateIntervals, 
     estimatePitches,
     offset_ratio=None)  
-
+    
 print("finished")
 print("overlap score -> "+str(overlapScore))
 print("overlap score 2 -> "+str(overlapScore2))
 
 savedRefNotes = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\notes files\refNotes.txt')
 savedEstNotes = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\notes files\estNotes.txt')
-saveNotes(estimatePath, savedEstNotes)
-saveNotes(referencePath, savedRefNotes)
+saveNotes(FITP_ESTIMATE_PATH, savedEstNotes)
+saveNotes(FITP_REFERENCE_PATH, savedRefNotes)
 
 
 #audio_path = (r'C:\Users\jason\school\FYP\FYP\Code\input\FITPeval.mp3')

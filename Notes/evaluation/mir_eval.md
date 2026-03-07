@@ -71,3 +71,11 @@
 # References
 [mir_eval research paper](https://colinraffel.com/publications/ismir2014mir_eval.pdf)
 [MIREX note tracking subtask](http://www.music-ir.org/mirex/wiki/2015:Multiple_Fundamental_Frequency_Estimation_%26_Tracking_Results_-_MIREX_Dataset#Task_2:Note_Tracking_.28NT.29)
+
+a Singing Transcription Model Using
+
+Connectionist Temporal Classiﬁcation
+
+Loss and Cross-Entropy Loss
+
+TRAINING A SINGING TRANSCRIPTION MODEL USING CONNECTIONIST TEMPORAL CLASSIFICATION LOSS

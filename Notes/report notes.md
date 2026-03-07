@@ -1,0 +1,7 @@
+- diagrams to use
+	- chromagram
+	- overlapped prediction+ground truth notes ![[Pasted image 20260305025621.png]]
+	- flowchart? for MIDI generation + comparison process
+- things to talk about
+	- precision vs recall
+		- when to prioritise one, why would i prioritise one, what they even calculate, significance
