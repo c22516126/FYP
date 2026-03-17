@@ -10,8 +10,6 @@ from getMidiData import getPitchesInHZ, getIntervals, getShiftedIntervals
 from src.config import FITP_REFERENCE_PATH, FITP_ESTIMATE_PATH, AUDIO_SAMPLE_RATE, FFT_HOP
 from src.config import CDL__ESTIMATE_PATH, CDL_REFERENCE_PATH
 import mir_eval
-from basic_pitch import ICASSP_2022_MODEL_PATH
-from basic_pitch.inference import predict
 
 # shift global timing by frame length from start to end range
 def align(start, end, estimatePath, referencePath):
@@ -22,7 +20,8 @@ def align(start, end, estimatePath, referencePath):
     estimateIntervals = getIntervals(estimatePath)
     referencePitches = getPitchesInHZ(referencePath)
     fScorePeak = 0
-    scoreList = []
+    shifts = []
+    f1 = []
 
     while s < end:
         s += shiftSize
@@ -38,18 +37,6 @@ def align(start, end, estimatePath, referencePath):
             peakShift = s
             fScorePeak = f_measure
             finalScore = [precision, recall, f_measure, avg_overlap_ratio]
-        scoreList.append([s, f_measure])
-    return peakShift, finalScore, scoreList
-    
-
-print("fitp")
-# fish in the pool eval
-pShift, fScore, sList = align(-0.2, 0.2, FITP_ESTIMATE_PATH, FITP_REFERENCE_PATH)
-print(fScore)
-
-
-print("clair de lune")
-
-# claire de lune eval
-pShift, fScore, sList = align(-0.2, 0.2, CDL__ESTIMATE_PATH, CDL_REFERENCE_PATH)
-print(fScore)
+        shifts.append(s)
+        f1.append(f_measure)
+    return peakShift, finalScore, shifts, f1

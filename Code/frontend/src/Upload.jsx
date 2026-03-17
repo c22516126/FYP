@@ -1,7 +1,6 @@
-import { useState, useRef } from "react"
+import { useRef } from "react"
 
-function Upload() {
-    const [audioUrl, setAudioUrl] = useState(null)
+function Upload({ onTranscribed }) {
     const fileInputRef = useRef(null)
 
     return(
@@ -21,21 +20,17 @@ function Upload() {
                     method: "POST",
                     body: inputFile
                 })
-                .then(res => res.blob())
-                .then(blob => {
-                    const url = URL.createObjectURL(blob)
-                    setAudioUrl(url)
+                .then(res => res.json())
+                .then(data => {
+                    onTranscribed({
+                        midiUrl: `http://localhost:5000${data.midiUrl}`,
+                        audioUrl: `http://localhost:5000${data.audioUrl}`
+                    })
                     event.target.value = null
                 })
             }}/>
             
             <button onClick={() => fileInputRef.current.click()}>Upload</button>
-            {audioUrl && (
-                <audio key={audioUrl} controls>
-                    <source src={audioUrl} type="audio/wav"/>
-                    Audio not supported by browser.
-                </audio>
-            )}
         </div>
     )
 }

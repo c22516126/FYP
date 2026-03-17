@@ -37,11 +37,25 @@ def upload():
         return{"error": ["audio format must be .mp3, .wav, or .flac"]}, 422
     
 
-    filePath = os.path.join(UPLOAD_FOLDER, "inputFile" )
+    filePath = os.path.join(UPLOAD_FOLDER, "inputFile")
     file.save(filePath)
 
-    midiPath, audioPath = transcriber.transcribe(filePath)    
+    midiPath, audioPath = transcriber.transcribe(filePath)
+    return {
+        "midiUrl": "/midi",
+        "audioUrl": "/audio"
+    }
+
+@app.route('/midi')
+def serve_midi():
+    midiPath = os.path.join(os.path.dirname(__file__), "..", "output", "output.mid")
+    return send_file(midiPath, mimetype="audio/midi")
+
+@app.route('/audio')
+def serve_audio():
+    audioPath = os.path.join(os.path.dirname(__file__), "..", "output", "output.wav")
     return send_file(audioPath, mimetype="audio/wav")
+
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)

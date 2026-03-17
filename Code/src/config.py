@@ -38,3 +38,5 @@ FITP_ESTIMATE_PATH = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files
 FITP_REFERENCE_PATH = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\FITP\FITPeval.mid')
 CDL__ESTIMATE_PATH = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\CDL\output.mid')
 CDL_REFERENCE_PATH = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\CDL\CDL.mid')
+INDIA_ESTIMATE_PATH = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\india\output.mid')
+INDIA_REFERENCE_PATH = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\india\panjabi_mcmundian_to_bach_ke.mid')

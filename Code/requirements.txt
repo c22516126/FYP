@@ -8,3 +8,4 @@ mir_eval
 flask
 flask-cors
 mirdata
+matplotlib
