@@ -1,122 +1,152 @@
 import numpy as np
-import pretty_midi
-from typing import Optional
+import scipy
+from typing import Optional, List, Tuple
+
+MAX_FREQUENCY_INDEX = 87
+MIDI_OFFSET = 21
 
 def createNotes(
-    pitchPost: np.ndarray,
-    onsetPost: Optional[np.ndarray] = None,
-    offsetPost: Optional[np.ndarray] = None,  # kept for future use
-    pitchThreshold: float = 0.2,
-    onsetThreshold: float = 0.5,
-    minFrames: int = 3,
-    bridgeGap: int = 2,
-    sampleRate: int = 22050,
-    fftHop: int = 512,
-    midiOffset: int = 21,  # BasicPitch-style: 0 -> 21 (A0)
-    velocity: int = 80,
-):
+    frames: np.array,
+    onsets: np.array,
+    onsetThreshold: float,
+    frameThreshold: float,
+    minimumNoteLength: int,
+    energyTolerance: int,
+    melodia: bool = True
+) ->List[Tuple[int,int,int,float]]:
 
-    if pitchPost.ndim != 2:
-        raise ValueError(f"pitchPost must be 2D (T, P), got shape {pitchPost.shape}")
+    nFrames = frames.shape[0]
+    
+    # basic pitch constrains frequencies and adds extra note starts (get_infered_onsets) here, skipping for now
 
-    TIME, PITCH_BIN = pitchPost.shape
-    secondsPerFrame = fftHop / sampleRate
+    # find local maximum within onset matrix
+    peakThresholdMatrix = np.zeros(onsets.shape)
+    peaks = scipy.signal.argrelmax(onsets, axis = 0) # find the index of values that are greater than its neighbours
+    peakThresholdMatrix[peaks] = onsets[peaks]
 
-    notes: list[pretty_midi.Note] = []
+    # get valid onset time and pitch positions
+    onsetIndex = np.where(peakThresholdMatrix >= onsetThreshold)
+    # reverse onset pitch and time arrays
+    # algorithm removes energy as it goes - process backwards to preserve later notes
+    onsetTimeIndex = onsetIndex[0][::-1]
+    onsetFreqIndex = onsetIndex[1][::-1]
 
-    for p in range(PITCH_BIN):
-        inNote = False
-        startFrame = None
-        lastActive = None
-        gap = 0
+    # prevent duplicate notes by locking time/frequency energy once claimed by a note
+    remainingEnergy = np.zeros(frames.shape)
+    remainingEnergy[:, :] = frames[:, :]
 
-        for pitchTime in range(TIME):
-            pitchValue = pitchPost[pitchTime, p]
-            pitchActive = pitchValue >= pitchThreshold
+    # loop onsets
+    noteEvents = [] # make note array
+    for noteStartIndex, frequencyIndex in zip(onsetTimeIndex, onsetFreqIndex): # pair reversed note and frequency array, loop through
+        if noteStartIndex >= nFrames -1: # skip onsets at end of audio
+            continue
 
-            onsetActive = False
-            if onsetPost is not None:
-                onsetActive = onsetPost[pitchTime, p] >= onsetThreshold
+        # find time index
+        i = noteStartIndex + 1
+        k = 0 # number of frames since energy has dropped below energy threshold
 
-            # ------------- STATE MACHINE -------------
+        # while still inside the audio and above the energy loss threshold
+        while (i < nFrames - 1 and  k < energyTolerance):
+            if remainingEnergy[i, frequencyIndex] < frameThreshold:
+                k += 1
+            else: # reset counter if remaining energy passes threshold
+                k = 0
+            i += 1
 
-            if not inNote:
-                # Prefer onset-triggered starts
-                if onsetPost is not None:
-                    if onsetActive and pitchActive:
-                        inNote = True
-                        startFrame = pitchTime
-                        lastActive = pitchTime
-                        gap = 0
+        i -= k # rewind k to last frame where energy is above the threshold
+
+        if (i - noteStartIndex <= minimumNoteLength): # skip if note is too small
+            continue
+
+        # lock energy once claimed by a note
+        remainingEnergy[noteStartIndex:i, frequencyIndex] = 0 # remove energy at main pitch
+        if frequencyIndex < MAX_FREQUENCY_INDEX:
+            remainingEnergy[noteStartIndex:i, frequencyIndex + 1] = 0 # remove energy in neighbour above
+        if frequencyIndex > 0:
+            remainingEnergy[noteStartIndex:i, frequencyIndex - 1] = 0 # remove energy in neighbour below
+
+        # create the note
+        amplitude = np.mean(frames[noteStartIndex:i, frequencyIndex]) # normalized loudness estimate
+        noteEvents.append(
+            (
+                noteStartIndex, # note start
+                i, # note end
+                frequencyIndex + MIDI_OFFSET, # pitch
+                amplitude # velocity
+            )
+        )
+
+    # melodia trick (create notes out of strongest remaining energy peaks)
+    if melodia:
+        energyShape = remainingEnergy.shape
+
+        while (np.max(remainingEnergy) > frameThreshold): # while energy is strong enough to be considered a note
+            noteCentre, frequencyIndex = np.unravel_index(np.argmax(remainingEnergy), energyShape)
+            remainingEnergy[noteCentre, frequencyIndex] = 0
+
+            # forward pass
+            i = noteCentre + 1
+            k = 0
+
+            while (i < nFrames - 1 and k < energyTolerance):
+                if (remainingEnergy[i, frequencyIndex] < frameThreshold):
+                    k += 1
                 else:
-                    # Fallback: no onset info -> use pitch only
-                    if pitchActive:
-                        inNote = True
-                        startFrame = pitchTime
-                        lastActive = pitchTime
-                        gap = 0
-            else:
-                # We are inside a note
-                if pitchActive:
-                    lastActive = pitchTime
-                    gap = 0
-                else:
-                    gap += 1
-                    if gap > bridgeGap:
-                        # Close the note at lastActive + 1
-                        endFrameExcl = (lastActive + 1) if lastActive is not None else pitchTime
-                        length = endFrameExcl - startFrame
-                        if length >= minFrames:
-                            startTime = startFrame * secondsPerFrame
-                            endTime = endFrameExcl * secondsPerFrame
-                            midiPitch = p + midiOffset
-                            notes.append(
-                                pretty_midi.Note(
-                                    velocity=velocity,
-                                    pitch=midiPitch,
-                                    start=startTime,
-                                    end=endTime,
-                                )
-                            )
-                        # reset state
-                        inNote = False
-                        startFrame = None
-                        lastActive = None
-                        gap = 0
+                    k = 0
 
-        # If we end the sequence while still in a note
-        if inNote and startFrame is not None and lastActive is not None:
-            endFrameExcl = lastActive + 1
-            length = endFrameExcl - startFrame
-            if length >= minFrames:
-                startTime = startFrame * secondsPerFrame
-                endTime = endFrameExcl * secondsPerFrame
-                midiPitch = p + midiOffset
-                notes.append(
-                    pretty_midi.Note(
-                        velocity=velocity,
-                        pitch=midiPitch,
-                        start=startTime,
-                        end=endTime,
-                    )
+                remainingEnergy[i, frequencyIndex] = 0
+                if (frequencyIndex < MAX_FREQUENCY_INDEX):
+                    remainingEnergy[i, frequencyIndex + 1] = 0
+                if (frequencyIndex > 0):
+                    remainingEnergy[i, frequencyIndex - 1] = 0
+
+                i += 1
+
+            noteEnd = i - 1 - k # go back to frame above threshold
+
+            # backward pass
+            i = noteCentre - 1
+            k = 0
+            while (i > 0 and k < energyTolerance):
+                if (remainingEnergy[i, frequencyIndex] < frameThreshold):
+                    k += 1
+                else:
+                    k = 0
+
+                remainingEnergy[i, frequencyIndex] = 0
+                if (frequencyIndex < MAX_FREQUENCY_INDEX):
+                    remainingEnergy[i, frequencyIndex + 1] = 0
+                if (frequencyIndex > 0):
+                    remainingEnergy[i, frequencyIndex - 1] = 0
+
+                i -= 1
+
+            noteStart = i + 1 + k # go back to frame above threshold
+            
+            if (noteEnd - noteStart <= minimumNoteLength): # skip if note is too short
+                continue
+
+            # add note
+            amplitude = np.mean(frames[noteStart:noteEnd, frequencyIndex])
+            noteEvents.append(
+                (
+                    noteStart,
+                    noteEnd,
+                    frequencyIndex + MIDI_OFFSET,
+                    amplitude
                 )
+            )
+    return noteEvents
 
-    # Sort by time then pitch for sanity
-    notes.sort(key=lambda n: (n.start, n.pitch))
-    return notes
+# convert note creation output from frames to seconds
+def framesToSeconds(noteEvents, sampleRate, hopSize):
+    secondsPerFrame = hopSize / sampleRate
 
+    converted = []
+    for start, end, pitch, amplitude in noteEvents:
+        startTime = start * secondsPerFrame
+        endTime = end * secondsPerFrame
 
-# Quick self-test when run directly
-if __name__ == "__main__":
-    T, P = 100, 88
-    mat = np.zeros((T, P), dtype=np.float32)
-    on = np.zeros((T, P), dtype=np.float32)
+        converted.append((startTime, endTime, pitch, amplitude))
 
-    # Fake: one note around pitch bin 60 for frames 10–30
-    mat[10:31, 60] = 0.9
-    on[10, 60] = 0.9
-
-    test_notes = createNotes(mat, onsetPost=on, minFrames=2)
-    print("Num notes:", len(test_notes))
-    for n in test_notes:
-        print("pitch", n.pitch, "start", n.start, "end", n.end)
+    return converted

@@ -1,13 +1,15 @@
+# transcriber for the website - not used in CLI
+
 import os
 import numpy as np
 
 from pipeline.loadModel import loadModel
 from pipeline.inference import infer
-from pipeline.noteCreation import createNotes
+from pipeline.noteCreation import createNotes, framesToSeconds
 from pipeline.generateMIDI import buildMIDI
 from pipeline.audioRender import midi_to_audio
 from pipeline.stitch import unwrapOutput
-from config import MODEL_PATH, SOUNDFONT_PATH, OUTPUT_DIR, FFT_HOP, WINDOW_SAMPLES, OVERLAP_FRAMES
+from config import MODEL_PATH, SOUNDFONT_PATH, OUTPUT_DIR, FFT_HOP, WINDOW_SAMPLES, OVERLAP_FRAMES, AUDIO_SAMPLE_RATE
 
 from basic_pitch.inference import get_audio_input
 
@@ -46,16 +48,26 @@ class Transcriber:
         # run inference
         pitchFull, onsetFull, audio_len = self._run_inference(audio_path)
 
-        # create notes
         notes = createNotes(
-            pitchFull,
-            onsetPost=onsetFull,
-            sampleRate=22050,
-            fftHop= FFT_HOP,
+            frames=pitchFull,
+            onsets=onsetFull,
+            onsetThreshold=0.5,
+            frameThreshold=0.3,
+            minimumNoteLength=11,
+            energyTolerance=11,
+            melodia=False
+        )
+
+        notesInSeconds = framesToSeconds(
+            notes,
+            sampleRate=AUDIO_SAMPLE_RATE,
+            hopSize=FFT_HOP
         )
 
         # create midi
-        buildMIDI(notes, self.midi_out)
+        print(type(notesInSeconds[0]))
+        print("bruh")
+        buildMIDI(notesInSeconds, self.midi_out)
 
         # render audio
         midi_to_audio(self.midi_out, self.audio_out, self.soundfont)

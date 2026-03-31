@@ -1,0 +1,78 @@
+# Overview
+- constant q
+	- Q = center frequency / bandwidth
+		- ratio of frequency to bandwidth
+			- same relative resolution across freqs
+			- log spacing consistency
+		- number of cycles of a frequency is analysed within a window
+		- analysis window length determined as a result of Q
+		- controls time/frequency resolution tradeoff
+	- bandwidth = center frequency/q
+		- pitch bin frequency range
+	- center frequency = f1 * 2^(k-1 / b)
+		- f1 = center frequency of lowest pitch bin
+		- b = pitch bins per octave 
+			- determines frequency resolution granularity
+			- indirectly impacts time-frequency tradeoff through Q scaling
+	- high Q
+		- large window
+		- short bandwidth
+	- low Q
+		- small window
+		- wide bandwidth
+- analysis window (Nk)
+	- Nk = Q * sr / center frequency
+### Limitations
+- bass notes have wider windows
+	- worse onset accuracy
+- no perfect transform to reconstruct original signal from transform coefficients
+	- exist but not perfect
+	- does NOT matter for AMT
+- varying time resolution for each bin
+	- sampling of each frequency bin is not synchronized
+### Issues with CQT
+- more computationally expensive than discrete fourier transform
+- more difficult to work with than STFT
+	- varying time resolution for each bin
+	- not synchronised
+### CQT Equations
+- CQT definition ![[Pasted image 20260326041445.png]]
+	- XCQ(k,n)
+		- how much frequency fk is present at time N
+	- summation
+		- iterate j through local region around time N
+		- take small chunk of signal around time N
+	- x(j)
+		- raw audio signal - whole
+	- ak(n)
+		- kernel at frequency K
+		- tuned to frequency K
+		- windowed (finite length)
+	- why shift (j-n + Nk/2)
+		- align kernel with time N
+		- where to sample the kernel
+	- complex conjugate: *
+		- for kernel value at index (j-n + Nk/2)
+			- flip sign of imaginary number
+			- preserve non imaginary number sign
+- basis function (kernel structure) ![[Pasted image 20260326044724.png]]
+	- exponential (actual frequency)
+		- complex sinusoid
+		- frequency = fk
+		- cosine (real)
+		- sine (imaginary)
+	- window function
+		- w(n/Nk)
+		- shapes kernel
+		- controls how long sinusoid exists in time
+		- why use it
+			- infinite sinusoid without it
+	- scaling factor
+		- 1/Nk
+		- normalization
+		- keep energy consistent across frequencies
+		- prevent longer windows(low freqs) from dominating
+- equivalence (parseval link) ![[Pasted image 20260326044743.png]]
+- practical computation ![[Pasted image 20260326044755.png]]
+---
+# Implementation

@@ -128,3 +128,93 @@
 	- 
 - q 
 - cycles in window
+## Report Structure
+1. CQT Theory
+	1. intro to time-freq analysis (context)
+		1. why spectral representations are needed
+		2. stft
+	2. limitations of stft
+		1. linear frequency spacing
+		2. fixed window size
+		3. poor low freq resolution
+	3. CQT overview (original paper)
+		1. constant q ratio
+		2. logarithmic freq spacing
+		3. musical alignment
+	4. variable window lengths + implications
+		1. window length = Q * sample rate / frequency center
+		2. low frequency -> long windows
+		3. high frequency -> high windows
+		4. time vs freq tradeoff
+		5. onset smearing
+	5. advantages and limitations of CQT
+		1. advantages
+			1. musical pitch alignment
+			2. better low freq resolution
+		2. limitations
+			1. temporal smearing at low frequencies
+			2. frame based timing contraints
+			3. freq dependant resolution
+	6. modern CQT implementaions (CQT toolbox paper)
+		1. multi sample rate
+		2. downsampling across octaves
+		3. computational efficiency
+	7. summary
+		1. tradeoffs
+		2. why CQT is suitable
+2. CQT implementation in basic pitch
+	1. role of CQT in pipeline
+		1. audio -> CQT -> CNN -> MIDI
+	2. implementation approach
+		1. multi rate CQT (schorkhuber based)
+		2. kernel reuse across octaves
+		3. downsample strat
+	3. key params and effects
+		1. hop length
+			1. time resolution
+			2. frame spacing
+		2. bins per octave
+			1. freq resolution
+			2. pitch granularity
+		3. min frequency
+			1. coverage of pitch range
+		4. window function
+			1. hann window
+			2. effect on spectral leakage
+		5. q factor
+			1. controls window length
+			2. tradeoff tuning
+	4. analysis window length in practice
+		1. why low notes behave different
+		2. effect on onset detection
+	5. implications for CNN input representation
+		1. time freq structure
+		2. frame alignment
+		3. pitch dependant resolution
+	6. limitations of implementation
+		1. downsampling artifacts
+		2. temporal resolution issues
+		3. approximation vs true CQT
+	7. summary
+3. CQT Experiments
+	1. experimental setup
+	2. effectt of hop length on time resolution
+	3. effect of freq resolution (bins)
+	4. effect of q factor
+	5. analysis of observed tradeoffs
+		1. what changed
+		2. why it changed
+		3. link back to theory
+	6. limitations and observed fail cases
+		1. low freq onset issues
+		2. fast note transitions
+		3. noise sensitivity
+	7. summary of experimental findings
+- diagrams
+	- sec 1
+		- stft vs CQT
+		- variable window
+		- pitch bin mapping (frequency center calculation)
+	- sec 2
+		- pipeline flow
+		- kernel matching
