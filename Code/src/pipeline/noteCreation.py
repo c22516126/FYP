@@ -8,10 +8,10 @@ MIDI_OFFSET = 21
 def createNotes(
     frames: np.array,
     onsets: np.array,
-    onsetThreshold: float,
-    frameThreshold: float,
-    minimumNoteLength: int,
-    energyTolerance: int,
+    onsetThreshold: float = 0.5,
+    frameThreshold: float = 0.3,
+    minimumNoteLength: int = 11,
+    energyTolerance: int = 8,
     melodia: bool = True
 ) ->List[Tuple[int,int,int,float]]:
 

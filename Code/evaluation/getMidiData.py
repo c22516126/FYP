@@ -21,6 +21,20 @@ def getShiftedIntervals(path, shift):
     intervals = np.array([[note.start - shift, note.end - shift] for note in notes])
 
     return intervals
+
+def shiftIntervals(intervals, shift):
+    shifted = []
+
+    for start, end in intervals:
+        new_start = start + shift
+        new_end = end + shift
+
+        if new_end <= 0:
+            continue
+
+        shifted.append([max(0, new_start), max(0, new_end)])
+
+    return np.array(shifted)
         
 # get 1d array of pitches in HZ
 def getPitchesInHZ(path):
@@ -42,4 +56,12 @@ def getPitchesInMIDI(path):
     pitches = np.array(pitches) # convert to numpy
     return pitches
 
+def noteToEvalData(notes):
+    intervals = []
+    pitches = []
 
+    for start, end, pitch, _ in notes:
+        intervals.append([start, end])
+        pitches.append(mir_eval.util.midi_to_hz(pitch))
+
+    return np.array(intervals), np.array(pitches)

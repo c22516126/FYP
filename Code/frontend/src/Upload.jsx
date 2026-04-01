@@ -23,10 +23,10 @@ function Upload({ onTranscribed }) {
                 .then(res => res.json())
                 .then(data => {
                     onTranscribed({
-                        midiUrl: `http://localhost:5000${data.midiUrl}`,
-                        audioUrl: `http://localhost:5000${data.audioUrl}`
+                        midiUrl: `http://localhost:5000${data.midiUrl}?t=${Date.now()}`,
+                        audioUrl: `http://localhost:5000${data.audioUrl}?t=${Date.now()}`
                     })
-                    event.target.value = null
+                    event.target.value = ""
                 })
             }}/>
             

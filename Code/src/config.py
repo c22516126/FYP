@@ -32,11 +32,14 @@ FFT_HOP = 256 # for every 256 samples, start a frame and make a prediction
 WINDOW_SAMPLES = 32768 # amount of samples fed to model during each inference instance
 OVERLAP_FRAMES = 30 # amount of frames overlapping within a window
 
-# evaluation file paths
+# note creation
+ONSET_DEFAULT = 0.5
+FRAME_DEFAULT = 0.3
+MIN_DEFAULT = 11
+ENERGY_DEFAULT = 8
+
+# eval paths
 # ----------------------------------------------------------------------------------------------------------------------------------------
-FITP_ESTIMATE_PATH = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\FITP\output.mid')
-FITP_REFERENCE_PATH = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\FITP\FITPeval.mid')
-CDL__ESTIMATE_PATH = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\CDL\output.mid')
-CDL_REFERENCE_PATH = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\CDL\CDL.mid')
-INDIA_ESTIMATE_PATH = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\india\output.mid')
-INDIA_REFERENCE_PATH = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\india\panjabi_mcmundian_to_bach_ke.mid')
+# midi outputs
+FITP_EP = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\FITP\output.mid')
+CDL_EP = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\CDL\output.mid')

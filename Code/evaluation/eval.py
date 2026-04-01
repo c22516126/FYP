@@ -5,9 +5,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from alignment import align
 
 from getMidiData import getPitchesInHZ, getIntervals, getShiftedIntervals
-from src.config import FITP_REFERENCE_PATH, FITP_ESTIMATE_PATH # fish in the pool
-from src.config import CDL__ESTIMATE_PATH, CDL_REFERENCE_PATH # claire de lune
-from src.config import INDIA_ESTIMATE_PATH, INDIA_REFERENCE_PATH
+from src.config import FITP_RP, FITP_EP # fish in the pool
+from src.config import CDL_EP, CDL_RP # claire de lune
 import mir_eval
 import mir_eval.display
 import matplotlib.pyplot as plt
@@ -16,23 +15,23 @@ import numpy as np
 #from basic_pitch.inference import predict
 
 # fish in the pool 
-FITPpShift, FITPfScore, FITPshifts, FITPf1 = align(-0.2, 0.2, FITP_ESTIMATE_PATH, FITP_REFERENCE_PATH)
+FITPpShift, FITPfScore, FITPshifts, FITPf1 = align(-0.2, 0.2, FITP_EP, FITP_RP)
 
 # claire de lune 
-CDLpShift, CDLfScore, CDLshifts, CDLf1 = align(-0.2, 0.2, CDL__ESTIMATE_PATH, CDL_REFERENCE_PATH)
+CDLpShift, CDLfScore, CDLshifts, CDLf1 = align(-0.2, 0.2, CDL_EP, CDL_RP)
 
 # CDL2
 qPath = r'C:\Users\jason\school\FYP\FYP\Code\output\output_fs0_25.mid'
-_,t1,_,_ = align(-0.2,0.2, qPath, CDL_REFERENCE_PATH)
+_,t1,_,_ = align(-0.2,0.2, qPath, CDL_RP)
 
 qPath = r'C:\Users\jason\school\FYP\FYP\Code\output\output_fs0_5.mid'
-_,t2,_,_ = align(-0.2,0.2, qPath, CDL_REFERENCE_PATH)
+_,t2,_,_ = align(-0.2,0.2, qPath, CDL_RP)
 
 qPath = r'C:\Users\jason\school\FYP\FYP\Code\output\output_fs0_75.mid'
-_,t3,_,_ = align(-0.2,0.2, qPath, CDL_REFERENCE_PATH)
+_,t3,_,_ = align(-0.2,0.2, qPath, CDL_RP)
 
 qPath = r'C:\Users\jason\school\FYP\FYP\Code\output\output_fs1_0.mid'
-_,t4,_,_ = align(-0.2,0.2, qPath, CDL_REFERENCE_PATH)
+_,t4,_,_ = align(-0.2,0.2, qPath, CDL_RP)
 
 #print("Base system: "+str(CDLfScore))
 print("Format: Precision, Recall, F1, Overlap Ratio")
@@ -60,11 +59,11 @@ plt.savefig('timeShift.png')
 # overlapping notes ------------------------------------------------------------------------------------------
 # fish in the pool
 plt.figure()
-estIntervalsFITP = getIntervals(FITP_ESTIMATE_PATH)
-estPitchesFITP = getPitchesInHZ(FITP_ESTIMATE_PATH)
+estIntervalsFITP = getIntervals(FITP_EP)
+estPitchesFITP = getPitchesInHZ(FITP_EP)
 
-refIntervalsFITP = getIntervals(FITP_REFERENCE_PATH)
-refPitchesFITP = getPitchesInHZ(FITP_REFERENCE_PATH)
+refIntervalsFITP = getIntervals(FITP_RP)
+refPitchesFITP = getPitchesInHZ(FITP_RP)
 mir_eval.display.piano_roll(refIntervalsFITP, refPitchesFITP, color="tab:orange", label="Reference")
 mir_eval.display.piano_roll(estIntervalsFITP, estPitchesFITP, color="tab:blue", alpha=0.5, label="Estimate")
 
@@ -76,11 +75,11 @@ plt.savefig('FITPoverlappingNotes.png')
 
 # clair de lune
 plt.figure()
-estIntervalsCDL = getIntervals(CDL__ESTIMATE_PATH)
-estPitchesCDL = getPitchesInHZ(CDL__ESTIMATE_PATH)
+estIntervalsCDL = getIntervals(CDL_EP)
+estPitchesCDL = getPitchesInHZ(CDL_EP)
 
-refIntervalsCDL = getIntervals(CDL_REFERENCE_PATH)
-refPitchesCDL = getPitchesInHZ(CDL_REFERENCE_PATH)
+refIntervalsCDL = getIntervals(CDL_RP)
+refPitchesCDL = getPitchesInHZ(CDL_RP)
 mir_eval.display.piano_roll(refIntervalsCDL, refPitchesCDL, color="tab:orange", label="Reference")
 mir_eval.display.piano_roll(estIntervalsCDL, estPitchesCDL, color="tab:blue", alpha=0.5, label="Estimate")
 plt.xlim(0, 60)

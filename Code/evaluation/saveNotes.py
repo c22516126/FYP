@@ -43,6 +43,6 @@ def saveNotes(inputPath, outputPath):
         else:
             file.write("\nNo sustain pedal events found\n")
 
-path = r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\other\CDL.mid'
-outpath = r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\other\notes.txt'
+path = r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\CSM\CSM.mid'
+outpath = r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\CSM\CSMnotes.txt'
 saveNotes(path, outpath)

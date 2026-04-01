@@ -1,15 +1,13 @@
-# transcriber for the website - not used in CLI
-
 import os
 import numpy as np
 
-from pipeline.loadModel import loadModel
-from pipeline.inference import infer
-from pipeline.noteCreation import createNotes, framesToSeconds
-from pipeline.generateMIDI import buildMIDI
-from pipeline.audioRender import midi_to_audio
-from pipeline.stitch import unwrapOutput
-from config import MODEL_PATH, SOUNDFONT_PATH, OUTPUT_DIR, FFT_HOP, WINDOW_SAMPLES, OVERLAP_FRAMES, AUDIO_SAMPLE_RATE
+from src.pipeline.loadModel import loadModel
+from src.pipeline.inference import infer
+from src.pipeline.noteCreation import createNotes, framesToSeconds
+from src.pipeline.generateMIDI import buildMIDI
+from src.pipeline.audioRender import midi_to_audio
+from src.pipeline.stitch import unwrapOutput
+from src.config import MODEL_PATH, SOUNDFONT_PATH, OUTPUT_DIR, FFT_HOP, WINDOW_SAMPLES, OVERLAP_FRAMES, AUDIO_SAMPLE_RATE
 
 from basic_pitch.inference import get_audio_input
 
@@ -54,8 +52,8 @@ class Transcriber:
             onsetThreshold=0.5,
             frameThreshold=0.3,
             minimumNoteLength=11,
-            energyTolerance=11,
-            melodia=False
+            energyTolerance=8,
+            melodia=True
         )
 
         notesInSeconds = framesToSeconds(
@@ -108,3 +106,4 @@ class Transcriber:
 
 
         return pitchFull, onsetFull, audioOriginalLen
+    
