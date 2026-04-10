@@ -1,5 +1,6 @@
 import mirdata
 
-maestro = mirdata.initialize("maestro")
+maestro = mirdata.initialize('maestro')
 
-print(maestro)
+maestro.download(["index"])
+print(maestro.index_path)

@@ -1,6 +1,7 @@
 import numpy as np
 import pretty_midi
 import mir_eval
+import os
 
 def getNoteData(path):
     midiData = pretty_midi.PrettyMIDI(path)
@@ -56,6 +57,22 @@ def getPitchesInMIDI(path):
     pitches = np.array(pitches) # convert to numpy
     return pitches
 
+def buildDataset(eval_folder):
+    dataset = []
+
+    for file in os.listdir(eval_folder):
+        if file.endswith(".mid"):
+            base = file[:-4]  # remove .mid
+            midi_path = os.path.join(eval_folder, file)
+            audio_path = os.path.join(eval_folder, base + ".mp3")
+
+            if os.path.exists(audio_path):
+                dataset.append((audio_path, midi_path))
+            else:
+                print(f"Warning: Missing audio for {file}")
+
+    return dataset
+
 def noteToEvalData(notes):
     intervals = []
     pitches = []
@@ -65,3 +82,48 @@ def noteToEvalData(notes):
         pitches.append(mir_eval.util.midi_to_hz(pitch))
 
     return np.array(intervals), np.array(pitches)
+
+
+# save MIDI information into text format
+def saveNotes(inputPath, outputPath):
+    midiData = pretty_midi.PrettyMIDI(inputPath)
+    pianoData = midiData.instruments[0]
+    notes = pianoData.notes
+
+    filePath = outputPath
+
+    notes = pianoData.notes
+
+    seen = set()
+    duplicates = 0
+
+    for n in notes:
+        key = (round(n.start,5), round(n.end,5), n.pitch)
+        if key in seen:
+            duplicates += 1
+        else:
+            seen.add(key)
+
+    print("Total notes:", len(notes))
+    print("Duplicate notes:", duplicates)
+    print("Unique notes:", len(seen))
+
+    pedal_events = []
+    for cc in pianoData.control_changes:
+        if cc.number == 64:   # sustain pedal
+            pedal_events.append((cc.time, cc.value))
+
+    with open(filePath, "w") as file:
+        for note in notes:
+            file.write(f"{note}\n")
+        file.write(f"End time:{midiData.get_end_time()}\n")
+        file.write(f"tempo changes:{midiData.get_tempo_changes()}")
+        print(f"Saved into {filePath}")
+
+     # write pedal info
+        if pedal_events:
+            file.write("\nSustain pedal events:\n")
+            for time, value in pedal_events:
+                file.write(f"time={time:.3f}, value={value}\n")
+        else:
+            file.write("\nNo sustain pedal events found\n")

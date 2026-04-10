@@ -1,0 +1,2 @@
+model,precision,recall,F1,stdPrecision,stdRecall,stdF1,overlap,stdOverlap,avgShift,stdShift
+BasicPitch,0.0049,0.0053,0.0051,0.0049,0.0056,0.0052,0.2829,0.2035,0.0036,0.1099

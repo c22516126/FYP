@@ -32,11 +32,11 @@ FFT_HOP = 256 # for every 256 samples, start a frame and make a prediction
 WINDOW_SAMPLES = 32768 # amount of samples fed to model during each inference instance
 OVERLAP_FRAMES = 30 # amount of frames overlapping within a window
 
-# note creation
+# note creation - currently BP defaults
 ONSET_DEFAULT = 0.5
 FRAME_DEFAULT = 0.3
 MIN_DEFAULT = 11
-ENERGY_DEFAULT = 8
+ENERGY_DEFAULT = 11
 
 # eval paths
 # ----------------------------------------------------------------------------------------------------------------------------------------

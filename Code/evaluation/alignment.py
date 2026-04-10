@@ -42,6 +42,7 @@ def align(start, end, estimatePitches, estimateIntervals, referencePath):
         shifts.append(s)
     return shifts, peakShift, finalScore
 
+# evaluate output pitch and interval lists against reference midi file
 def evaluate(estimatePitches, estimateIntervals, reference):
-    shifts, peakShift, finalScore = align(-0.2, 0, estimatePitches, estimateIntervals, reference)
+    shifts, peakShift, finalScore = align(-0.2, 0.2, estimatePitches, estimateIntervals, reference)
     return shifts, peakShift, finalScore

@@ -1,11 +1,11 @@
 import sys
 import os
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "..", "src"))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from flask import Flask, request, send_file
 from flask_cors import CORS
-from transcribe import Transcriber
+from src.transcribe import Transcriber
 
 app = Flask(__name__)
 CORS(app)
@@ -40,22 +40,15 @@ def upload():
     filePath = os.path.join(UPLOAD_FOLDER, "inputFile")
     file.save(filePath)
 
-    midiPath, audioPath = transcriber.transcribe(filePath)
+    midiPath = transcriber.transcribe(filePath)
     return {
-        "midiUrl": "/midi",
-        "audioUrl": "/audio"
+        "midiUrl": "/midi"
     }
 
 @app.route('/midi')
 def serve_midi():
     midiPath = os.path.join(os.path.dirname(__file__), "..", "output", "output.mid")
     return send_file(midiPath, mimetype="audio/midi")
-
-@app.route('/audio')
-def serve_audio():
-    audioPath = os.path.join(os.path.dirname(__file__), "..", "output", "output.wav")
-    return send_file(audioPath, mimetype="audio/wav")
-
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)

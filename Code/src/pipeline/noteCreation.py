@@ -6,7 +6,7 @@ MAX_FREQUENCY_INDEX = 87
 MIDI_OFFSET = 21
 
 def createNotes(
-    frames: np.array,
+    frames: np.array, # energy (is pitch active during this frame)
     onsets: np.array,
     onsetThreshold: float = 0.5,
     frameThreshold: float = 0.3,
@@ -19,23 +19,28 @@ def createNotes(
     
     # basic pitch constrains frequencies and adds extra note starts (get_infered_onsets) here, skipping for now
 
-    # find local maximum within onset matrix
+    # peak pick in onset matrix
     peakThresholdMatrix = np.zeros(onsets.shape)
     peaks = scipy.signal.argrelmax(onsets, axis = 0) # find the index of values that are greater than its neighbours
     peakThresholdMatrix[peaks] = onsets[peaks]
 
+    # THRESHOLDING STEP
     # get valid onset time and pitch positions
+    # find all positions (index) where onset value is over threshold
     onsetIndex = np.where(peakThresholdMatrix >= onsetThreshold)
+
     # reverse onset pitch and time arrays
+    # goes hand in hand for energy locking - lets later notes lock energy first
     # algorithm removes energy as it goes - process backwards to preserve later notes
     onsetTimeIndex = onsetIndex[0][::-1]
     onsetFreqIndex = onsetIndex[1][::-1]
 
     # prevent duplicate notes by locking time/frequency energy once claimed by a note
+    # create mutable copy of frame posteriorgram
     remainingEnergy = np.zeros(frames.shape)
     remainingEnergy[:, :] = frames[:, :]
 
-    # loop onsets
+    # for all valid onset candidates
     noteEvents = [] # make note array
     for noteStartIndex, frequencyIndex in zip(onsetTimeIndex, onsetFreqIndex): # pair reversed note and frequency array, loop through
         if noteStartIndex >= nFrames -1: # skip onsets at end of audio
@@ -45,6 +50,7 @@ def createNotes(
         i = noteStartIndex + 1
         k = 0 # number of frames since energy has dropped below energy threshold
 
+        # go forward until energy dies out (tolerance wise)
         # while still inside the audio and above the energy loss threshold
         while (i < nFrames - 1 and  k < energyTolerance):
             if remainingEnergy[i, frequencyIndex] < frameThreshold:
@@ -54,7 +60,7 @@ def createNotes(
             i += 1
 
         i -= k # rewind k to last frame where energy is above the threshold
-
+    
         if (i - noteStartIndex <= minimumNoteLength): # skip if note is too small
             continue
 

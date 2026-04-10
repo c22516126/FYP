@@ -5,7 +5,6 @@ from src.pipeline.loadModel import loadModel
 from src.pipeline.inference import infer
 from src.pipeline.noteCreation import createNotes, framesToSeconds
 from src.pipeline.generateMIDI import buildMIDI
-from src.pipeline.audioRender import midi_to_audio
 from src.pipeline.stitch import unwrapOutput
 from src.config import MODEL_PATH, SOUNDFONT_PATH, OUTPUT_DIR, FFT_HOP, WINDOW_SAMPLES, OVERLAP_FRAMES, AUDIO_SAMPLE_RATE
 
@@ -67,10 +66,7 @@ class Transcriber:
         print("bruh")
         buildMIDI(notesInSeconds, self.midi_out)
 
-        # render audio
-        midi_to_audio(self.midi_out, self.audio_out, self.soundfont)
-
-        return self.midi_out, self.audio_out
+        return self.midi_out
 
 
     # OPTIMIZE THIS LATER
