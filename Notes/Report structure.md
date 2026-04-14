@@ -62,9 +62,19 @@
 	2. software methodology
 	3. project planning
 		1. schedule
-	4. overview of system
-		1. transcription pipeline modularity
-		2. website
+	4. overview of system / experiments
+		1. system
+			1. transcription pipeline modularity
+			2. website
+		2. experiments
+			1. cqt
+				1. motivation
+				2. params being studied
+				3. hypothesis
+				4. experimental design (how experiment is conducted)
+					1. controlled input
+					2. 1 param at a time
+			2. grid search parameters
 	5. fulfillment of system requirements
 	6. other section if needed
 		1. pipeline design
@@ -121,6 +131,7 @@
 		3. beat detection
 		4. key detection
 		5. generalisation
+		6. optimisation - make it run more efficiently
 	3. conclusions
 8. appendix
 	1. system model and analysis
@@ -148,3 +159,11 @@
 - note creation
 - grid search
 - system architecture
+- experiments for design section
+	- objective
+		- params
+		- to decide which params are the best, ask people 
+	- subjective
+		- ask people which precision vs recall results 
+		- preference on recall vs precision
+	- lifeheart scale

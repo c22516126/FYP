@@ -60,27 +60,12 @@ function MidiPlayer({ midiUrl }) {
         <div id="visContainer">
             <midi-player src={midiUrl} sound-font />
             <div id="midiVisualizer">
-                {/* piano keys */}
-                <div id="piano-container">
-                    {keys.map(note => {
-                        const active = activeNotes.has(note)
-
-                        return (
-                            <div
-                                key={note}
-                                className={`piano-key ${isBlackKey(note) ? "black" : "white"} ${active ? "active" : ""}`}
-                            >
-                                {getNoteName(note)}
-                            </div>
-                        )
-                    })}
-                </div>
 
                 {/* player + roll */}
                 <div id="playerRoll">
                     <midi-visualizer
                         src={midiUrl}
-                        type="piano-roll"
+                        type="waterfall"
                     />
                 </div>
 

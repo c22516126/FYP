@@ -18,7 +18,6 @@ import librosa
 from pipeline.model2 import model as buildModel
 from pipeline.noteCreation import createNotes
 from pipeline.generateMIDI import buildMIDI
-from pipeline.audioRender import midi_to_audio
 from pipeline.stitch import unwrapOutput
 from config import SOUNDFONT_PATH, OUTPUT_DIR, FFT_HOP, WINDOW_SAMPLES, OVERLAP_FRAMES
 from basic_pitch.constants import AUDIO_N_SAMPLES, AUDIO_SAMPLE_RATE
@@ -98,9 +97,8 @@ class CQTExperimentTranscriber:
         )
 
         buildMIDI(notes, self.midi_out)
-        midi_to_audio(self.midi_out, self.audio_out, self.soundfont)
 
-        return self.midi_out, self.audio_out
+        return self.midi_out
 
     def _run_inference(self, audio_path: str):
         # load audio the same way BP does

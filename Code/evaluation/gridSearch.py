@@ -9,37 +9,13 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import pickle
 import numpy as np
 from src.pipeline.noteCreation import createNotes, framesToSeconds
-from src.transcribe import Transcriber
+from src.transcribe import Transcriber, transcribeWithParams
 from getMidiData import noteToEvalData, buildDataset
-from alignment import evaluate
-from src.config import ONSET_DEFAULT, FRAME_DEFAULT, MIN_DEFAULT, ENERGY_DEFAULT, FFT_HOP, AUDIO_SAMPLE_RATE
-from plot import plotCSVResults
+from eval import evaluate
+from src.config import ONSET_DEFAULT, FRAME_DEFAULT, MIN_DEFAULT, ENERGY_DEFAULT, FFT_HOP, AUDIO_SAMPLE_RATE, EVAL_FOLDER, CACHE_PATH
+from plot import plotGridSearch
 
-EVAL_FOLDER = r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\eval'
-CACHE_PATH = "posteriorgrams.pkl"
-
-# get pitch and interval arrays using tunable note creation params
-def transcribeWithParams(pitchFull, onsetFull, params=None):
-    if params is None:
-        params = {
-            "onset": 0.5,
-            "frame": 0.3,
-            "min_len": 11,
-            "energy": 8
-        }
-    notes = createNotes(
-        frames=pitchFull,
-        onsets=onsetFull,
-        onsetThreshold=params["onset"],
-        frameThreshold=params["frame"],
-        minimumNoteLength=params["min_len"],
-        energyTolerance=params["energy"],
-        melodia=False
-    )
-
-    return notes
-
-def saveResults(results, testParameter):
+def saveGridSearch(results, testParameter):
     outputPath = f"{testParameter}Results.csv"
 
     with open(outputPath, "w", newline="") as f:
@@ -148,61 +124,61 @@ def gridSearch(testParameter, posteriorgrams, start, end, step):
 
     results = sorted(results, key=lambda x: x["F1"], reverse=True)
 
-    outputPath = saveResults(results, testParameter) # save to CSV
-    plotCSVResults(outputPath)
+    outputPath = saveGridSearch(results, testParameter) # save to CSV
+    plotGridSearch(outputPath)
     return results
 
+if __name__ == "__main__":
+    dataset = buildDataset(EVAL_FOLDER)
 
-dataset = buildDataset(EVAL_FOLDER)
+    start = time.time()
 
-start = time.time()
+    transcriber = Transcriber()
 
-transcriber = Transcriber()
+    end = time.time()
+    print(f"Model load: {end - start:.2f} seconds")
 
-end = time.time()
-print(f"Model load: {end - start:.2f} seconds")
+    start = time.time()
+    # precompute posteriorgrams
 
-start = time.time()
-# precompute posteriorgrams
+    if os.path.exists(CACHE_PATH):
+        print("Loading cached posteriorgrams")
+        with open(CACHE_PATH, "rb") as f:
+            posteriorgrams = pickle.load(f)
 
-if os.path.exists(CACHE_PATH):
-    print("Loading cached posteriorgrams")
-    with open(CACHE_PATH, "rb") as f:
-        posteriorgrams = pickle.load(f)
+    else:
 
-else:
+        print("Running inference")
+        posteriorgrams = []
 
-    print("Running inference")
-    posteriorgrams = []
+        for audioPath, refPath in dataset:
+            pitchFull, onsetFull, _ = transcriber._run_inference(audioPath)
 
-    for audioPath, refPath in dataset:
-        pitchFull, onsetFull, _ = transcriber._run_inference(audioPath)
+            posteriorgrams.append({
+                "pitch": pitchFull,
+                "onset": onsetFull,
+                "ref": refPath
+            })
 
-        posteriorgrams.append({
-            "pitch": pitchFull,
-            "onset": onsetFull,
-            "ref": refPath
-        })
+        with open(CACHE_PATH, "wb") as f:
+            pickle.dump(posteriorgrams, f)
 
-    with open(CACHE_PATH, "wb") as f:
-        pickle.dump(posteriorgrams, f)
+        print("Saved posteriorgrams to cache")
 
-    print("Saved posteriorgrams to cache")
+    end = time.time()
 
-end = time.time()
+    print(f"Inference loop: {end - start:.2f} seconds")
 
-print(f"Inference loop: {end - start:.2f} seconds")
+    start = time.time()
 
-start = time.time()
+    results = gridSearch(
+        testParameter = "min_len",
+        posteriorgrams = posteriorgrams,
+        start = 8,
+        end = 14,
+        step = 1
+    )
 
-results = gridSearch(
-    testParameter = "energy",
-    posteriorgrams = posteriorgrams,
-    start = 0,
-    end = 150,
-    step = 30
-)
+    end = time.time()
 
-end = time.time()
-
-print(f"BP eval: {end - start:.2f} seconds")
+    print(f"BP eval: {end - start:.2f} seconds")

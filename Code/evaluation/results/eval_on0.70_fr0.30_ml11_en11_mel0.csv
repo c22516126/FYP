@@ -1,0 +1,2 @@
+precision,recall,F1,stdPrecision,stdRecall,stdF1,overlap,stdOverlap,avgShift,stdShift
+0.8934,0.7,0.764,0.1517,0.1434,0.1219,0.5076,0.1724,-0.2023,0.012

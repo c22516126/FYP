@@ -6,7 +6,7 @@ from src.pipeline.inference import infer
 from src.pipeline.noteCreation import createNotes, framesToSeconds
 from src.pipeline.generateMIDI import buildMIDI
 from src.pipeline.stitch import unwrapOutput
-from src.config import MODEL_PATH, SOUNDFONT_PATH, OUTPUT_DIR, FFT_HOP, WINDOW_SAMPLES, OVERLAP_FRAMES, AUDIO_SAMPLE_RATE
+from src.config import MODEL_PATH, OUTPUT_DIR, FFT_HOP, WINDOW_SAMPLES, OVERLAP_FRAMES, AUDIO_SAMPLE_RATE, ONSET_DEFAULT, FRAME_DEFAULT, ENERGY_DEFAULT, MIN_DEFAULT
 
 from basic_pitch.inference import get_audio_input
 
@@ -15,7 +15,6 @@ class Transcriber:
         self,
         model_path = MODEL_PATH,
         output_dir = OUTPUT_DIR,
-        soundfont = SOUNDFONT_PATH
     ):
         
         self.interpreter = loadModel(model_path)
@@ -36,9 +35,6 @@ class Transcriber:
         os.makedirs(self.output_dir, exist_ok = True)
 
         self.midi_out = os.path.join(self.output_dir, "output.mid")
-        self.audio_out = os.path.join(self.output_dir, "output.wav")
-
-        self.soundfont = str(soundfont)
 
     def transcribe(self, audio_path):
         
@@ -48,11 +44,11 @@ class Transcriber:
         notes = createNotes(
             frames=pitchFull,
             onsets=onsetFull,
-            onsetThreshold=0.5,
+            onsetThreshold=0.7,
             frameThreshold=0.3,
             minimumNoteLength=11,
-            energyTolerance=8,
-            melodia=True
+            energyTolerance=ENERGY_DEFAULT,
+            melodia=False
         )
 
         notesInSeconds = framesToSeconds(
@@ -63,13 +59,11 @@ class Transcriber:
 
         # create midi
         print(type(notesInSeconds[0]))
-        print("bruh")
         buildMIDI(notesInSeconds, self.midi_out)
 
         return self.midi_out
 
 
-    # OPTIMIZE THIS LATER
     def _run_inference(self, audio_path):
         pitchWindows = []
         onsetWindows = []
@@ -100,6 +94,26 @@ class Transcriber:
             self.FRAMES_PER_STRIDE,
         )
 
-
         return pitchFull, onsetFull, audioOriginalLen
     
+# get pitch and interval arrays using tunable note creation params
+def transcribeWithParams(pitchFull, onsetFull, params=None):
+    if params is None:
+        params = {
+            "onset": 0.5,
+            "frame": 0.3,
+            "min_len": 11,
+            "energy": 8,
+            "melodia": True
+        }
+    notes = createNotes(
+        frames=pitchFull,
+        onsets=onsetFull,
+        onsetThreshold=params["onset"],
+        frameThreshold=params["frame"],
+        minimumNoteLength=params["min_len"],
+        energyTolerance=params["energy"],
+        melodia=params.get("melodia", False)
+    )
+
+    return notes

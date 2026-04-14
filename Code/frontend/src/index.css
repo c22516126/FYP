@@ -129,11 +129,6 @@ midi-visualizer svg rect.note.active {
   flex-shrink: 0;
 }
 
-/* hide scrollbar (clean look) */
-#piano-container::-webkit-scrollbar {
-  display: none;
-}
-
 
 /* base key */
 .piano-key {

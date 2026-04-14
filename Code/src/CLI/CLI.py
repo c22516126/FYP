@@ -1,4 +1,4 @@
-from transcribe import Transcriber
+from src.transcribe import Transcriber
 
 class TranscriptionCLI:
     def __init__(self, model_path):

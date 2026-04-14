@@ -1,7 +1,7 @@
 from basic_pitch.inference import predict
 import numpy as np
-from alignment import evaluate
-from gridSearch import saveResults, plotCSVResults, EVAL_FOLDER
+from evaluation.eval import evaluate
+from gridSearch import saveGridSearch, plotGridSearch, EVAL_FOLDER
 from getMidiData import buildDataset
 
 dataset = buildDataset(EVAL_FOLDER)
@@ -64,8 +64,8 @@ def evaluateBasicPitch(dataset):
     results = [result]
 
     # reuse your existing pipeline
-    outputPath = saveResults(results, "model")
-    plotCSVResults(outputPath)
+    outputPath = saveGridSearch(results, "model")
+    plotGridSearch(outputPath)
 
     return result
 

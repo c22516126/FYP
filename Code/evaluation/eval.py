@@ -1,136 +1,254 @@
+"""
+todo list
+- plot shift/f-score results
+"""
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from alignment import align
-
-from getMidiData import getPitchesInHZ, getIntervals, getShiftedIntervals
-from src.config import FITP_RP, FITP_EP # fish in the pool
-from src.config import CDL_EP, CDL_RP # claire de lune
+from getMidiData import getPitchesInHZ, getIntervals, shiftIntervals
+from src.config import AUDIO_SAMPLE_RATE, FFT_HOP, EVAL_FOLDER, CACHE_PATH
 import mir_eval
-import mir_eval.display
-import matplotlib.pyplot as plt
 import numpy as np
-#from basic_pitch import ICASSP_2022_MODEL_PATH
-#from basic_pitch.inference import predict
+import time, pickle
+from src.transcribe import transcribeWithParams, Transcriber
+from src.pipeline.noteCreation import framesToSeconds
+from getMidiData import noteToEvalData
+from plot import plotEvaluation, plotPerFileF1
+from getMidiData import buildDataset
 
-# fish in the pool 
-FITPpShift, FITPfScore, FITPshifts, FITPf1 = align(-0.2, 0.2, FITP_EP, FITP_RP)
+# shift global timing by frame length from start to end range
+def align(start, end, estimatePitches, estimateIntervals, referencePath):
+    shiftSize = FFT_HOP / AUDIO_SAMPLE_RATE # shift by frame length (11.6ms)
+    s = start - shiftSize
 
-# claire de lune 
-CDLpShift, CDLfScore, CDLshifts, CDLf1 = align(-0.2, 0.2, CDL_EP, CDL_RP)
+    referenceIntervals = getIntervals(referencePath)
+    referencePitches = getPitchesInHZ(referencePath)
+    fScorePeak = 0
+    shifts = []
+    
+    peakShift = 0
+    finalScore = [0, 0, 0, 0]
+    while s < end:
+        s += shiftSize
+        shiftedEstimateIntervals = shiftIntervals(estimateIntervals, s)
 
-# CDL2
-qPath = r'C:\Users\jason\school\FYP\FYP\Code\output\output_fs0_25.mid'
-_,t1,_,_ = align(-0.2,0.2, qPath, CDL_RP)
+        # offset is not considered
+        precision, recall, f_measure, avg_overlap_ratio = mir_eval.transcription.precision_recall_f1_overlap(
+            referenceIntervals,
+            referencePitches,
+            shiftedEstimateIntervals,
+            estimatePitches,
+            offset_ratio=None
+        )
+        
+        if f_measure > fScorePeak:
+            peakShift = s
+            fScorePeak = f_measure
+            finalScore = [precision, recall, f_measure, avg_overlap_ratio]
+        shifts.append(s)
+    return shifts, peakShift, finalScore
 
-qPath = r'C:\Users\jason\school\FYP\FYP\Code\output\output_fs0_5.mid'
-_,t2,_,_ = align(-0.2,0.2, qPath, CDL_RP)
+# evaluate output pitch and interval lists against reference midi file
+def evaluate(estimatePitches, estimateIntervals, reference):
+    shifts, peakShift, finalScore = align(-0.3, 0, estimatePitches, estimateIntervals, reference)
+    return shifts, peakShift, finalScore
 
-qPath = r'C:\Users\jason\school\FYP\FYP\Code\output\output_fs0_75.mid'
-_,t3,_,_ = align(-0.2,0.2, qPath, CDL_RP)
+# runs evaluation for each file within the dataset
+def evaluateDataset(posteriorgrams, parameters):   
+    metrics = []
+    shiftValues = []
 
-qPath = r'C:\Users\jason\school\FYP\FYP\Code\output\output_fs1_0.mid'
-_,t4,_,_ = align(-0.2,0.2, qPath, CDL_RP)
+    for i, item in enumerate(posteriorgrams):
+        pitchFull = item["pitch"]
+        onsetFull = item["onset"]
+        refPath = item["ref"]
 
-#print("Base system: "+str(CDLfScore))
-print("Format: Precision, Recall, F1, Overlap Ratio")
-print("0.25: "+str(t1))
-print("0.5: "+str(t2))
-print("0.75: "+str(t3))
-print("1: "+str(t4))
+        notes = transcribeWithParams(pitchFull, onsetFull, parameters)
+        notesInSecs = framesToSeconds(notes, AUDIO_SAMPLE_RATE, FFT_HOP)
 
-# visualisation ------------------------------------------------------------------------------------------
+        estimatedIntervals, estimatePitches = noteToEvalData(notesInSecs)
+        
+        estimatedIntervals = np.array(estimatedIntervals).reshape(-1, 2)
+        estimatePitches = np.array(estimatePitches)
 
-fig, ax = plt.subplots()             # Create a figure containing a single Axes.
-ax.plot(CDLshifts, CDLf1, label='Clair De Lune')  # Plot some data on the Axes.
-ax.plot(FITPshifts, FITPf1, label='Fish in The Pool')
+        # onset only
+        if len(estimatedIntervals) == 0:
+            metrics.append([0, 0, 0, 0])
+            shiftValues.append(0)
+            continue
+        _, peakShift, finalScore = evaluate(estimatePitches, estimatedIntervals, refPath)
 
-ax.axvline(FITPpShift, linestyle="--", alpha=0.5, color="tab:orange")
-ax.axvline(CDLpShift, linestyle="--", alpha=0.5, color="tab:blue")
+        metrics.append(finalScore)
+        shiftValues.append(peakShift)
 
-ax.set_title('Time Shift - F1 Relationship')
-ax.set_ylabel("F-measure")
-ax.set_xlabel("Time shift (seconds)")
-ax.legend()
+    return {
+        "metrics": np.array(metrics), 
+        "shifts": np.array(shiftValues)
+        }
 
-plt.savefig('timeShift.png')
+def saveEvaluationResults(summary, outputPath="evalResults.csv"):
+    import csv
 
-# overlapping notes ------------------------------------------------------------------------------------------
-# fish in the pool
-plt.figure()
-estIntervalsFITP = getIntervals(FITP_EP)
-estPitchesFITP = getPitchesInHZ(FITP_EP)
+    with open(outputPath, "w", newline="") as f:
+        writer = csv.writer(f)
 
-refIntervalsFITP = getIntervals(FITP_RP)
-refPitchesFITP = getPitchesInHZ(FITP_RP)
-mir_eval.display.piano_roll(refIntervalsFITP, refPitchesFITP, color="tab:orange", label="Reference")
-mir_eval.display.piano_roll(estIntervalsFITP, estPitchesFITP, color="tab:blue", alpha=0.5, label="Estimate")
+        writer.writerow([
+            "precision", "recall", "F1",
+            "stdPrecision", "stdRecall", "stdF1",
+            "overlap", "stdOverlap",
+            "avgShift", "stdShift"
+        ])
 
-plt.title("Estimated and Reference Transcription (Fish In The Pool)")
-plt.xlabel("Time (seconds)")
-plt.ylabel("Pitch (MIDI)")
-plt.legend()
-plt.savefig('FITPoverlappingNotes.png')
+        writer.writerow([
+            round(summary["precision"], 4),
+            round(summary["recall"], 4),
+            round(summary["F1"], 4),
+            round(summary["stdPrecision"], 4),
+            round(summary["stdRecall"], 4),
+            round(summary["stdF1"], 4),
+            round(summary["overlap"], 4),
+            round(summary["stdOverlap"], 4),
+            round(summary["avgShift"], 4),
+            round(summary["stdShift"], 4)
+        ])
 
-# clair de lune
-plt.figure()
-estIntervalsCDL = getIntervals(CDL_EP)
-estPitchesCDL = getPitchesInHZ(CDL_EP)
+    return outputPath
 
-refIntervalsCDL = getIntervals(CDL_RP)
-refPitchesCDL = getPitchesInHZ(CDL_RP)
-mir_eval.display.piano_roll(refIntervalsCDL, refPitchesCDL, color="tab:orange", label="Reference")
-mir_eval.display.piano_roll(estIntervalsCDL, estPitchesCDL, color="tab:blue", alpha=0.5, label="Estimate")
-plt.xlim(0, 60)
-plt.title("Estimated and Reference Transcription (Clair De Lune)")
-plt.xlabel("Time (seconds)")
-plt.ylabel("Pitch (MIDI)")
-plt.legend()
-plt.savefig('CDLoverlappingNotes.png')
+def savePerFileResults(metrics, shifts, outputPath="perFileResults.csv"):
+    import csv
 
-# Q factor experiment results
-filter_scales = [0.25, 0.5, 0.75, 1.0]
-results = [t1, t2, t3, t4]
+    with open(outputPath, "w", newline="") as f:
+        writer = csv.writer(f)
 
-precision =  [r[0] for r in results]
-recall =     [r[1] for r in results]
-f1 =         [r[2] for r in results]
-overlap =    [r[3] for r in results]
+        writer.writerow(["fileIndex", "precision", "recall", "F1", "overlap", "shift"])
 
-plt.figure(figsize=(8, 5))
-plt.plot(filter_scales, precision, marker='o', label='Precision')
-plt.plot(filter_scales, recall, marker='o', label='Recall')
-plt.plot(filter_scales, f1, marker='o', label='F1')
-plt.plot(filter_scales, overlap, marker='o', label='Overlap Ratio')
-plt.xlabel('Q Factor Scale')
-plt.ylabel('Score')
-plt.title('Q-Factor Scaling (Clair de Lune)')
-plt.legend()
-plt.grid(True, alpha=0.3)
-plt.xticks(filter_scales)
-plt.tight_layout()
-plt.savefig('QFactor.png', dpi=150)
+        for i in range(len(metrics)):
+            writer.writerow([
+                i,
+                round(metrics[i][0], 4),
+                round(metrics[i][1], 4),
+                round(metrics[i][2], 4),
+                round(metrics[i][3], 4),
+                round(shifts[i], 4)
+            ])
 
-# bar chart
-filter_scales = [0.25, 0.5, 0.75, 1.0]
-results = [t1, t2, t3, t4]
-metrics = ['Precision', 'Recall', 'F1', 'Overlap Ratio']
+def runEvaluation(params):
+    dataset = buildDataset(EVAL_FOLDER)
 
-x = np.arange(len(metrics))
-width = 0.2
+    # load model once
+    start = time.time()
+    transcriber = Transcriber()
+    print(f"Model load: {time.time() - start:.2f} seconds")
 
-fig, ax = plt.subplots(figsize=(10, 6))
-for i, (fs, result) in enumerate(zip(filter_scales, results)):
-    ax.bar(x + (i - 1.5) * width, result, width, label=fs)
+    # load or compute posteriorgrams
+    start = time.time()
 
-ax.set_xlabel('Metric')
-ax.set_ylabel('Score')
-ax.set_title('Q-Factor Scaling (Clair de Lune)')
-ax.set_xticks(x)
-ax.set_xticklabels(metrics)
-ax.legend()
-ax.set_ylim(0, 1)
-ax.grid(True, alpha=0.3, axis='y')
-plt.tight_layout()
-plt.savefig('QFactorBar.png', dpi=150)
+    if os.path.exists(CACHE_PATH):
+        print("Loading cached posteriorgrams")
+        with open(CACHE_PATH, "rb") as f:
+            posteriorgrams = pickle.load(f)
+    else:
+        print("Running inference")
+        posteriorgrams = []
+
+        for audioPath, refPath in dataset:
+            pitchFull, onsetFull, _ = transcriber._run_inference(audioPath)
+
+            posteriorgrams.append({
+                "pitch": pitchFull,
+                "onset": onsetFull,
+                "ref": refPath
+            })
+
+        with open(CACHE_PATH, "wb") as f:
+            pickle.dump(posteriorgrams, f)
+
+        print("Saved posteriorgrams to cache")
+
+    print(f"Inference loop: {time.time() - start:.2f} seconds")
+
+    # run evaluation
+    start = time.time()
+
+    results = evaluateDataset(posteriorgrams, params)
+    metrics = results["metrics"]
+    shifts = results["shifts"]
+
+    # summarise
+    results = {
+        "precision": np.mean(metrics[:, 0]),
+        "recall": np.mean(metrics[:, 1]),
+        "F1": np.mean(metrics[:, 2]),
+        "overlap": np.mean(metrics[:, 3]),
+        "avgShift": np.mean(shifts),
+
+        "stdPrecision": np.std(metrics[:, 0]),
+        "stdRecall": np.std(metrics[:, 1]),
+        "stdF1": np.std(metrics[:, 2]),
+        "stdOverlap": np.std(metrics[:, 3]),
+        "stdShift": np.std(shifts)
+    }
+
+    print(f"Evaluation: {time.time() - start:.2f} seconds")
+
+    # save + plot
+    tag = paramsToString(params)
+
+    evalPath = os.path.join("results", f"eval_{tag}.csv")
+    perFilePath = os.path.join("results", f"perfile_{tag}.csv")
+    evalPathPlot = os.path.join("results", f"eval_{tag}.png")
+    perFilePathPlot = os.path.join("results", f"perfile_{tag}.png")
+    
+    os.makedirs("results", exist_ok=True)
+
+    saveEvaluationResults(results, evalPath)
+    savePerFileResults(metrics, shifts, perFilePath)
+
+    plotEvaluation(results, evalPathPlot)
+    plotPerFileF1(metrics, perFilePathPlot)
+
+    return results
+
+def paramsToString(params):
+    return (
+        f"on{params['onset']:.2f}_"
+        f"fr{params['frame']:.2f}_"
+        f"ml{params['min_len']}_"
+        f"en{params['energy']}_"
+        f"mel{int(params['melodia'])}"
+    )
+f1Focused = {
+    "onset": 0.7,
+    "frame": 0.3,
+    "min_len": 11,
+    "energy": 11,
+    "melodia": False
+}
+
+pFocused = {
+    "onset": 0.8,
+    "frame": 0.4,
+    "min_len": 14,
+    "energy": 11,
+    "melodia": False
+}
+
+rFocusedMelodiaOn = {
+    "onset": 0.6,
+    "frame": 0.3,
+    "min_len": 8,
+    "energy": 11,
+    "melodia": True
+}
+
+rFocusedMelodiaOff = {
+    "onset": 0.6,
+    "frame": 0.3,
+    "min_len": 8,
+    "energy": 11,
+    "melodia": False
+}
+
+if __name__ == "__main__":
+    runEvaluation(rFocusedMelodiaOn)

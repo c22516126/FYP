@@ -18,9 +18,6 @@ MODEL_PATH = (
     / "nmp.tflite"
 )
 
-# soundfont
-SOUNDFONT_PATH = PROJECT_ROOT / "resources" / "FluidR3_GM.sf2"
-
 # output location
 OUTPUT_DIR = PROJECT_ROOT / "output"
 
@@ -40,6 +37,5 @@ ENERGY_DEFAULT = 11
 
 # eval paths
 # ----------------------------------------------------------------------------------------------------------------------------------------
-# midi outputs
-FITP_EP = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\FITP\output.mid')
-CDL_EP = (r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\CDL\output.mid')
+EVAL_FOLDER = r'C:\Users\jason\school\FYP\FYP\Code\evaluation\midi files\eval'
+CACHE_PATH = "posteriorgrams.pkl"

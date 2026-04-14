@@ -1,6 +1,6 @@
 import numpy as np
 import scipy
-from typing import Optional, List, Tuple
+from typing import List, Tuple
 
 MAX_FREQUENCY_INDEX = 87
 MIDI_OFFSET = 21
@@ -17,21 +17,15 @@ def createNotes(
 
     nFrames = frames.shape[0]
     
-    # basic pitch constrains frequencies and adds extra note starts (get_infered_onsets) here, skipping for now
-
     # peak pick in onset matrix
     peakThresholdMatrix = np.zeros(onsets.shape)
     peaks = scipy.signal.argrelmax(onsets, axis = 0) # find the index of values that are greater than its neighbours
     peakThresholdMatrix[peaks] = onsets[peaks]
 
-    # THRESHOLDING STEP
-    # get valid onset time and pitch positions
-    # find all positions (index) where onset value is over threshold
+    # Thresholding step - find all positions (index) where onset value is over threshold
     onsetIndex = np.where(peakThresholdMatrix >= onsetThreshold)
 
-    # reverse onset pitch and time arrays
-    # goes hand in hand for energy locking - lets later notes lock energy first
-    # algorithm removes energy as it goes - process backwards to preserve later notes
+    # reverse onset pitch and time arrays - goes hand in hand for energy locking, lets later notes lock energy first
     onsetTimeIndex = onsetIndex[0][::-1]
     onsetFreqIndex = onsetIndex[1][::-1]
 
@@ -94,12 +88,14 @@ def createNotes(
             i = noteCentre + 1
             k = 0
 
+            # go forward until end of audio or energy is below tolerance
             while (i < nFrames - 1 and k < energyTolerance):
                 if (remainingEnergy[i, frequencyIndex] < frameThreshold):
                     k += 1
                 else:
                     k = 0
 
+                # lock energy for pitch bin and neighbouring pitch bins
                 remainingEnergy[i, frequencyIndex] = 0
                 if (frequencyIndex < MAX_FREQUENCY_INDEX):
                     remainingEnergy[i, frequencyIndex + 1] = 0
@@ -113,12 +109,15 @@ def createNotes(
             # backward pass
             i = noteCentre - 1
             k = 0
+            
+            # go backwards until start of audio or energy is below tolerance
             while (i > 0 and k < energyTolerance):
                 if (remainingEnergy[i, frequencyIndex] < frameThreshold):
                     k += 1
                 else:
                     k = 0
 
+                # lock energy for pitch bin and neighbouring pitch bins
                 remainingEnergy[i, frequencyIndex] = 0
                 if (frequencyIndex < MAX_FREQUENCY_INDEX):
                     remainingEnergy[i, frequencyIndex + 1] = 0

@@ -1,7 +1,7 @@
 # main.py
 import argparse
-from CLI.CLI import TranscriptionCLI
-from config import MODEL_PATH
+from src.CLI.CLI import TranscriptionCLI
+from src.config import MODEL_PATH
 
 def main():
     parser = argparse.ArgumentParser(description="Audio-to-MIDI CLI")

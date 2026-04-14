@@ -1,0 +1,7 @@
+- deep learning
+- patterns in data
+- notes are patterns in data
+- SHOW WHY DEEP LEARNING IS USED
+	- INPUT REPRESENTATION
+	- CNN
+	- POST PROCESSING
